@@ -19,7 +19,7 @@ jobs:
                 node-version: ${{ matrix.node-version }}
 
           - name: Install dependencies
-            run: pnpm install
+            run: npm install
 
           - name: Lint JS
-            run: pnpm run lint
+            run: npm run lint
