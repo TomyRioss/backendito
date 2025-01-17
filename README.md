@@ -1,22 +1,31 @@
+# Backendito
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+Install the project dependencies with one of the following commands:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> - `npm install`
+> - `pnpm install`
 
+> [!WARNING]
+> Use ***only one*** package manager while developing the application, either npm or pnpm, but not both. Mixing two or more package managers may cause inconsistencies due to unsynchronized lock files, among other issues.
+> The README examples use the pnpm package manager, but you can use your preferred one.
+
+## Available commands
+
+### `pnpm run dev`
+
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### `pnpm run lint`
+
+Run esLint to show the syntax errors and good practices.
+
+### `pnpm run lint:fix`
+
+The same as `pnpm run lint` but fixes easy problems.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
