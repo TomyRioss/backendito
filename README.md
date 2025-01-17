@@ -9,7 +9,7 @@ Install the project dependencies with one of the following commands:
 > - `pnpm install`
 
 > [!WARNING]
-> Use ***only one*** package manager while developing the application, either npm or pnpm, but not both. Mixing two or more package managers may cause inconsistencies due to unsynchronized lock files, among other issues.
+> Use ***only one*** package manager while developing the application, either npm or pnpm, but not both. Mixing two or more package managers may cause inconsistencies due to unsynchronized lock files, among other issues.\
 > The README examples use the pnpm package manager, but you can use your preferred one.
 
 ## Available commands
