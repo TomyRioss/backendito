@@ -1,34 +1,32 @@
-import React from 'react';
-import { Link } from 'next/link';
+import Link from 'next/link';
+import { menusList } from './menusList';
 
 function NavBar() {
-  // Traducciones para código Navigation
-  const t = useTranslations('Navigation');
-
-  // Mapeo de menu info para navbar
-  const menus = menusList.map(({ name, path }) => (
-    <NavLink
-      href={path}
-      key={path}
-      className="text-white hover:text-lightGreen"
-    >
-      {t(name)}
-    </NavLink>
-  ));
-
   return (
-    <header className="flex justify-between items-center w-full h-16 text-white  bg-darkGreen px-10  py-4">
-      <div className="text-white hover:text-lightGreen">
-        <Link href={'/'} className="flex gap-5">
-          <FaPaw className="w-8 h-8 " />
-          <h2 className="text-2xl"> AnimalCare </h2>
+    <header className="flex justify-around items-center w-full h-16 bg-blue-700 px-10 py-4">
+      <div className="flex gap-5">
+        <Link href="/">
+          <h2 className="text-2xl text-white hover:text-blue-300 transition duration-300">
+            Backendito
+          </h2>
         </Link>
       </div>
 
-      {/* Mapeo de menu para el navbar*/}
-      <nav className="flex gap-10">
-        {menus}
-        <h2>login area</h2>
+      {/* Mapeo de menú para el navbar */}
+      <nav>
+        <ul className="flex gap-10 justify-center items-center">
+          {menusList.map(({ name, path }) => (
+            <li
+              key={path}
+              className="relative text-white hover:text-blue-300 transition duration-300"
+            >
+              <Link href={path}>
+                <span>{name}</span>
+              </Link>
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-300 transition-all duration-300 hover:w-full"></span>
+            </li>
+          ))}
+        </ul>
       </nav>
     </header>
   );
