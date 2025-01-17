@@ -1,7 +1,6 @@
-import React from 'react';
 import { Button } from '@/components/ui/button';
 
-const HomepageContact = () => {
+export const Contact = () => {
   return (
     <article className="bg-blue-900 h-2/3 w-full grid grid-cols-2 gap-10">
       <div className="flex flex-col justify-center ml-20">
@@ -27,4 +26,3 @@ const HomepageContact = () => {
   );
 };
 
-export default HomepageContact;

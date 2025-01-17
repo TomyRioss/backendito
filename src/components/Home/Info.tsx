@@ -1,7 +1,6 @@
-import React from 'react';
 import { Button } from '@/components/ui/button';
 
-const HomepageInfo = () => {
+export const Info = () => {
   return (
     <article className=" h-2/3 w-full grid grid-cols-2 gap-10">
       <div className="flex flex-col justify-center items-center">
@@ -27,4 +26,3 @@ const HomepageInfo = () => {
   );
 };
 
-export default HomepageInfo;

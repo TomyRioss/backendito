@@ -1,7 +1,6 @@
-import React from 'react';
 import { Button } from '@/components/ui/button';
 
-const ServicesInfo = () => {
+export const ServicesInfo = () => {
   return (
     <div className="bg-blue-800 text-white py-16 px-10 flex items-center justify-center">
       <div className="grid grid-cols-2 items-center gap-10 max-w-6xl">
@@ -33,5 +32,3 @@ const ServicesInfo = () => {
     </div>
   );
 };
-
-export default ServicesInfo;

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { menusList } from './menusList';
+import { menusList } from '../../utils/menusList';
 
 function NavBar() {
   return (

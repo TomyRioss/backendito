@@ -9,7 +9,7 @@ export const menusList = [
   },
   {
     name: 'Nosotros',
-    path: '/aboutus',
+    path: '/about',
   },
   {
     name: 'Contacto',
