@@ -1,11 +1,16 @@
-import HomeHeader from './components/HomeHeader/HomeHeader';
-import HomepageContact from './components/HomepageContact';
+import Contact from "@/components/Home/Contact";
+import { Hero } from "@/components/Home/Hero";
+import { Info } from "@/components/Home/Info";
+import { Services } from "@/components/Home/Services";
+
 
 export default function Home() {
   return (
     <>
-      <HomeHeader />
-      <HomepageContact />
+      <Hero />
+      <Contact />
+      <Info />
+      <Services />
     </>
   );
 }
