@@ -35,7 +35,11 @@ const ThemeContextProvider = (props: ThemePropsInterface): ReactElement => {
       const isDarkTheme: boolean = JSON.parse(
         localStorage.getItem("isDarkTheme")!
       );
-      isDarkTheme && document!.querySelector("body")!.classList.add("dark");
+
+      if (isDarkTheme) {
+        document!.querySelector("body")!.classList.add("dark");
+      }
+
       setIsDarkTheme(() => {
         return isDarkTheme;
       });
