@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { menusList } from "./menusList";
+import { menusList } from "../../utils/menusList";
 import { useContext } from "react";
 import { ThemeContext } from "@/shared/styles/themes/themeProvider";
 import DemoThemeButton from "@/components/ui/customButton";
