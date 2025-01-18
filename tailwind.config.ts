@@ -1,3 +1,5 @@
+import { createDarkPalette } from "./src/shared/styles/themes/darkTheme";
+import { createLightPalette } from "./src/shared/styles/themes/lightTheme";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -5,11 +7,13 @@ export default {
     content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
   	extend: {
   		colors: {
+			dark: createDarkPalette,
+			light: createLightPalette,
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
