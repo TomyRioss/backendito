@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "./components/Navbar/Navbar";
 import { getLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import ThemeContextProvider from "@/shared/styles/themes/themeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,10 +34,12 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
-          <NavBar />
-          {children}
-        </NextIntlClientProvider>
+        <ThemeContextProvider>
+          <NextIntlClientProvider messages={messages}>
+            <NavBar />
+            {children}
+          </NextIntlClientProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );
