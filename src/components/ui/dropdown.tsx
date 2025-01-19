@@ -1,11 +1,11 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { Dispatch, ReactElement, SetStateAction, useState } from "react";
+import { Dispatch, ReactElement, SetStateAction } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
 type BDDropdownType = {
-  options?: Language[] | Object[];
-  current?: Language | Object;
-  setCurrent: Dispatch<SetStateAction<Object | Language | undefined>>;
+  options?: Language[] | object[];
+  current?: Language | object;
+  setCurrent: Dispatch<SetStateAction<object | Language | undefined>>;
 };
 
 const BDDropdown = (props: BDDropdownType): ReactElement => {
@@ -49,7 +49,6 @@ const BDDropdown = (props: BDDropdownType): ReactElement => {
                 <MenuItem key={`${option?.id || option}`}>
                   <button
                     className="relative w-full cursor-pointer select-none hover:bg-dark-background-paper py-2 px-3 text-dark-primary-light"
-                    role="option"
                     onClick={() => setCurrent(option)}
                   >
                     <div className="flex items-center">
