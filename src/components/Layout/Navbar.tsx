@@ -1,17 +1,32 @@
 "use client";
 import Link from "next/link";
 import { menusList } from "../../shared/utils/menusList";
-import { useContext } from "react";
+import { startTransition, useContext, useEffect, useState } from "react";
 import { ThemeContext } from "@/shared/styles/themes/themeProvider";
-import DemoThemeButton from "@/components/ui/customButton";
+import BDDropdown from "../ui/dropdown";
+import { getUserLocale, setUserLocale } from "@/shared/utils/getUserLocale";
+import { Languages, Locale } from "@/i18n/config";
 
 function NavBar() {
-  const themeContext: { isDarkMode?: boolean; toggleThemeHandler: () => void } =
-    useContext(ThemeContext);
+  const themeContext: ThemeContext = useContext(ThemeContext);
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(
+    Languages.find(async (lang) => lang.value === await getUserLocale()) || Languages[1]
+  );
 
   const toggleThemeHandler = (): void => {
     themeContext.toggleThemeHandler();
   };
+
+  const toggleLanguageHandler = (value: Locales): void => {
+    const locale = value as Locale;
+    startTransition(() => {
+      setUserLocale(locale);
+    });
+  };
+
+  useEffect(() => {
+    toggleLanguageHandler(currentLanguage.value);
+  }, [currentLanguage]);
 
   return (
     <header className="flex justify-around items-center w-full h-16 bg-blue-700 dark:bg-black px-10 py-4">
@@ -41,7 +56,11 @@ function NavBar() {
             <button onClick={toggleThemeHandler}>Change theme</button>
           </li>
           <li>
-            <DemoThemeButton />
+            <BDDropdown
+              options={Languages}
+              current={currentLanguage}
+              setCurrent={setCurrentLanguage}
+            />
           </li>
         </ul>
       </nav>
