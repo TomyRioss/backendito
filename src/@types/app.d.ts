@@ -9,3 +9,12 @@ type Example = {
   example: Foo;
   [key: string]: string;
 };
+
+type Language = {
+  id?: number;
+  value: Locales;
+  name: string;
+  image: string;
+};
+
+type Locales = "en" | "es";
