@@ -11,13 +11,13 @@ const WorkInfo = () => {
   const scrollNext = () => emblaApi?.scrollNext();
   const scrollPrev = () => emblaApi?.scrollPrev();
 
-  const calculateProgress = () => {
-    if (emblaApi) {
-      const progress = emblaApi.scrollProgress();
-      return `${progress * 100}%`;
-    }
-    return '0%';
-  };
+  // const calculateProgress = () => {
+  //   if (emblaApi) {
+  //     const progress = emblaApi.scrollProgress();
+  //     return `${progress * 100}%`;
+  //   }
+  //   return '0%';
+  // };
 
   return (
     <section className="py-10 px-6 bg-gray-50">
