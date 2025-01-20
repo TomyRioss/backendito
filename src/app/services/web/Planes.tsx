@@ -1,6 +1,7 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
+import { MdOutlineShoppingCart, MdOutlineMessage } from 'react-icons/md';
 
 // Datos dinámicos para los planes
 const planesData = [
@@ -96,8 +97,14 @@ const Planes = () => {
             <h3 className="text-xl font-bold">Precio</h3>
             <h4 className="mt-2 text-green-500 text-xl">{plan.price}</h4>
             <div className="grid grid-flow-col grid-cols-2 justify-center items-center w-full mt-10 gap-4">
-              <Button>Comprar</Button>
-              <Button>Contactar</Button>
+              <Button>
+                <MdOutlineShoppingCart />
+                Comprar
+              </Button>
+              <Button>
+                <MdOutlineMessage />
+                Contactar
+              </Button>
             </div>
           </div>
         ))}
