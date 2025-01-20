@@ -1,11 +1,12 @@
 "use client";
-import Link from "next/link";
 import { menusList } from "../../shared/utils/menusList";
 import { startTransition, useContext, useEffect, useState } from "react";
 import { ThemeContext } from "@/shared/styles/themes/themeProvider";
 import BDDropdown from "../ui/dropdown";
 import { getUserLocale, setUserLocale } from "@/shared/utils/getUserLocale";
 import { Languages, Locale } from "@/i18n/config";
+import Link from 'next/link';
+import Image from 'next/image';
 
 function NavBar() {
   const themeContext: ThemeContext = useContext(ThemeContext);
@@ -29,9 +30,16 @@ function NavBar() {
   }, [currentLanguage]);
 
   return (
-    <header className="flex justify-around items-center w-full h-16 bg-blue-700 dark:bg-black px-10 py-4">
-      <div className="flex gap-5">
-        <Link href="/">
+    <header className="flex justify-around items-center w-full h-16 bg-blue-800 dark:bg-dark-background-default px-10 py-4">
+      <div>
+        <Link href="/" className="flex gap-5 items-center">
+          <Image
+            src={'/backencito.png'}
+            width={50}
+            height={50}
+            alt="fondo"
+            className="rounded-xl"
+          />
           <h2 className="text-2xl text-white hover:text-blue-300 transition duration-300">
             Backendito
           </h2>
