@@ -1,11 +1,20 @@
 import Link from 'next/link';
 import { menusList } from '../../utils/menusList';
+import Image from 'next/image';
+import { Icon } from '../Home/Icon';
 
 function NavBar() {
   return (
-    <header className="flex justify-around items-center w-full h-16 bg-blue-700 px-10 py-4">
-      <div className="flex gap-5">
-        <Link href="/">
+    <header className="flex justify-around items-center w-full h-16 bg-blue-800 px-10 py-4">
+      <div>
+        <Link href="/" className="flex gap-5 items-center">
+          <Image
+            src={'/backencito.png'}
+            width={50}
+            height={50}
+            alt="fondo"
+            className="rounded-xl"
+          />
           <h2 className="text-2xl text-white hover:text-blue-300 transition duration-300">
             Backendito
           </h2>
