@@ -1,3 +1,5 @@
+import { createDarkPalette } from '@/shared/styles/themes/darkTheme';
+import { createLightPalette } from '@/shared/styles/themes/lightTheme';
 import type { Config } from 'tailwindcss';
 
 export default {
