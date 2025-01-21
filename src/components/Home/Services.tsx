@@ -13,7 +13,7 @@ const Services = () => {
       <div className="w-full max-w-7xl mx-auto">
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {useServicesList().map(services => (
-            <a
+            <Link
               href={services.path}
               key={services.title}
               className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-950 shadow-lg rounded-lg p-6 md:p-8 flex flex-col items-center text-center"
@@ -33,7 +33,7 @@ const Services = () => {
                   {services.description}
                 </p>
               </li>
-            </a>
+            </Link>
           ))}
         </ul>
       </div>

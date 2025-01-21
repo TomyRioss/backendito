@@ -1,11 +1,7 @@
-import { Button } from '@/components/ui/button';
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const ServicesInfo = () => {
-  const t = useTranslations('landingPage.ourServices.services');
-
   return (
     <div className="w-full bg-blue-800 dark:bg-blue-950 text-white py-12 md:py-16 px-4 md:px-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
