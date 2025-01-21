@@ -149,7 +149,7 @@ export default function About() {
                     whileHover={{ scale: 1.03 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <p className="text-lg mb-4">"{testimonial.text}"</p>
+                    <p className="text-lg mb-4">{testimonial.text}</p>
                     <p className="font-semibold">{testimonial.name}</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
                       {testimonial.company}
