@@ -2,6 +2,11 @@ import { createDarkPalette } from './src/shared/styles/themes/darkTheme';
 import { createLightPalette } from './src/shared/styles/themes/lightTheme';
 import type { Config } from 'tailwindcss';
 
+// Si realmente necesitas `createDarkPalette` y `createLightPalette`, defínelos aquí o elimínalos.
+const createDarkPalette = {};
+const createLightPalette = {};
+
+
 export default {
   darkMode: ['class'],
   content: [
