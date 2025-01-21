@@ -5,6 +5,7 @@ import { MdOutlineDesktopMac, MdOutlineMessage } from 'react-icons/md';
 
 const planesData = [
   {
+    id: '12',
     title: 'Aplicación Básica',
     description:
       'Ideal para pequeñas empresas o emprendedores que necesitan una solución rápida y funcional.',
@@ -20,6 +21,7 @@ const planesData = [
     price: '$1,000 USD',
   },
   {
+    id: '13',
     title: 'Aplicación Avanzada',
     description:
       'Diseñado para empresas que requieren aplicaciones personalizadas y optimizadas.',
@@ -35,6 +37,7 @@ const planesData = [
     price: '$2,500 USD',
   },
   {
+    id: '14',
     title: 'Aplicación Empresarial',
     description:
       'Perfecto para empresas consolidadas que necesitan aplicaciones robustas, escalables y seguras.',

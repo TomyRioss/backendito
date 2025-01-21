@@ -6,6 +6,7 @@ import { MdOutlineShoppingCart, MdOutlineMessage } from 'react-icons/md';
 // Datos dinámicos para los planes
 const planesData = [
   {
+    id: '7',
     title: 'Web Sencilla',
     description:
       'Ideal para pequeños proyectos, marcas personales con funcionalidades básicas.',
@@ -24,6 +25,7 @@ const planesData = [
     support: '1 mes',
   },
   {
+    id: '8',
     title: 'Web Premium',
     description:
       'Perfecta para negocios que buscan escalar su presencia en línea, vender productos y gestionar inventarios.',
@@ -42,6 +44,7 @@ const planesData = [
     support: '3 meses',
   },
   {
+    id: '9',
     title: 'Web Empresarial',
     description:
       'Ideal para negocios consolidados que buscan un sitio profesional con funcionalidades avanzadas, diseño atractivo y SEO perfeccionado.',

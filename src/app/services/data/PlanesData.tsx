@@ -5,6 +5,7 @@ import { MdOutlineAnalytics, MdOutlineMessage } from 'react-icons/md';
 
 const planesData = [
   {
+    id: '13',
     title: 'Análisis Básico',
     description:
       'Ideal para pequeñas empresas o proyectos personales que necesitan obtener insights clave de sus datos.',
@@ -20,6 +21,7 @@ const planesData = [
     price: '$700 USD',
   },
   {
+    id: '14',
     title: 'Análisis Avanzado',
     description:
       'Diseñado para empresas que necesitan una comprensión más profunda y herramientas avanzadas de análisis.',
@@ -35,6 +37,7 @@ const planesData = [
     price: '$1,500 USD',
   },
   {
+    id: '15',
     title: 'Análisis Empresarial',
     description:
       'Perfecto para grandes empresas que buscan aprovechar al máximo sus datos con soluciones a medida y modelos avanzados.',

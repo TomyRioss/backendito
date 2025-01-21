@@ -20,7 +20,7 @@ const Cards = () => {
       <div className="flex flex-col gap-4 w-full p-10">
         {cardsLogic.map(card => (
           <div
-            key={card.title}
+            key={card.id}
             className="flex items-center gap-16 p-6 bg-blue-100 rounded-md border-2 border-gray-300 shadow-lg transition-transform transform hover:scale-105 duration-300"
           >
             <Image

@@ -5,6 +5,7 @@ import { MdOutlineCode, MdOutlineMessage } from 'react-icons/md';
 
 const planesData = [
   {
+    id: '9',
     title: 'Scripting Básico',
     description:
       'Ideal para pequeños proyectos o tareas específicas que requieren automatización simple y eficaz.',
@@ -20,6 +21,7 @@ const planesData = [
     price: '$500 USD',
   },
   {
+    id: '10',
     title: 'Scripting Avanzado',
     description:
       'Perfecto para soluciones complejas que requieren optimización, escalabilidad y soporte avanzado.',
@@ -35,6 +37,7 @@ const planesData = [
     price: '$1,200 USD',
   },
   {
+    id: '11',
     title: 'Scripting Empresarial',
     description:
       'Diseñado para grandes empresas que necesitan soluciones de scripting personalizadas y seguras para procesos críticos.',

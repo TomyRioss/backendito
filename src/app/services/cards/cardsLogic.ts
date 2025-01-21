@@ -1,5 +1,6 @@
 const cardsLogic = [
   {
+    id: 0,
     path: '/services/web',
     title: 'Desarrollo Web',
     description:
@@ -9,6 +10,7 @@ const cardsLogic = [
     timeout: '4 Días',
   },
   {
+    id: 1,
     path: '/services/data',
     title: 'Ánalisis de Datos',
     description:
@@ -18,6 +20,7 @@ const cardsLogic = [
     timeout: '3 Días',
   },
   {
+    id: 2,
     path: '/services/desktop',
     title: 'Desarrollo Desktop',
     description:
@@ -27,6 +30,7 @@ const cardsLogic = [
     timeout: '4 Días',
   },
   {
+    id: 3,
     path: '/services/mobile',
     title: 'Desarrollo Mobile',
     description:
@@ -36,6 +40,7 @@ const cardsLogic = [
     timeout: '5 Días',
   },
   {
+    id: 4,
     path: '/services/script',
     title: 'Servicios Scripting',
     description:
@@ -45,6 +50,7 @@ const cardsLogic = [
     timeout: '5 Días',
   },
   {
+    id: 5,
     path: '/services/seo',
     title: 'Consultoría SEO',
     description:

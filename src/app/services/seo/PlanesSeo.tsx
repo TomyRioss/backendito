@@ -5,6 +5,7 @@ import { MdOutlineDesktopMac, MdOutlineMessage } from 'react-icons/md';
 
 const planesData = [
   {
+    id: '4',
     title: 'Consultoría SEO Básica',
     description:
       'Ideal para sitios web pequeños o startups que buscan optimización inicial y un análisis básico de SEO.',
@@ -20,6 +21,7 @@ const planesData = [
     price: '$800 USD',
   },
   {
+    id: '5',
     title: 'Consultoría SEO Avanzada',
     description:
       'Perfecto para negocios que necesitan una optimización profunda, estrategia a largo plazo y seguimiento continuo.',
@@ -35,6 +37,7 @@ const planesData = [
     price: '$1,500 USD',
   },
   {
+    id: '6',
     title: 'Consultoría SEO Empresarial',
     description:
       'Diseñado para grandes empresas o sitios web complejos que requieren soluciones integrales y personalizadas para mejorar su presencia en buscadores.',
