@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Servicios IT',
-  description: 'Backendito',
+  title: 'Backendito | Desarrollo Web',
+  description: 'Backendito, un sitio web para desarrollo web',
 };
 
 export default async function RootLayout({
@@ -32,6 +32,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <link rel="icon" href="/backenditoIcon.ico" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >

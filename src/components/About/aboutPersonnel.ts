@@ -63,7 +63,7 @@ const frontendPersonnel = [
     initials: 'MA',
     name: 'Miguel Angel',
     role: 'Frontend Developer',
-    CV: 'https://github.com/FallasDev.',
+    CV: ' https://www.linkedin.com/in/miguel-angel-fernandez-barco-7b802429b/.',
     portfolio: 'https://miguelangeldev.vercel.app',
   },
   {

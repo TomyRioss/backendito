@@ -2,6 +2,7 @@ import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { MdOutlineMobileFriendly, MdOutlineMessage } from 'react-icons/md';
+import Link from 'next/link';
 
 const planesData = [
   {
@@ -110,10 +111,12 @@ const PlanesMobile = () => {
                 <MdOutlineMobileFriendly />
                 Comprar
               </Button>
-              <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
-                <MdOutlineMessage />
-                Contactar
-              </Button>
+              <Link href={'/contact'}>
+                <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white w-full">
+                  <MdOutlineMessage />
+                  Contactar
+                </Button>
+              </Link>
             </div>
           </div>
         ))}

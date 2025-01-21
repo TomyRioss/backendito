@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const Info = () => {
   const t = useTranslations('landingPage.contact');
@@ -24,9 +25,11 @@ export const Info = () => {
         <p className="text-xl text-black dark:text-white">
           {t('ourTeamPlansTheSolution')}
         </p>
-        <Button className="bg-blue-400 hover:bg-blue-500  w-48 p-6 rounded-xl mt-10">
-          <h2 className="text-lg">{t('contactUs')}</h2>
-        </Button>
+        <Link href={'/contact'}>
+          <Button className="bg-blue-400 hover:bg-blue-500  w-48 p-6 rounded-xl mt-10">
+            <h2 className="text-lg">{t('contactUs')}</h2>
+          </Button>
+        </Link>
       </div>
     </article>
   );

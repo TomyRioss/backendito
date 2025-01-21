@@ -2,6 +2,7 @@ import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { MdOutlineCode, MdOutlineMessage } from 'react-icons/md';
+import Link from 'next/link';
 
 const planesData = [
   {
@@ -108,15 +109,17 @@ const PlanesDesktop = () => {
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
               ¡Aprovecha este precio exclusivo! Contáctanos para más detalles.
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 ">
               <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white">
                 <MdOutlineCode />
                 Comprar
               </Button>
-              <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white">
-                <MdOutlineMessage />
-                Contactar
-              </Button>
+              <Link href={'/contact'}>
+                <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white w-full">
+                  <MdOutlineMessage />
+                  Contactar
+                </Button>
+              </Link>
             </div>
           </div>
         ))}

@@ -26,9 +26,9 @@
           "title": "Análisis de Datos",
           "description": "Análisis avanzado basado en dato para la toma de decisiones."
         },
-        "design": {
-          "title": "Diseño Web",
-          "description": "Herramientas diseñadas para tus necesidades específicas."
+        "desktop": {
+          "title": "Diseño Aplicaciones de Escritorio",
+          "description": "Aplicaciones simples o complejas, para cualquier tarea."
         },
         "mobile": {
           "title": "Desarrollo Mobile",

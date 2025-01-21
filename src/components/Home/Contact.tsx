@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Contact = () => {
   const t = useTranslations('landingPage.contact');
@@ -14,9 +15,11 @@ const Contact = () => {
           {t('neverLeaveAProblemUnsolved')}
         </h2>
         <p className="text-xl text-white">{t('ourTeamPlansTheSolution')}</p>
-        <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-48 p-6 rounded-xl mt-10">
-          <h2 className="text-lg">{t('contactUs')}</h2>
-        </Button>
+        <Link href={'/contact'}>
+          <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-48 p-6 rounded-xl mt-10">
+            <h2 className="text-lg">{t('contactUs')}</h2>
+          </Button>
+        </Link>
       </div>
       <div className="flex justify-center items-center">
         <Image src={'/contact.svg'} alt="contact" width={500} height={500} />

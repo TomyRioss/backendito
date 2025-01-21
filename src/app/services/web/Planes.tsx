@@ -126,7 +126,7 @@ const Planes = () => {
               Precio
             </h3>
             <h4 className="mt-2 text-green-500 text-xl">{plan.price}</h4>
-            <div className="grid grid-flow-col grid-cols-2 justify-center items-center w-full mt-10 gap-4">
+            <div className="grid grid-flow-col grid-cols-2 justify-center items-center w-full mt-10 gap-4 ">
               <Button>
                 <MdOutlineShoppingCart />
                 Comprar

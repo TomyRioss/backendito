@@ -26,9 +26,9 @@
           "title": "Data Analysis",
           "description": "Advanced data analysis for decision-making."
         },
-        "design": {
-          "title": "Web Design",
-          "description": "Tools designed for your specific needs."
+        "desktop": {
+          "title": "Desktop Development",
+          "description": "Simple or complex applications for any task."
         },
         "mobile": {
           "title": "Mobile Development",

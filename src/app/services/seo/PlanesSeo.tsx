@@ -1,68 +1,69 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
-import { MdOutlineInsights, MdOutlineContactSupport } from 'react-icons/md';
+import { MdOutlineSearch, MdOutlineContactSupport } from 'react-icons/md';
+import Link from 'next/link';
 
-const planesDataAnalytics = [
+const planesSeoData = [
   {
     id: '1',
-    title: 'Análisis Básico de Datos',
+    title: 'Consultoría SEO Básica',
     description:
-      'Ideal para pequeñas empresas o proyectos que buscan comprender tendencias clave en sus datos.',
+      'Ideal para sitios web pequeños o startups que buscan optimización inicial y un análisis básico de SEO.',
     details: {
-      'Recopilación de Datos': '✅',
-      'Análisis Exploratorio': '✅',
-      'Visualización Básica': '✅',
+      'Análisis de Palabras Clave': '✅',
+      'Auditoría SEO Inicial': '✅',
+      'Optimización On-Page': '✅',
       'Informe Resumido': '✅',
-      'Modelos Predictivos': '❌',
-      'Integración de Herramientas BI': '❌',
+      'Optimización de Contenidos': '❌',
+      'Enlace Interno y Externo': '❌',
     },
     deliveryTime: '1 - 2 Semanas',
     price: '$50 USD',
   },
   {
     id: '2',
-    title: 'Análisis Avanzado de Datos',
+    title: 'Consultoría SEO Avanzada',
     description:
-      'Diseñado para empresas que necesitan estrategias basadas en datos y análisis avanzados.',
+      'Perfecto para negocios que necesitan una optimización más profunda y estrategias de largo plazo.',
     details: {
-      'Recopilación y Limpieza de Datos': '✅',
-      'Análisis Exploratorio Avanzado': '✅',
-      'Dashboards Interactivos': '✅',
-      'Modelos Predictivos': '✅',
-      'Optimización de Procesos con Datos': '❌',
-      'Integración de Herramientas BI': '❌',
+      'Análisis Profundo de Competencia': '✅',
+      'Auditoría SEO Completa': '✅',
+      'Optimización Avanzada On-Page y Off-Page': '✅',
+      'Informe Detallado': '✅',
+      'Optimización de Contenidos': '✅',
+      'Enlace Interno y Externo': '❌',
     },
     deliveryTime: '3 - 4 Semanas',
     price: '$90 USD',
   },
   {
     id: '3',
-    title: 'Consultoría Empresarial de Datos',
+    title: 'Consultoría SEO Empresarial',
     description:
-      'Ideal para grandes empresas que necesitan soluciones avanzadas e integradas en sus operaciones.',
+      'Diseñado para grandes empresas que requieren soluciones avanzadas y personalizadas para mejorar su presencia en buscadores.',
     details: {
-      'Estrategia Basada en Datos': '✅',
-      'Desarrollo de Modelos Predictivos': '✅',
-      'Integración Completa de Herramientas BI': '✅',
+      'Estrategia SEO Personalizada': '✅',
+      'Auditoría SEO Completa': '✅',
+      'Optimización Integral de Contenidos': '✅',
+      'Link Building Avanzado': '✅',
       'Análisis en Tiempo Real': '✅',
       'Soporte Técnico Dedicado': '✅',
-      'Automatización de Procesos': '✅',
     },
     deliveryTime: '6 - 8 Semanas',
     price: '$150 USD',
   },
 ];
 
-const PlanesDataAnalytics = () => {
+const PlanesSeo = () => {
   return (
     <section className="w-full px-4 py-6 bg-gray-50 dark:bg-gray-900">
       <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-white">
-        Soluciones Personalizadas en Data Analytics
+        Soluciones Personalizadas en Consultoría SEO
       </h2>
 
       <article className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {planesDataAnalytics.map((plan, index) => (
+        {planesSeoData.map((plan, index) => (
           <div
             key={index}
             className="p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition-transform transform hover:scale-105"
@@ -107,18 +108,20 @@ const PlanesDataAnalytics = () => {
             </div>
             <Separator className="my-4" />
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
-              ¡Transforma tus datos en decisiones inteligentes! Contáctanos para
-              más información.
+              ¡Optimiza tu presencia en línea hoy mismo! Contáctanos para más
+              información.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white">
-                <MdOutlineInsights />
+                <MdOutlineSearch />
                 Comprar
               </Button>
-              <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white">
-                <MdOutlineContactSupport />
-                Contactar
-              </Button>
+              <Link href={'/contact'}>
+                <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white w-full">
+                  <MdOutlineContactSupport />
+                  Contactar
+                </Button>
+              </Link>
             </div>
           </div>
         ))}
@@ -127,4 +130,4 @@ const PlanesDataAnalytics = () => {
   );
 };
 
-export default PlanesDataAnalytics;
+export default PlanesSeo;

@@ -4,6 +4,7 @@ import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { MdOutlineDesktopMac, MdOutlineMessage } from 'react-icons/md';
+import Link from 'next/link';
 
 const planesData = [
   {
@@ -117,10 +118,12 @@ const PlanesDesktop = () => {
                 <MdOutlineDesktopMac />
                 Comprar
               </Button>
-              <Button className="flex justify-center items-center gap-2">
-                <MdOutlineMessage />
-                Contactar
-              </Button>
+              <Link href={'/contact'}>
+                <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 hover:bg-gray-300 dark:text-white w-full">
+                  <MdOutlineMessage />
+                  Contactar
+                </Button>
+              </Link>
             </div>
           </div>
         ))}

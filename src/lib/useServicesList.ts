@@ -23,10 +23,10 @@ export const useServicesList = (): ServicesItemsType[] => {
       image: '/mobile.svg',
     },
     {
-      path: '/services/design',
-      title: t('design.title'),
-      description: t('design.description'),
-      image: '/design.svg',
+      path: '/services/desktop',
+      title: t('desktop.title'),
+      description: t('desktop.description'),
+      image: '/desktop.svg',
     },
     {
       path: '/services/data',

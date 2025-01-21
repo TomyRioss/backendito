@@ -90,14 +90,35 @@ export default function About() {
               </motion.div>
 
               <div className="grid grid-cols-2 gap-2 mt-6 w-full ">
-                <a href={person.CV} target="_blank">
+                {person.portfolio === '' ? (
+                  <a
+                    href={person.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-red-500 hover:bg-red-600 text-black w-full">
+                      Port.
+                    </Button>
+                  </a>
+                ) : (
+                  <a
+                    href={person.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                      Port.
+                    </Button>
+                  </a>
+                )}
+
+                <a
+                  href={person.CV}
+                  target="_blank"
+                  className="flex justify-center items-center gap-2"
+                >
                   <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
                     CV
-                  </Button>
-                </a>
-                <a href={person.portfolio} target="_blank">
-                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
-                    Port.
                   </Button>
                 </a>
               </div>
@@ -141,11 +162,27 @@ export default function About() {
                     CV
                   </Button>
                 </a>
-                <a href={person.portfolio} target="_blank">
-                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
-                    Port.
-                  </Button>
-                </a>
+                {person.portfolio === '' ? (
+                  <a
+                    href={person.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-red-500 hover:bg-red-600 text-black w-full">
+                      Port.
+                    </Button>
+                  </a>
+                ) : (
+                  <a
+                    href={person.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                      Port.
+                    </Button>
+                  </a>
+                )}
               </div>
             </FadeIn>
           ))}
@@ -183,16 +220,27 @@ export default function About() {
               </motion.div>
 
               <div className="grid grid-cols-2 gap-2 mt-6 w-full ">
-                <a href={person.CV} target="_blank">
-                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
-                    CV
-                  </Button>
-                </a>
-                <a href={person.portfolio} target="_blank">
-                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
-                    Port.
-                  </Button>
-                </a>
+                {person.portfolio === '' ? (
+                  <a
+                    href={person.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-red-500 hover:bg-red-600 text-black w-full">
+                      Port.
+                    </Button>
+                  </a>
+                ) : (
+                  <a
+                    href={person.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                      Port.
+                    </Button>
+                  </a>
+                )}
               </div>
             </FadeIn>
           ))}
@@ -229,18 +277,27 @@ export default function About() {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-2 gap-2 mt-6 w-full ">
-                <a href={person.CV} target="_blank">
-                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
-                    CV
+              {person.portfolio === '' ? (
+                <a
+                  href={person.portfolio}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-red-500 hover:bg-red-600 text-black w-full">
+                    Port.
                   </Button>
                 </a>
-                <a href={person.portfolio} target="_blank">
+              ) : (
+                <a
+                  href={person.portfolio}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
                     Port.
                   </Button>
                 </a>
-              </div>
+              )}
             </FadeIn>
           ))}
         </div>
@@ -282,11 +339,27 @@ export default function About() {
                     CV
                   </Button>
                 </a>
-                <a href={person.portfolio} target="_blank">
-                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
-                    Port.
-                  </Button>
-                </a>
+                {person.portfolio === '' ? (
+                  <a
+                    href={person.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-red-500 hover:bg-red-600 text-black w-full">
+                      Port.
+                    </Button>
+                  </a>
+                ) : (
+                  <a
+                    href={person.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                      Port.
+                    </Button>
+                  </a>
+                )}
               </div>
             </FadeIn>
           ))}
