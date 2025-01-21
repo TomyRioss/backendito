@@ -1,17 +1,21 @@
 import Cards from '@/app/services/cards/Cards';
+import { Separator } from '@/components/ui/separator';
 
 export default function Services() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center m-10  text-black">
-        <h2 className="text-4xl font-bold mt-20">
-          Estos son nuestros servicios.
-        </h2>
-        <p className="text-gray-500 text-base">
-          *Todos los precios son en USD, los pagos se realizan por Binance o
-          Paypal.
-        </p>
+      <div className="flex flex-col items-center justify-center w-full text-white dark:bg-gradient-to-b dark:from-blue-900 dark:via-gray-800 dark:to-gray-900 ">
+        <div className="mt-10">
+          <h2 className="text-4xl font-bold mt-10 text-blue-400 dark:text-blue-800">
+            Estos son nuestros servicios.
+          </h2>
+          <p className="mt-4 text-gray-400 dark:text-gray-400 text-base">
+            *Todos los precios son en USD, los pagos se realizan por Binance o
+            Paypal.
+          </p>
+        </div>
       </div>
+      <Separator className="dark:bg-blue-950" />
 
       <Cards />
     </>

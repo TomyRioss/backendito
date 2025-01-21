@@ -1,6 +1,5 @@
 'use client';
 import backencito from '../../../public/backencito.png';
-
 import { GoPerson } from 'react-icons/go';
 import { MdSubject, MdMessage } from 'react-icons/md';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
@@ -48,30 +47,32 @@ export default function Contact() {
   };
 
   return (
-    <div>
-      {isSubmitted && <div>¡Formulario enviado con éxito!</div>}
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      {isSubmitted && (
+        <div className="p-4 mb-4 text-white bg-green-500 rounded-md">
+          ¡Formulario enviado con éxito!
+        </div>
+      )}
       <Formik
         initialValues={{ name: '', subject: '', consult: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
         {({ isSubmitting }) => (
-          <div className="flex w-full h-[90vh] justify-evenly  items-center">
+          <div className="flex w-full h-[90vh] justify-evenly items-center">
             <Form className="flex flex-col gap-6 justify-center items-center border-2 shadow-md rounded-md border-gray w-[25rem] h-[35rem]">
               <span className="font-bold text-blue-700 text-[2rem]">
-                Contactanos
+                Contáctanos
               </span>
 
-              {/* Campo Nombre */}
-
               <div>
-                <div className="flex relative border-[1px] shadow-sm border-gray rounded-md w-72 h-10 bg-white">
+                <div className="flex relative border-[1px] shadow-sm border-gray rounded-md w-72 h-10 bg-white dark:bg-gray-800">
                   <GoPerson className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-500" />
                   <Field
                     type="text"
                     name="name"
                     placeholder="Tu nombre"
-                    className="pl-10 flex-grow outline-none bg-transparent"
+                    className="pl-10 flex-grow outline-none bg-transparent text-gray-900 dark:text-white"
                   />
                 </div>
                 <ErrorMessage
@@ -81,15 +82,14 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Campo Asunto */}
               <div>
-                <div className="flex relative border-[1px] w-72 shadow-sm border-gray rounded-md h-10">
-                  <MdSubject className="absolute top-[30%] left-3   text-gray-500" />
+                <div className="flex relative border-[1px] w-72 shadow-sm border-gray rounded-md h-10 bg-white dark:bg-gray-800">
+                  <MdSubject className="absolute top-[30%] left-3 text-gray-500" />
                   <Field
                     type="text"
                     name="subject"
                     placeholder="Asunto"
-                    className="pl-10 flex-grow outline-none bg-transparent"
+                    className="pl-10 flex-grow outline-none bg-transparent text-gray-900 dark:text-white"
                   />
                 </div>
                 <ErrorMessage
@@ -99,15 +99,14 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Campo Consulta */}
               <div>
-                <div className="flex relative border-[1px] w-72 h-48 shadow-sm border-gray rounded-md ">
+                <div className="flex relative border-[1px] w-72 h-48 shadow-sm border-gray rounded-md bg-white dark:bg-gray-800">
                   <MdMessage className="absolute top-3 left-3 text-gray-500" />
                   <Field
                     as="textarea"
                     name="consult"
                     placeholder="Tu consulta"
-                    className="pl-10 pt-2 flex-grow outline-none bg-transparent resize-none"
+                    className="pl-10 pt-2 flex-grow outline-none bg-transparent resize-none text-gray-900 dark:text-white"
                   />
                 </div>
                 <ErrorMessage
@@ -117,7 +116,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Botón Enviar */}
               <button
                 type="submit"
                 disabled={isSubmitting}
@@ -126,7 +124,7 @@ export default function Contact() {
                 {isSubmitting ? 'Enviando...' : 'Enviar'}
               </button>
             </Form>
-            <div className="hidden md:flex  imagentexto h-[35rem] w-96  flex flex-col items-start ">
+            <div className="hidden md:flex imagentexto h-[35rem] w-96 flex flex-col items-start">
               <span className="text-blue-700 font-medium text-[2rem]">
                 Backencito
               </span>
@@ -137,7 +135,7 @@ export default function Contact() {
                 className="rounded-md w-96 h-96 mt-4"
                 src={backencito}
                 alt="backencito imagen"
-              ></Image>
+              />
             </div>
           </div>
         )}

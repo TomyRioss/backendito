@@ -18,7 +18,7 @@ const planesData = [
       'Actualizaciones Incluidas': '❌',
     },
     deliveryTime: '2 - 3 Semanas',
-    price: '$800 USD',
+    price: '$400.00 USD',
   },
   {
     id: '1',
@@ -34,7 +34,7 @@ const planesData = [
       'Actualizaciones Incluidas': '❌',
     },
     deliveryTime: '4 - 6 Semanas',
-    price: '$1,500 USD',
+    price: '$650.00 USD',
   },
   {
     id: '2',
@@ -50,51 +50,67 @@ const planesData = [
       'Actualizaciones Incluidas': '✅',
     },
     deliveryTime: '8 - 10 Semanas',
-    price: '$3,000 USD',
+    price: '$1,100.00 USD',
   },
 ];
 
 const PlanesMobile = () => {
   return (
-    <section className="w-full px-4 py-6 bg-gray-50">
-      <h2 className="text-2xl font-bold text-center mb-6">
+    <section className="w-full px-4 py-6 bg-gray-50 dark:bg-gray-900">
+      <h2 className="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-gray-100">
         Nuestros Planes de Desarrollo Móvil
       </h2>
       <article className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {planesData.map((plan, index) => (
           <div
             key={index}
-            className="p-4 border border-gray-300 rounded-lg shadow-lg bg-white"
+            className="p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg bg-white dark:bg-gray-800"
           >
-            <h3 className="text-xl font-bold">{plan.title}</h3>
-            <p className="text-gray-600 text-sm mt-2">{plan.description}</p>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+              {plan.title}
+            </h3>
+            <p className="text-gray-600 text-sm mt-2 dark:text-gray-400">
+              {plan.description}
+            </p>
             <Separator className="my-4" />
             <div>
-              <h3 className="text-lg font-bold mb-2">Características</h3>
+              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">
+                Características
+              </h3>
               <ul className="space-y-2">
                 {Object.entries(plan.details).map(([key, value]) => (
-                  <li key={key} className="flex justify-between text-sm">
-                    <span>{key}:</span> <span>{value}</span>
+                  <li
+                    key={key}
+                    className="flex justify-between text-sm dark:text-gray-100"
+                  >
+                    <span>{key}:</span>{' '}
+                    <span className="text-gray-900 dark:text-gray-300">
+                      {value}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
             <Separator className="my-4" />
             <div>
-              <h4 className="text-md font-semibold">Plazo de Entrega</h4>
-              <p className="text-sm text-gray-700">{plan.deliveryTime}</p>
+              <h4 className="text-md font-semibold text-gray-900 dark:text-gray-100">
+                Plazo de Entrega
+              </h4>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                {plan.deliveryTime}
+              </p>
             </div>
             <div>
               <h4 className="text-md font-semibold text-green-600">Precio</h4>
-              <p className="text-lg font-bold">{plan.price}</p>
+              <p className="text-lg font-bold text-green-600">{plan.price}</p>
             </div>
             <Separator className="my-4" />
             <div className="grid grid-cols-2 gap-4">
-              <Button className="flex justify-center items-center gap-2">
+              <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
                 <MdOutlineMobileFriendly />
                 Comprar
               </Button>
-              <Button className="flex justify-center items-center gap-2">
+              <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
                 <MdOutlineMessage />
                 Contactar
               </Button>

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
@@ -18,7 +20,7 @@ const planesData = [
       'Optimización de Rendimiento': '❌',
     },
     deliveryTime: '2 - 3 Semanas',
-    price: '$1,000 USD',
+    price: '$750.00 USD',
   },
   {
     id: '13',
@@ -34,7 +36,7 @@ const planesData = [
       'Optimización de Rendimiento': '✅',
     },
     deliveryTime: '4 - 6 Semanas',
-    price: '$2,500 USD',
+    price: '$1,500.00 USD',
   },
   {
     id: '14',
@@ -50,14 +52,14 @@ const planesData = [
       'Optimización de Rendimiento Avanzada': '✅',
     },
     deliveryTime: '6 - 8 Semanas',
-    price: '$5,000 USD',
+    price: '$2,500.00 USD',
   },
 ];
 
 const PlanesDesktop = () => {
   return (
-    <section className="w-full px-4 py-6 bg-gray-50">
-      <h2 className="text-2xl font-bold text-center mb-6">
+    <section className="w-full px-4 py-6 bg-gray-50 dark:bg-gray-900">
+      <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-200 mb-6">
         Nuestros Planes de Desarrollo Desktop
       </h2>
 
@@ -65,16 +67,25 @@ const PlanesDesktop = () => {
         {planesData.map((plan, index) => (
           <div
             key={index}
-            className="p-4 border border-gray-300 rounded-lg shadow-lg bg-white transition-transform transform hover:scale-105"
+            className="p-4 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition-transform transform hover:scale-105"
           >
-            <h3 className="text-xl font-bold">{plan.title}</h3>
-            <p className="text-gray-600 text-sm mt-2">{plan.description}</p>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+              {plan.title}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
+              {plan.description}
+            </p>
             <Separator className="my-4" />
             <div>
-              <h3 className="text-lg font-bold mb-2">Características</h3>
+              <h3 className="text-lg font-bold mb-2 text-gray-800 dark:text-gray-200">
+                Características
+              </h3>
               <ul className="space-y-2">
                 {Object.entries(plan.details).map(([key, value]) => (
-                  <li key={key} className="flex justify-between text-sm">
+                  <li
+                    key={key}
+                    className="flex justify-between text-sm dark:text-gray-200"
+                  >
                     <span>{key}:</span> <span>{value}</span>
                   </li>
                 ))}
@@ -82,15 +93,23 @@ const PlanesDesktop = () => {
             </div>
             <Separator className="my-4" />
             <div>
-              <h4 className="text-md font-semibold">Plazo de Entrega</h4>
-              <p className="text-sm text-gray-700">{plan.deliveryTime}</p>
+              <h4 className="text-md font-semibold text-gray-300 dark:text-gray-500">
+                Plazo de Entrega
+              </h4>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {plan.deliveryTime}
+              </p>
             </div>
             <div>
-              <h4 className="text-md font-semibold text-green-600">Precio</h4>
-              <p className="text-lg font-bold">{plan.price}</p>
+              <h4 className="text-md font-semibold text-green-400 dark:text-green-500">
+                Precio
+              </h4>
+              <p className="text-lg font-bold text-green-500 dark:text-green-400">
+                {plan.price}
+              </p>
             </div>
             <Separator className="my-4" />
-            <p className="text-xs text-gray-500 mb-4">
+            <p className="text-xs text-gray-500 dark:text-gray-300 mb-4">
               ¡Aprovecha este precio exclusivo! Contáctanos para más detalles.
             </p>
             <div className="grid grid-cols-2 gap-4">

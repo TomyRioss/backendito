@@ -1,101 +1,122 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
-import { MdOutlineAnalytics, MdOutlineMessage } from 'react-icons/md';
+import { MdOutlineInsights, MdOutlineContactSupport } from 'react-icons/md';
 
-const planesData = [
+const planesDataAnalytics = [
   {
-    id: '13',
-    title: 'Análisis Básico',
+    id: '1',
+    title: 'Análisis Básico de Datos',
     description:
-      'Ideal para pequeñas empresas o proyectos personales que necesitan obtener insights clave de sus datos.',
+      'Ideal para pequeñas empresas o proyectos que buscan comprender tendencias clave en sus datos.',
     details: {
-      'Análisis Descriptivo': '✅',
-      'Panel de Visualización Básico': '✅',
-      'Limpieza de Datos': '✅',
-      'Automatización de Informes': '❌',
+      'Recopilación de Datos': '✅',
+      'Análisis Exploratorio': '✅',
+      'Visualización Básica': '✅',
+      'Informe Resumido': '✅',
       'Modelos Predictivos': '❌',
-      'Soporte Técnico': '1 mes',
+      'Integración de Herramientas BI': '❌',
     },
     deliveryTime: '1 - 2 Semanas',
-    price: '$700 USD',
+    price: '$300 USD',
   },
   {
-    id: '14',
-    title: 'Análisis Avanzado',
+    id: '2',
+    title: 'Análisis Avanzado de Datos',
     description:
-      'Diseñado para empresas que necesitan una comprensión más profunda y herramientas avanzadas de análisis.',
+      'Diseñado para empresas que necesitan estrategias basadas en datos y análisis avanzados.',
     details: {
-      'Análisis Descriptivo': '✅',
-      'Panel de Visualización Personalizado': '✅',
-      'Limpieza y Transformación de Datos': '✅',
-      'Automatización de Informes': '✅',
-      'Modelos Predictivos Básicos': '✅',
-      'Soporte Técnico': '3 meses',
+      'Recopilación y Limpieza de Datos': '✅',
+      'Análisis Exploratorio Avanzado': '✅',
+      'Dashboards Interactivos': '✅',
+      'Modelos Predictivos': '✅',
+      'Optimización de Procesos con Datos': '❌',
+      'Integración de Herramientas BI': '❌',
     },
     deliveryTime: '3 - 4 Semanas',
-    price: '$1,500 USD',
+    price: '$800 USD',
   },
   {
-    id: '15',
-    title: 'Análisis Empresarial',
+    id: '3',
+    title: 'Consultoría Empresarial de Datos',
     description:
-      'Perfecto para grandes empresas que buscan aprovechar al máximo sus datos con soluciones a medida y modelos avanzados.',
+      'Ideal para grandes empresas que necesitan soluciones avanzadas e integradas en sus operaciones.',
     details: {
-      'Análisis Descriptivo': '✅',
-      'Panel de Visualización Avanzado': '✅',
-      'Limpieza y Transformación de Datos': '✅',
-      'Automatización de Informes': '✅',
-      'Modelos Predictivos y Prescriptivos': '✅',
-      'Soporte Técnico': '6 meses',
+      'Estrategia Basada en Datos': '✅',
+      'Desarrollo de Modelos Predictivos': '✅',
+      'Integración Completa de Herramientas BI': '✅',
+      'Análisis en Tiempo Real': '✅',
+      'Soporte Técnico Dedicado': '✅',
+      'Automatización de Procesos': '✅',
     },
     deliveryTime: '6 - 8 Semanas',
-    price: '$3,500 USD',
+    price: '$1.550 USD',
   },
 ];
 
-const Planes = () => {
+const PlanesData = () => {
   return (
-    <section className="w-full px-4 py-6 bg-gray-50">
-      <h2 className="text-2xl font-bold text-center mb-6">
-        Nuestros Planes de Data Analytics
+    <section className="w-full px-4 py-6 bg-gray-50 dark:bg-gray-900">
+      <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-white">
+        Soluciones Personalizadas en Data Analytics
       </h2>
+
       <article className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {planesData.map((plan, index) => (
+        {planesDataAnalytics.map((plan, index) => (
           <div
             key={index}
-            className="p-4 border border-gray-300 rounded-lg shadow-lg bg-white"
+            className="p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition-transform transform hover:scale-105"
           >
-            <h3 className="text-xl font-bold">{plan.title}</h3>
-            <p className="text-gray-600 text-sm mt-2">{plan.description}</p>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+              {plan.title}
+            </h3>
+            <p className="text-gray-600 text-sm mt-2 dark:text-gray-400">
+              {plan.description}
+            </p>
             <Separator className="my-4" />
             <div>
-              <h3 className="text-lg font-bold mb-2">Características</h3>
+              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
+                Características
+              </h3>
               <ul className="space-y-2">
                 {Object.entries(plan.details).map(([key, value]) => (
-                  <li key={key} className="flex justify-between text-sm">
-                    <span>{key}:</span> <span>{value}</span>
+                  <li
+                    key={key}
+                    className="flex justify-between text-sm dark:text-white"
+                  >
+                    <span>{key}:</span>{' '}
+                    <span className="text-gray-900 dark:text-gray-300">
+                      {value}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
             <Separator className="my-4" />
             <div>
-              <h4 className="text-md font-semibold">Plazo de Entrega</h4>
-              <p className="text-sm text-gray-700">{plan.deliveryTime}</p>
+              <h4 className="text-md font-semibold text-gray-900 dark:text-white">
+                Plazo de Entrega
+              </h4>
+              <p className="text-sm text-gray-700 dark:text-gray-300">
+                {plan.deliveryTime}
+              </p>
             </div>
             <div>
               <h4 className="text-md font-semibold text-green-600">Precio</h4>
-              <p className="text-lg font-bold">{plan.price}</p>
+              <p className="text-lg font-bold text-green-600">{plan.price}</p>
             </div>
             <Separator className="my-4" />
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+              ¡Transforma tus datos en decisiones inteligentes! Contáctanos para
+              más información.
+            </p>
             <div className="grid grid-cols-2 gap-4">
-              <Button className="flex justify-center items-center gap-2">
-                <MdOutlineAnalytics />
+              <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white">
+                <MdOutlineInsights />
                 Comprar
               </Button>
-              <Button className="flex justify-center items-center gap-2">
-                <MdOutlineMessage />
+              <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white">
+                <MdOutlineContactSupport />
                 Contactar
               </Button>
             </div>
@@ -106,4 +127,4 @@ const Planes = () => {
   );
 };
 
-export default Planes;
+export default PlanesData;

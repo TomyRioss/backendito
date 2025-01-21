@@ -66,38 +66,65 @@ const planesData = [
 
 const Planes = () => {
   return (
-    <section className="w-full px-8 my-20">
-      <h2 className="text-2xl font-bold flex justify-center items-center">
+    <section className="w-full px-8 bg-gray-50 dark:bg-gray-900">
+      <h2 className="text-2xl font-bold flex justify-center items-center text-gray-800 dark:text-gray-200 ">
         Nuestros Planes de Desarrollo
       </h2>
+
       <article className="grid grid-cols-3 gap-4 mt-10">
         {planesData.map((plan, index) => (
           <div
             key={index}
-            className="p-4 border border-gray-300 rounded shadow grid gap-6"
+            className="p-4 border border-gray-300 rounded shadow grid gap-6 bg-white dark:bg-gray-800"
           >
-            <h3 className="text-2xl font-bold">{plan.title}</h3>
-            <p className="text-gray-600">{plan.description}</p>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+              {plan.title}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              {plan.description}
+            </p>
             <Separator />
-            <h3 className="text-xl font-bold">Características</h3>
+            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">
+              Características
+            </h3>
             <ul className="mt-2 grid gap-2">
               {Object.entries(plan.details).map(([key, value]) => (
-                <li key={key} className="flex justify-between">
-                  <span>{key}:</span> <span className="text-xl">{value}</span>
+                <li
+                  key={key}
+                  className="flex justify-between dark:text-gray-300"
+                >
+                  <span>{key}:</span>{' '}
+                  <span className="text-xl text-gray-800 dark:text-gray-300">
+                    {value}
+                  </span>
                 </li>
               ))}
             </ul>
             <Separator />
-            <h3 className="text-xl font-bold">Cantidad de Páginas</h3>
-            <h4 className="mt-2">{plan.pages}</h4>
+            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">
+              Cantidad de Páginas
+            </h3>
+            <h4 className="mt-2 text-gray-900 dark:text-gray-100">
+              {plan.pages}
+            </h4>
             <Separator />
-            <h3 className="text-xl font-bold">Soporte Incluido</h3>
-            <h4 className="mt-2">{plan.support}</h4>
+            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">
+              Soporte Incluido
+            </h3>
+            <h4 className="mt-2 text-gray-900 dark:text-gray-100">
+              {plan.support}
+            </h4>
             <Separator />
-            <h3 className="text-xl font-bold">Plazo de Entrega</h3>
-            <h4 className="mt-2">{plan.deliveryTime}</h4>
+            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">
+              Plazo de Entrega
+            </h3>
+            <h4 className="mt-2 text-gray-900 dark:text-gray-100">
+              {plan.deliveryTime}
+            </h4>
             <Separator />
-            <h3 className="text-xl font-bold">Precio</h3>
+            <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">
+              Precio
+            </h3>
             <h4 className="mt-2 text-green-500 text-xl">{plan.price}</h4>
             <div className="grid grid-flow-col grid-cols-2 justify-center items-center w-full mt-10 gap-4">
               <Button>

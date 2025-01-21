@@ -19,7 +19,7 @@ function NavBar() {
   };
 
   return (
-    <header className="fixed flex justify-between items-center top-0 z-50 w-full h-16 bg-white  shadow-lg px-10 py-4">
+    <header className="fixed flex justify-between items-center top-0 z-50 w-full h-16 bg-white dark:bg-blue-900 shadow-lg px-10 py-4">
       <div className="flex items-center gap-4">
         <Link href="/" className="flex gap-2 items-center">
           <Image
@@ -29,7 +29,7 @@ function NavBar() {
             alt="fondo"
             className="rounded-full"
           />
-          <h2 className="text-2xl text-blue-900 hover:text-blue-600 transition duration-300">
+          <h2 className="text-2xl dark:text-white text-blue-900 hover:text-blue-600 transition duration-300">
             Backendito
           </h2>
         </Link>
@@ -39,7 +39,7 @@ function NavBar() {
           {useMenusList().map(({ name, path }) => (
             <li
               key={path}
-              className="flex text-gray-800 hover:text-blue-600 transition duration-300 font-bold font-xl"
+              className="flex dark:text-slate-300 dark:hover:text-slate-400 text-gray-800 hover:text-blue-600 transition duration-300  font-xl"
             >
               <Link href={path}>
                 <span>{name}</span>
@@ -50,9 +50,9 @@ function NavBar() {
           <li className="flex justify-center items-center text-white hover:text-blue-300 transition duration-300">
             <button onClick={toggleThemeHandler}>
               {isDarkTheme ? (
-                <MdLightMode className="text-black" />
+                <MdLightMode className="text-black dark:text-white" />
               ) : (
-                <MdDarkMode />
+                <MdDarkMode className="text-white" />
               )}
             </button>
           </li>

@@ -1,10 +1,20 @@
-"use client";
+'use client';
 
-import type * as React from "react";
-import { motion } from "framer-motion";
-import * as Avatar from "@radix-ui/react-avatar";
-import * as HoverCard from "@radix-ui/react-hover-card";
-import * as ScrollArea from "@radix-ui/react-scroll-area";
+import type * as React from 'react';
+import { motion } from 'framer-motion';
+import * as Avatar from '@radix-ui/react-avatar';
+import * as HoverCard from '@radix-ui/react-hover-card';
+import {
+  featuredPersonnel,
+  frontendPersonnel,
+  backendPersonnel,
+  fullstackPersonnel,
+  mobilePersonnel,
+} from './aboutPersonnel';
+import { Button } from '../ui/button';
+import { Separator } from '../ui/separator';
+import values from './valuesLogic';
+import Link from 'next/link';
 
 const FadeIn = ({ children }: { children: React.ReactNode }) => (
   <motion.div
@@ -19,173 +29,302 @@ const FadeIn = ({ children }: { children: React.ReactNode }) => (
 
 export default function About() {
   return (
-    <ScrollArea.Root className="w-full h-screen overflow-hidden">
-      <ScrollArea.Viewport className="w-full h-full">
-        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-          <FadeIn>
-            <section className="py-20 px-4 md:px-6 text-center">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                Sobre Nosotros
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Somos una start-up innovadora dedicada a transformar [tu
-                industria] con soluciones creativas y tecnología de vanguardia.
-              </p>
-            </section>
-          </FadeIn>
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <FadeIn>
+        <section className="py-20 px-4 md:px-6 text-center mt-10">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            Sobre Nosotros
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Somos una start-up de Desarrollo Web, damos servicios de desarrollo
+            con nuestros equipos de programadores altamente calificados, para
+            entregar constantemente código optimizado, responsivo, y de alta
+            calidad para todos nuestros clientes.
+          </p>
+        </section>
+      </FadeIn>
+      <Separator />
+      <FadeIn>
+        <section className="py-16 px-4 md:px-6  dark:bg-gray-800">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Nuestra Misión</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              Nuestra misión es brindar a nuestros clientes seguridad y la mayor
+              calidad posible en el menor tiempo. Nos esforzamos por conseguir
+              esto y estamos comprometidos con siempre dar una atención
+              excepcional a nuestros clientes.
+            </p>
+          </div>
+        </section>
+      </FadeIn>
 
-          <FadeIn>
-            <section className="py-16 px-4 md:px-6 bg-gray-100 dark:bg-gray-800">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl font-bold mb-6">Nuestra Misión</h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300">
-                  Nuestra misión es [describe tu misión aquí]. Nos esforzamos
-                  por [objetivos principales] y estamos comprometidos con
-                  [valores clave].
+      <section className="py-20 px-4 md:px-6">
+        <div className="mb-10 bg-yellow-200 dark:bg-yellow-800 p-4">
+          <h2 className="text-3xl font-bold text-center mb-2">
+            Personal Destacado
+          </h2>
+          <h4 className="text-center text-xl ">
+            Ellos ayudaron a programar este sitio web, ¡Gracias!
+          </h4>
+        </div>
+        <div className="flex p-20 gap-36 max-w-6xl mx-auto  ">
+          {featuredPersonnel.map(person => (
+            <FadeIn key={person.id}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-center cursor-pointer "
+              >
+                <Avatar.Root className="inline-flex bg-slate-200 dark:bg-gray-700 items-center justify-center overflow-hidden w-32 h-32 rounded-full border-2 border-black">
+                  <Avatar.Image
+                    src={`/placeholder.svg?height=200&width=200`}
+                    alt={`Team Member ${person.id + 1}`}
+                    className="w-full h-full object-cover "
+                  />
+                  <Avatar.Fallback delayMs={600}>
+                    {person.initials}
+                  </Avatar.Fallback>
+                </Avatar.Root>
+                <h3 className="font-semibold text-lg mt-4">{person.name}</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {person.role}
                 </p>
-              </div>
-            </section>
-          </FadeIn>
+              </motion.div>
 
-          <section className="py-20 px-4 md:px-6">
-            <FadeIn>
-              <h2 className="text-3xl font-bold text-center mb-12">
-                Nuestro Equipo
-              </h2>
+              <div className="grid grid-cols-2 gap-2 mt-6 w-full ">
+                <a href={person.CV} target="_blank">
+                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                    CV
+                  </Button>
+                </a>
+                <a href={person.portfolio} target="_blank">
+                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                    Port.
+                  </Button>
+                </a>
+              </div>
             </FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {[...Array(9)].map((_, i) => (
-                <FadeIn key={i}>
-                  <HoverCard.Root>
-                    <HoverCard.Trigger asChild>
-                      <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        className="text-center cursor-pointer"
-                      >
-                        <Avatar.Root className="inline-flex items-center justify-center overflow-hidden w-32 h-32 rounded-full">
-                          <Avatar.Image
-                            src={`/placeholder.svg?height=200&width=200`}
-                            alt={`Team Member ${i + 1}`}
-                            className="w-full h-full object-cover"
-                          />
-                          <Avatar.Fallback delayMs={600}>
-                            TM{i + 1}
-                          </Avatar.Fallback>
-                        </Avatar.Root>
-                        <h3 className="font-semibold text-lg mt-4">
-                          Nombre del Miembro
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          Cargo
-                        </p>
-                      </motion.div>
-                    </HoverCard.Trigger>
-                    <HoverCard.Portal>
-                      <HoverCard.Content className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
-                        <p className="text-sm">
-                          Breve descripción del miembro del equipo y sus
-                          responsabilidades.
-                        </p>
-                      </HoverCard.Content>
-                    </HoverCard.Portal>
-                  </HoverCard.Root>
-                </FadeIn>
+          ))}
+        </div>
+        <div className="mb-10 bg-orange-300 dark:bg-orange-800 p-4">
+          <h2 className="text-3xl font-bold text-center mb-2">
+            Departamento Frontend
+          </h2>
+          <h4 className="text-center text-xl ">
+            Ellos ayudaron a programar este sitio web, ¡Gracias!
+          </h4>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 p-14 gap-12 max-w-6xl mx-auto mt-20">
+          {frontendPersonnel.map(person => (
+            <FadeIn key={person.id}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-center cursor-pointer"
+              >
+                <Avatar.Root className="inline-flex bg-slate-200 dark:bg-gray-700 items-center justify-center overflow-hidden w-32 h-32 rounded-full border-2 border-black">
+                  <Avatar.Image
+                    src={`/placeholder.svg?height=200&width=200`}
+                    alt={`Team Member ${person.name}`}
+                    className="w-full h-full object-cover"
+                  />
+                  <Avatar.Fallback delayMs={600}>
+                    {person.initials}
+                  </Avatar.Fallback>
+                </Avatar.Root>
+                <h3 className="font-semibold text-lg mt-4">{person.name}</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {person.role}
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-2 gap-2 mt-6 w-full ">
+                <a href={person.CV} target="_blank">
+                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                    CV
+                  </Button>
+                </a>
+                <a href={person.portfolio} target="_blank">
+                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                    Port.
+                  </Button>
+                </a>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <div className="mb-10 bg-blue-500 dark:bg-blue-800 p-4">
+          <h2 className="text-3xl font-bold text-center mb-2 p-4">
+            Departamento Backend
+          </h2>
+          <h4 className="text-center text-xl ">
+            Ellos ayudaron a programar este sitio web, ¡Gracias!
+          </h4>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 p-14 gap-12 max-w-6xl mx-auto mt-20">
+          {backendPersonnel.map(person => (
+            <FadeIn key={person.id}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-center cursor-pointer"
+              >
+                <Avatar.Root className="inline-flex bg-slate-200 dark:bg-gray-700 items-center justify-center overflow-hidden w-32 h-32 rounded-full border-2 border-black">
+                  <Avatar.Image
+                    src={`/placeholder.svg?height=200&width=200`}
+                    alt={`Team Member ${person.name}`}
+                    className="w-full h-full object-cover"
+                  />
+                  <Avatar.Fallback delayMs={600}>
+                    {person.initials}
+                  </Avatar.Fallback>
+                </Avatar.Root>
+                <h3 className="font-semibold text-lg mt-4">{person.name}</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {person.role}
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-2 gap-2 mt-6 w-full ">
+                <a href={person.CV} target="_blank">
+                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                    CV
+                  </Button>
+                </a>
+                <a href={person.portfolio} target="_blank">
+                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                    Port.
+                  </Button>
+                </a>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <div className="mb-10 bg-purple-400 dark:bg-purple-800">
+          <h2 className="text-3xl font-bold text-center mb-2 p-4">
+            Departamento Fullstack
+          </h2>
+          <h4 className="text-center text-xl ">
+            Ellos ayudaron a programar este sitio web, ¡Gracias!
+          </h4>
+        </div>
+        <div className="flex justify-center items-center  p-14 gap-36 max-w-6xl mx-auto mt-20">
+          {fullstackPersonnel.map(person => (
+            <FadeIn key={person.id}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-center cursor-pointer"
+              >
+                <Avatar.Root className="inline-flex bg-slate-200 dark:bg-gray-700 items-center justify-center overflow-hidden w-32 h-32 rounded-full border-2 border-black">
+                  <Avatar.Image
+                    src={`/placeholder.svg?height=200&width=200`}
+                    alt={`Team Member ${person.name}`}
+                    className="w-full h-full object-cover"
+                  />
+                  <Avatar.Fallback delayMs={600}>
+                    {person.initials}
+                  </Avatar.Fallback>
+                </Avatar.Root>
+                <h3 className="font-semibold text-lg mt-4">{person.name}</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {person.role}
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-2 gap-2 mt-6 w-full ">
+                <a href={person.CV} target="_blank">
+                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                    CV
+                  </Button>
+                </a>
+                <a href={person.portfolio} target="_blank">
+                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                    Port.
+                  </Button>
+                </a>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <div className="mb-10 bg-green-400 dark:bg-green-800">
+          <h2 className="text-3xl font-bold text-center mb-2 p-4">
+            Departamento Mobile
+          </h2>
+          <h4 className="text-center text-xl ">
+            Ellos ayudaron a programar este sitio web, ¡Gracias!
+          </h4>
+        </div>
+        <div className="flex justify-center items-center p-14 gap-36 max-w-6xl mx-auto mt-20">
+          {mobilePersonnel.map(person => (
+            <FadeIn key={person.id}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-center cursor-pointer"
+              >
+                <Avatar.Root className="inline-flex bg-slate-200 dark:bg-gray-700 items-center justify-center overflow-hidden w-32 h-32 rounded-full border-2 border-black">
+                  <Avatar.Image
+                    src={`/placeholder.svg?height=200&width=200`}
+                    alt={`Team Member ${person.name}`}
+                    className="w-full h-full object-cover"
+                  />
+                  <Avatar.Fallback delayMs={600}>
+                    {person.initials}
+                  </Avatar.Fallback>
+                </Avatar.Root>
+                <h3 className="font-semibold text-lg mt-4">{person.name}</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {person.role}
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-2 gap-2 mt-6 w-full ">
+                <a href={person.CV} target="_blank">
+                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                    CV
+                  </Button>
+                </a>
+                <a href={person.portfolio} target="_blank">
+                  <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
+                    Port.
+                  </Button>
+                </a>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </section>
+
+      <FadeIn>
+        <section className="py-16 px-4 md:px-6 bg-gray-100 dark:bg-gray-800">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-8">
+              Nuestros Valores
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {values.map(value => (
+                <motion.div
+                  key={value.id}
+                  className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow"
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <h3 className="font-semibold text-xl mb-2">{value.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {value.description}
+                  </p>
+                </motion.div>
               ))}
             </div>
-          </section>
-
-          <FadeIn>
-            <section className="py-16 px-4 md:px-6 bg-gray-100 dark:bg-gray-800">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-8">
-                  Nuestros Valores
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[
-                    "Innovación",
-                    "Integridad",
-                    "Colaboración",
-                    "Excelencia",
-                  ].map((value, index) => (
-                    <motion.div
-                      key={index}
-                      className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow"
-                      whileHover={{ scale: 1.03 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <h3 className="font-semibold text-xl mb-2">{value}</h3>
-                      <p className="text-gray-600 dark:text-gray-300">
-                        Descripción breve del valor y cómo se aplica en nuestra
-                        start-up.
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </section>
-          </FadeIn>
-
-          <FadeIn>
-            <section className="py-20 px-4 md:px-6">
-              <h2 className="text-3xl font-bold text-center mb-12">
-                Lo que dicen nuestros clientes
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                {[
-                  {
-                    name: "María González",
-                    company: "Tech Innovators",
-                    text: "Esta start-up ha revolucionado nuestra forma de trabajar. Su innovación y dedicación son incomparables.",
-                  },
-                  {
-                    name: "Carlos Rodríguez",
-                    company: "Future Solutions",
-                    text: "Increíble equipo y producto. Han superado nuestras expectativas en todos los aspectos.",
-                  },
-                ].map((testimonial, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow"
-                    whileHover={{ scale: 1.03 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <p className="text-lg mb-4">"{testimonial.text}"</p>
-                    <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {testimonial.company}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </section>
-          </FadeIn>
-
-          <FadeIn>
-            <section className="py-20 px-4 md:px-6 text-center">
-              <h2 className="text-3xl font-bold mb-6">
-                Únete a Nuestra Aventura
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-                Estamos siempre buscando mentes brillantes y apasionadas para
-                unirse a nuestro equipo. ¿Listo para hacer un impacto?
-              </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Ver Oportunidades
-              </motion.button>
-            </section>
-          </FadeIn>
-        </div>
-      </ScrollArea.Viewport>
-      <ScrollArea.Scrollbar
-        className="flex select-none touch-none p-0.5 bg-gray-200 dark:bg-gray-800 transition-colors duration-[160ms] ease-out hover:bg-gray-300 dark:hover:bg-gray-700 data-[orientation=vertical]:w-2.5 data-[orientation=horizontal]:flex-col data-[orientation=horizontal]:h-2.5"
-        orientation="vertical"
-      >
-        <ScrollArea.Thumb className="flex-1 bg-gray-400 dark:bg-gray-600 rounded-[10px] relative before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:w-full before:h-full before:min-w-[44px] before:min-h-[44px]" />
-      </ScrollArea.Scrollbar>
-    </ScrollArea.Root>
+            <div className="text-center mt-8">
+              <Link href="/contact">
+                <Button className="bg-blue-500 hover:bg-blue-600 text-white w-full">
+                  Contáctanos
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
+    </div>
   );
 }
