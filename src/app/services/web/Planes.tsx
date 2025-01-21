@@ -24,7 +24,7 @@ const planesData = [
     support: '1 mes',
   },
   {
-    title: 'Web Empresarial',
+    title: 'Web Premium',
     description:
       'Perfecta para negocios que buscan escalar su presencia en línea, vender productos y gestionar inventarios.',
     details: {
@@ -42,7 +42,7 @@ const planesData = [
     support: '3 meses',
   },
   {
-    title: 'Web Premium',
+    title: 'Web Empresarial',
     description:
       'Ideal para negocios consolidados que buscan un sitio profesional con funcionalidades avanzadas, diseño atractivo y SEO perfeccionado.',
     details: {

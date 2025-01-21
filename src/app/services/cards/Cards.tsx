@@ -16,37 +16,36 @@ import {
 
 const Cards = () => {
   return (
-    <div className="flex flex-col min-h-screen mb-20">
-      <div className="flex flex-col gap-4 w-full">
+    <div className="flex flex-col min-h-screen bg-white">
+      <div className="flex flex-col gap-4 w-full p-10">
         {cardsLogic.map(card => (
           <div
             key={card.title}
-            className="flex items-center gap-16 p-20 bg-blue-800 rounded-md border-2 border-black mx-20 shadow-lg transition-transform transform hover:scale-105 duration-300"
+            className="flex items-center gap-16 p-6 bg-blue-100 rounded-md border-2 border-gray-300 shadow-lg transition-transform transform hover:scale-105 duration-300"
           >
             <Image
               src={card.icon}
               alt={`${card.title} icon`}
               width={500}
               height={500}
+              className="rounded-full"
             />
             <div className="flex flex-col gap-4">
               <div>
-                <div>
-                  <h2 className="text-2xl font-bold text-white">
-                    {card.title}
-                  </h2>
-                  <Link href={card.path}>
-                    <span className="underline text-blue-500 hover:text-blue-600">
-                      Obten detalles.
-                    </span>
-                  </Link>
-                </div>
-                <p className="text-gray-200 mt-4">{card.description}</p>
+                <h2 className="text-2xl font-bold text-blue-900">
+                  {card.title}
+                </h2>
+                <Link href={card.path}>
+                  <span className="underline text-blue-600 hover:text-blue-700">
+                    Obten detalles.
+                  </span>
+                </Link>
+                <p className="text-gray-600 mt-2">{card.description}</p>
               </div>
-              <div className="grid grid-flow-row-1 grid-cols-2 gap-4 mt-10 text-black">
-                <div className=" justify-center items-center bg-cyan-300 hover:bg-cyan-400 w-full p-4 rounded-md ">
+              <div className="grid grid-flow-row-1 grid-cols-2 gap-4 mt-6 text-black">
+                <div className="justify-center items-center bg-cyan-300 hover:bg-cyan-400 w-full p-4 rounded-md">
                   <AlertDialog>
-                    <AlertDialogTrigger className="w-full text-center">
+                    <AlertDialogTrigger className="w-full text-center text-blue-900">
                       Precio: {card.price}
                     </AlertDialogTrigger>
                     <AlertDialogContent>
@@ -63,7 +62,7 @@ const Cards = () => {
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
-                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <AlertDialogCancel>Cancelar</AlertDialogCancel>
                         <AlertDialogAction className="w-full px-8 py-4 text-lg bg-green-500 hover:bg-green-600">
                           <Link href="/contact">Contactar</Link>
                         </AlertDialogAction>
@@ -71,9 +70,9 @@ const Cards = () => {
                     </AlertDialogContent>
                   </AlertDialog>
                 </div>
-                <div className="flex justify-center items-center bg-cyan-300 hover:bg-cyan-400 w-full p-4 rounded-md ">
+                <div className="flex justify-center items-center bg-cyan-300 hover:bg-cyan-400 w-full p-4 rounded-md">
                   <AlertDialog>
-                    <AlertDialogTrigger className="w-full text-center">
+                    <AlertDialogTrigger className="w-full text-center text-blue-900">
                       Plazo: {card.timeout}
                     </AlertDialogTrigger>
                     <AlertDialogContent>
@@ -96,7 +95,7 @@ const Cards = () => {
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
-                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <AlertDialogCancel>Cancelar</AlertDialogCancel>
                         <Link href="/contact">
                           <AlertDialogAction className="w-full px-8 py-4 text-lg bg-green-500 hover:bg-green-600">
                             Contactar
