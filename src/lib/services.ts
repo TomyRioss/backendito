@@ -1,36 +1,43 @@
-export const services = [
+import { useTranslations } from "next-intl";
+
+type ServicesItemsType = {
+  title: string;
+  description: string;
+  image: string;
+};
+
+export const services = (): ServicesItemsType[] => {
+  const t = useTranslations("landingPage.ourServices.services");
+  return [
     {
-      title: 'Inteligencia Artificial',
-      description:
-        'Modelos de AI para optimizar procesos y decisiones estratégicas.',
-      image: 'https://via.placeholder.com/100',
+      title: t("ia.title"),
+      description: t("ia.description"),
+      image: "https://via.placeholder.com/100",
     },
     {
-      title: 'Desarrollo Web',
-      description:
-        'Creamos sitios web rápidos y modernos, adaptados a tu negocio.',
-      image: 'https://via.placeholder.com/100',
+      title: t("web.title"),
+      description: t("web.description"),
+      image: "https://via.placeholder.com/100",
     },
     {
-      title: 'Soluciones a Medida',
-      description: 'Herramientas diseñadas para tus necesidades específicas.',
-      image: 'https://via.placeholder.com/100',
+      title: t("tailored.title"),
+      description: t("tailored.description"),
+      image: "https://via.placeholder.com/100",
     },
     {
-      title: 'Despliegue de Infraestructura',
-      description:
-        'Implementamos sistemas escalables y eficientes para tu negocio.',
-      image: 'https://via.placeholder.com/100',
+      title: t("infra.title"),
+      description: t("infra.description"),
+      image: "https://via.placeholder.com/100",
     },
     {
-      title: 'Análisis de Datos',
-      description: 'Análisis avanzado para tomar decisiones basadas en datos.',
-      image: 'https://via.placeholder.com/100',
+      title: t("data.title"),
+      description: t("data.description"),
+      image: "https://via.placeholder.com/100",
     },
     {
-      title: 'Seguridad y Escalabilidad',
-      description:
-        'Soluciones confiables, seguras y preparadas para crecer contigo.',
-      image: 'https://via.placeholder.com/100',
+      title: t("security.title"),
+      description: t("security.description"),
+      image: "https://via.placeholder.com/100",
     },
   ];
+};

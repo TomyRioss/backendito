@@ -1,7 +1,8 @@
 import { Languages, Locale } from "@/i18n/config";
 import { setUserLocale } from "@/shared/utils/getUserLocale";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { ReactElement, startTransition, useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { ReactElement, startTransition, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
 type LanguageDropdownSwitcherType = {
@@ -13,6 +14,7 @@ const LanguageDropdownSwitcher = (
 ): ReactElement => {
   const { defaultLang: defaultLang } = props;
   const [currentLanguage, setCurrentLanguage] = useState<Language>(defaultLang);
+  const t = useTranslations("languageSelector");
 
   const toggleLanguageHandler = (language: Language): void => {
     const locale = language.value as Locale;
@@ -45,7 +47,7 @@ const LanguageDropdownSwitcher = (
                   )}
                 </>
               ) : (
-                <>There is no default, current option or info to show</>
+                <>{t("noDefaultOrCurrentLanguage")}</>
               )}
               <IoIosArrowDown />
             </div>
@@ -80,7 +82,7 @@ const LanguageDropdownSwitcher = (
                 </MenuItem>
               ))
             ) : (
-              <>There is no options</>
+              <>{t("noOptionsToShow")}</>
             )}
           </MenuItems>
         </Menu>

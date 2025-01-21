@@ -38,7 +38,7 @@ function NavBar() {
       {/* Mapeo de menú para el navbar */}
       <nav>
         <ul className="flex gap-10 justify-center items-center">
-          {menusList.map(({ name, path }) => (
+          {menusList().map(({ name, path }) => (
             <li
               key={path}
               className="relative text-white hover:text-blue-300 transition duration-300"
