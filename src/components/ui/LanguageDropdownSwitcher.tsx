@@ -1,15 +1,31 @@
+import { Languages, Locale } from "@/i18n/config";
+import { setUserLocale } from "@/shared/utils/getUserLocale";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { Dispatch, ReactElement, SetStateAction } from "react";
+import { ReactElement, startTransition, useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
-type BDDropdownType = {
-  options?: Language[] | object[];
-  current?: Language | object;
-  setCurrent: Dispatch<SetStateAction<object | Language | undefined>>;
+type LanguageDropdownSwitcherType = {
+  defaultLang?: Language;
 };
 
-const BDDropdown = (props: BDDropdownType): ReactElement => {
-  const { options, current: current, setCurrent } = props;
+const LanguageDropdownSwitcher = (
+  props: LanguageDropdownSwitcherType
+): ReactElement => {
+  const { defaultLang: defaultLang } = props;
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(
+    defaultLang || Languages[1]
+  );
+
+  const toggleLanguageHandler = (value: Locales): void => {
+    const locale = value as Locale;
+    startTransition(() => {
+      setUserLocale(locale);
+    });
+  };
+
+  useEffect(() => {
+    toggleLanguageHandler(currentLanguage.value);
+  }, [currentLanguage]);
 
   return (
     <>
@@ -23,12 +39,12 @@ const BDDropdown = (props: BDDropdownType): ReactElement => {
             aria-labelledby="listbox-label"
           >
             <div className="col-start-1 row-start-1 flex items-center pr-1">
-              {current ? (
+              {currentLanguage ? (
                 <>
-                  {"image" in current && (
+                  {"image" in currentLanguage && (
                     <img
-                      src={current.image}
-                      alt={current.name}
+                      src={currentLanguage.image}
+                      alt={currentLanguage.name}
                       className="size-5 shrink-0 rounded-full mr-1"
                     />
                   )}
@@ -44,12 +60,12 @@ const BDDropdown = (props: BDDropdownType): ReactElement => {
             anchor="bottom end"
             className="absolute z-10 right-0 pr-0 mt-1 max-h-56 w-32 overflow-auto rounded-md bg-dark-background-default py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm"
           >
-            {options ? (
-              options.map((option) => (
+            {Languages ? (
+              Languages.map((option) => (
                 <MenuItem key={`${option?.id || option}`}>
                   <button
                     className="relative w-full cursor-pointer select-none hover:bg-dark-background-paper py-2 px-3 text-dark-primary-light"
-                    onClick={() => setCurrent(option)}
+                    onClick={() => setCurrentLanguage(option)}
                   >
                     <div className="flex items-center">
                       {"image" in option && (
@@ -60,7 +76,7 @@ const BDDropdown = (props: BDDropdownType): ReactElement => {
                         />
                       )}
                       <span className="ml-3 block truncate font-normal">
-                        {option.name || option}
+                        {option.name}
                       </span>
                     </div>
                   </button>
@@ -76,4 +92,4 @@ const BDDropdown = (props: BDDropdownType): ReactElement => {
   );
 };
 
-export default BDDropdown;
+export default LanguageDropdownSwitcher;
