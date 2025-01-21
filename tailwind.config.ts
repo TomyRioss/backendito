@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryBlue: '#0E2286',
+        dark: createDarkPalette,
+        light: createLightPalette,
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

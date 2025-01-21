@@ -1,5 +1,3 @@
-import { time } from 'console';
-
 const cardsLogic = [
   {
     path: '/services/web',

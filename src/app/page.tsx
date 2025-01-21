@@ -1,4 +1,4 @@
-import { Contact } from '@/components/Home/Contact';
+import Contact from "@/components/Home/Contact";
 import { Info } from '@/components/Home/Info';
 import { Services } from '@/components/Home/Services';
 import HeaderHomepage from '@/components/Home/HeaderHomepage';
