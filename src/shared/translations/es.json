@@ -1,58 +1,58 @@
 {
-    "landingPage": {
-        "navbar": {
-            "home": "Inicio",
-            "services": "Servicios",
-            "aboutUs": "Nosotros",
-            "contact": "Contacto"
-        },
-        "head": {
-            "slogan": "Tu idea, nuestro trabajo."
-        },
-        "contact": {
-            "theSolutionToYourProject": "La solución a tu problema.",
-            "neverLeaveAProblemUnsolved": "Núnca dejamos un problema sin resolver.",
-            "ourTeamPlansTheSolution": "Todo nuestro equipo planifica la solución a cada problema posible que pudiera tener tu negocio, incluso si significa ir más allá de la programación, jamás va a haber un problema imposible.",
-            "contactUs": "Contáctanos"
-        },
-        "ourServices": {
-            "ourServices": "Nuestros Servicios",
-            "services": {
-                "ia": {
-                    "title": "Inteligencia Artificial",
-                    "description": "Modelos de AI para optimizar procesos y decisiones estratégicas."
-                },
-                "web": {
-                    "title": "Desarrollo Web",
-                    "description": "Creamos sitios web rápidos y modernos, adaptados a tu negocio."
-                },
-                "tailored": {
-                    "title": "Soluciones a la Medida",
-                    "description": "Herramientas diseñadas para tus necesidades específicas."
-                },
-                "infra": {
-                    "title": "Despliegue de Infraestructura",
-                    "description": "Implementamos sistemas escalables y eficientes para tu negocio."
-                },
-                "data": {
-                    "title": "Análisis de Datos",
-                    "description": "Análisis avanzado basado en dato para la toma de decisiones."
-                },
-                "security": {
-                    "title": "Seguridad y Escalabilidad",
-                    "description": "Soluciones confiables, seguras y escalables diseñadas para crecer contigo."
-                }
-            },
-            "servicesInfo": {
-                "join": "Únete a la innovación",
-                "getStarted": "Empieza tu proyecto con nosotros en minutos",
-                "contactUs": "Contáctanos hoy y da el primer paso hacia soluciones tecnológicas innovadoras que transformarán tu negocio.",
-                "startNow": "Empezar ahora"
-            }
-        }
+  "landingPage": {
+    "navbar": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "aboutUs": "Nosotros",
+      "contact": "Contacto"
     },
-    "languageSelector": {
-        "noDefaultOrCurrentLanguage": "No hay una opción default, actual o información para mostrar.",
-        "noOptionsToShow": "No hay opciones para mostrar."
+    "head": {
+      "slogan": "Tu idea, nuestro trabajo."
+    },
+    "contact": {
+      "theSolutionToYourProject": "La solución a tu problema.",
+      "neverLeaveAProblemUnsolved": "Núnca dejamos un problema sin resolver.",
+      "ourTeamPlansTheSolution": "Todo nuestro equipo planifica la solución a cada problema posible que pudiera tener tu negocio, incluso si significa ir más allá de la programación, jamás va a haber un problema imposible.",
+      "contactUs": "Contáctanos"
+    },
+    "ourServices": {
+      "ourServices": "Nuestros Servicios",
+      "services": {
+        "web": {
+          "title": "Desarrollo Web",
+          "description": "Creamos sitios web rápidos y modernos, adaptados a tu negocio."
+        },
+        "data": {
+          "title": "Análisis de Datos",
+          "description": "Análisis avanzado basado en dato para la toma de decisiones."
+        },
+        "design": {
+          "title": "Diseño Web",
+          "description": "Herramientas diseñadas para tus necesidades específicas."
+        },
+        "mobile": {
+          "title": "Desarrollo Mobile",
+          "description": "Implementamos sistemas escalables y eficientes para tu negocio."
+        },
+        "script": {
+          "title": "Servicio de Scripting",
+          "description": "Scripts para automatizar tareas."
+        },
+        "seo": {
+          "title": "Consultoría SEO",
+          "description": "Ten enseñamos cómo es que optimizamos nuestro SEO, para que tu sitio web sea más fácil de encontrar."
+        }
+      },
+      "servicesInfo": {
+        "join": "Únete a la innovación",
+        "getStarted": "Empieza tu proyecto con nosotros en minutos",
+        "contactUs": "Contáctanos hoy y da el primer paso hacia soluciones tecnológicas innovadoras que transformarán tu negocio.",
+        "startNow": "Empezar ahora"
+      }
     }
+  },
+  "languageSelector": {
+    "noDefaultOrCurrentLanguage": "No hay una opción default, actual o información para mostrar.",
+    "noOptionsToShow": "No hay opciones para mostrar."
+  }
 }

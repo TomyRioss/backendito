@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
 
 type ServicesItemsType = {
   title: string;
@@ -7,37 +7,37 @@ type ServicesItemsType = {
 };
 
 export const useServicesList = (): ServicesItemsType[] => {
-  const t = useTranslations("landingPage.ourServices.services");
+  const t = useTranslations('landingPage.ourServices.services');
   return [
     {
-      title: t("ia.title"),
-      description: t("ia.description"),
-      image: "https://via.placeholder.com/100",
+      title: t('web.title'),
+      description: t('web.description'),
+      image: '/web.svg',
     },
     {
-      title: t("web.title"),
-      description: t("web.description"),
-      image: "https://via.placeholder.com/100",
+      title: t('mobile.title'),
+      description: t('mobile.description'),
+      image: '/mobile.svg',
     },
     {
-      title: t("tailored.title"),
-      description: t("tailored.description"),
-      image: "https://via.placeholder.com/100",
+      title: t('design.title'),
+      description: t('design.description'),
+      image: '/design.svg',
     },
     {
-      title: t("infra.title"),
-      description: t("infra.description"),
-      image: "https://via.placeholder.com/100",
+      title: t('data.title'),
+      description: t('data.description'),
+      image: '/data.svg',
     },
     {
-      title: t("data.title"),
-      description: t("data.description"),
-      image: "https://via.placeholder.com/100",
+      title: t('script.title'),
+      description: t('script.description'),
+      image: '/wand.svg',
     },
     {
-      title: t("security.title"),
-      description: t("security.description"),
-      image: "https://via.placeholder.com/100",
+      title: t('seo.title'),
+      description: t('seo.description'),
+      image: '/seo.svg',
     },
   ];
 };
