@@ -1,43 +1,45 @@
 import React from 'react';
 import Link from 'next/link';
-import { ServicesInfo } from './ServicesInfo';
+import Image from 'next/image';
+import ServicesInfo from './ServicesInfo';
 import { useServicesList } from '@/lib/useServicesList';
-import { useTranslations } from 'next-intl';
 
-export const Services = () => {
-  const t = useTranslations('landingPage.ourServices');
-
+const Services = () => {
   return (
-    <div className="flex flex-col items-center bg-blue-800 dark:bg-blue-950 py-20">
-      <h2 className="text-4xl font-bold text-white mb-12">
-        {t('ourServices')}
+    <div className="flex flex-col items-center bg-blue-800 dark:bg-blue-950 py-12 md:py-20 px-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 md:mb-12 text-center">
+        Nuestros Servicios
       </h2>
-      <ul className="grid grid-cols-3 gap-10 justify-items-center w-11/12">
-        {useServicesList().map(service => (
-          <Link
-            href={service.path}
-            key={service.title + 1}
-            className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-950 shadow-lg rounded-lg p-8 flex flex-col items-center text-center w-full max-w-xl"
-          >
-            <li className="">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="mb-6 h-20 object-contain justify-center items-center w-full "
-              />
-              <h3 className="text-xl font-bold text-black dark:text-white">
-                {service.title}
-              </h3>
-              <p className="text-sm text-gray-700 mt-2 dark:text-white">
-                {service.description}
-              </p>
-            </li>
-          </Link>
-        ))}
-      </ul>
-      <div className="w-full mt-20">
-        <ServicesInfo />
+      <div className="w-full max-w-7xl mx-auto">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          {useServicesList().map(services => (
+            <a
+              href={services.path}
+              key={services.title}
+              className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-950 shadow-lg rounded-lg p-6 md:p-8 flex flex-col items-center text-center"
+            >
+              <li className="flex flex-col justify-center items-center">
+                <Image
+                  src={services.image}
+                  alt={services.title}
+                  width={100}
+                  height={100}
+                />
+
+                <h3 className="text-lg md:text-xl font-bold text-black dark:text-white">
+                  {services.title}
+                </h3>
+                <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mt-2">
+                  {services.description}
+                </p>
+              </li>
+            </a>
+          ))}
+        </ul>
       </div>
+      <ServicesInfo />
     </div>
   );
 };
+
+export default Services;

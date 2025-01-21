@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-6 dark:bg-blue-950">
+    <footer className="bg-gray-800 text-white py-6 dark:bg-slate-950">
       <div className="container mx-auto text-center">
         <p className="text-lg">
           Backendito © Todos los derechos reservados {new Date().getFullYear()}
