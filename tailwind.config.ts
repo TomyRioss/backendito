@@ -1,5 +1,10 @@
 import type { Config } from 'tailwindcss';
 
+// Si realmente necesitas `createDarkPalette` y `createLightPalette`, defínelos aquí o elimínalos.
+const createDarkPalette = {};
+const createLightPalette = {};
+
+
 export default {
   darkMode: ['class'],
   content: [
