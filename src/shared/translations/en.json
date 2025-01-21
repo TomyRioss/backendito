@@ -1,10 +1,58 @@
 {
-    "LandingPage": {
-        "Contact": {
-            "theSolutionToYourProject": "The solution to your project.",
-            "neverLeaveAProblemUnsolved": "We never leave a problem unsolved.",
-            "ourTeamPlansTheSolution": "Our entire team plans the solution to every possible problem your business could have, even if it means going beyond programming, there will never be an impossible problem.",
-            "contactUs": "Contact us"
+  "landingPage": {
+    "navbar": {
+      "home": "Home",
+      "services": "Services",
+      "aboutUs": "About Us",
+      "contact": "Contact"
+    },
+    "head": {
+      "slogan": "Your idea, our work."
+    },
+    "contact": {
+      "theSolutionToYourProject": "The solution to your project.",
+      "neverLeaveAProblemUnsolved": "We never leave a problem unsolved.",
+      "ourTeamPlansTheSolution": "Our entire team plans the solution to every possible problem your business could have, even if it means going beyond programming, there will never be an impossible problem.",
+      "contactUs": "Contact us"
+    },
+    "ourServices": {
+      "ourServices": "Our Services",
+      "services": {
+        "web": {
+          "title": "Web Development",
+          "description": "We create fast and modern websites tailored to your business."
+        },
+        "data": {
+          "title": "Data Analysis",
+          "description": "Advanced data analysis for decision-making."
+        },
+        "design": {
+          "title": "Web Design",
+          "description": "Tools designed for your specific needs."
+        },
+        "mobile": {
+          "title": "Mobile Development",
+          "description": "Implement scalable and efficient systems for your business."
+        },
+        "script": {
+          "title": "Scripting Service",
+          "description": "Scripts to automate tasks."
+        },
+        "seo": {
+          "title": "SEO Consultancy",
+          "description": "We teach you how we optimize SEO, so your website is easier to find."
         }
+      },
+      "servicesInfo": {
+        "join": "Join the innovation",
+        "getStarted": "Get your project started with us in just minutes",
+        "contactUs": "Contact us today and take the first step toward innovative technological solutions that will transform your business.",
+        "startNow": "Start Now"
+      }
     }
+  },
+  "languageSelector": {
+    "noDefaultOrCurrentLanguage": "There is no default, current option or info to show",
+    "noOptionsToShow": "There is no options to show"
+  }
 }

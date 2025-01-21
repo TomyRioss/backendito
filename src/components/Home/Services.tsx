@@ -1,17 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
-import { ServicesInfo } from './Services_Info';
-import { services } from '@/lib/services';
+import { ServicesInfo } from './ServicesInfo';
+import { useServicesList } from '@/lib/useServicesList';
+import { useTranslations } from 'next-intl';
 
 export const Services = () => {
+  const t = useTranslations('landingPage.ourServices');
 
   return (
     <div className="flex flex-col items-center bg-blue-800 py-20">
       <h2 className="text-4xl font-bold text-white mb-12">
-        Nuestros servicios
+        {t('ourServices')}
       </h2>
       <ul className="grid grid-cols-3 gap-10 justify-items-center w-11/12">
-        {services.map((service, index) => (
+        {useServicesList().map((service, index) => (
           <Link
             href={'/'}
             key={index}
@@ -19,7 +21,7 @@ export const Services = () => {
           >
             <li className="">
               <img
-                src="https://i.ibb.co/4b2r0r3/contact-us.png"
+                src={service.image}
                 alt={service.title}
                 className="mb-6 h-20 object-contain justify-center items-center w-full"
               />
@@ -37,4 +39,3 @@ export const Services = () => {
     </div>
   );
 };
-
