@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
 const Contact = () => {
-  const t = useTranslations("LandingPage.Contact");
+  const t = useTranslations("landingPage.contact");
   return (
     <article className="bg-blue-900 h-2/3 w-full grid grid-cols-2 gap-10">
       <div className="flex flex-col justify-center ml-20">

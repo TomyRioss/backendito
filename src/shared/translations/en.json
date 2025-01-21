@@ -1,10 +1,58 @@
 {
-    "LandingPage": {
-        "Contact": {
+    "landingPage": {
+        "navbar": {
+            "home": "Home",
+            "services": "Services",
+            "aboutUs": "About Us",
+            "contact": "Contact"
+        },
+        "head": {
+            "slogan": "Your idea, our work."
+        },
+        "contact": {
             "theSolutionToYourProject": "The solution to your project.",
             "neverLeaveAProblemUnsolved": "We never leave a problem unsolved.",
             "ourTeamPlansTheSolution": "Our entire team plans the solution to every possible problem your business could have, even if it means going beyond programming, there will never be an impossible problem.",
             "contactUs": "Contact us"
+        },
+        "ourServices": {
+            "ourServices": "Our Services",
+            "services": {
+                "ia": {
+                    "title": "Artificial inteligence",
+                    "description": "AI models for optimizing processes and decision making."
+                },
+                "web": {
+                    "title": "Web development",
+                    "description": "We create fast and modern web apps, tailored to your business."
+                },
+                "tailored": {
+                    "title": "tailored solutions",
+                    "description": "Custom tools designed to meet your specific needs."
+                },
+                "infra": {
+                    "title": "Infrastructure deployment",
+                    "description": "Implementation of scalable and efficient systems for your business."
+                },
+                "data": {
+                    "title": "Data analysis",
+                    "description": "Advanced data-driven analysis for decision-making."
+                },
+                "security": {
+                    "title": "Security and scalability",
+                    "description": "Reliable, secure, and scalable solutions designed to grow with your business."
+                }
+            },
+            "servicesInfo": {
+                "join": "Join the innovation",
+                "getStarted": "Get your project started with us in just minutes",
+                "contactUs": "Contact us today and take the first step toward innovative technological solutions that will transform your business.",
+                "startNow": "Start Now"
+            }
         }
+    },
+    "languageSelector": {
+        "noDefaultOrCurrentLanguage": "There is no default, current option or info to show",
+        "noOptionsToShow": "There is no options to show"
     }
 }

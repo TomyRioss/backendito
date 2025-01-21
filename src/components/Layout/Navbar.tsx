@@ -1,40 +1,29 @@
 "use client";
-import { menusList } from "../../shared/utils/menusList";
-import { startTransition, useContext, useEffect, useState } from "react";
+
+import { useMenusList } from "../../shared/utils/useMenusList";
+import { useContext } from "react";
 import { ThemeContext } from "@/shared/styles/themes/themeProvider";
-import BDDropdown from "../ui/dropdown";
-import { getUserLocale, setUserLocale } from "@/shared/utils/getUserLocale";
-import { Languages, Locale } from "@/i18n/config";
-import Link from 'next/link';
-import Image from 'next/image';
+import LanguageDropdown from "../ui/LanguageDropdown";
+import Link from "next/link";
+import Image from "next/image";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 function NavBar() {
-  const themeContext: ThemeContext = useContext(ThemeContext);
-  const [currentLanguage, setCurrentLanguage] = useState<Language>(
-    Languages.find(async (lang) => lang.value === await getUserLocale()) || Languages[1]
-  );
+  const {
+    isDarkTheme,
+    toggleThemeHandler: toggleThemeHandlerContext,
+  }: ThemeContext = useContext(ThemeContext);
 
   const toggleThemeHandler = (): void => {
-    themeContext.toggleThemeHandler();
+    toggleThemeHandlerContext();
   };
-
-  const toggleLanguageHandler = (value: Locales): void => {
-    const locale = value as Locale;
-    startTransition(() => {
-      setUserLocale(locale);
-    });
-  };
-
-  useEffect(() => {
-    toggleLanguageHandler(currentLanguage.value);
-  }, [currentLanguage]);
 
   return (
     <header className="flex justify-around items-center w-full h-16 bg-blue-800 dark:bg-dark-background-default px-10 py-4">
       <div>
         <Link href="/" className="flex gap-5 items-center">
           <Image
-            src={'/backencito.png'}
+            src={"/backencito.png"}
             width={50}
             height={50}
             alt="fondo"
@@ -49,7 +38,7 @@ function NavBar() {
       {/* Mapeo de menú para el navbar */}
       <nav>
         <ul className="flex gap-10 justify-center items-center">
-          {menusList.map(({ name, path }) => (
+          {useMenusList().map(({ name, path }) => (
             <li
               key={path}
               className="relative text-white hover:text-blue-300 transition duration-300"
@@ -61,14 +50,12 @@ function NavBar() {
             </li>
           ))}
           <li className="relative text-white hover:text-blue-300 transition duration-300">
-            <button onClick={toggleThemeHandler}>Change theme</button>
+            <button onClick={toggleThemeHandler}>
+              {isDarkTheme ? <MdLightMode /> : <MdDarkMode />}
+            </button>
           </li>
           <li>
-            <BDDropdown
-              options={Languages}
-              current={currentLanguage}
-              setCurrent={setCurrentLanguage}
-            />
+            <LanguageDropdown />
           </li>
         </ul>
       </nav>

@@ -1,6 +1,8 @@
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export const Info = () => {
+  const t = useTranslations("landingPage.contact");
   return (
     <article className=" h-2/3 w-full grid grid-cols-2 gap-10">
       <div className="flex flex-col justify-center items-center">
@@ -8,21 +10,16 @@ export const Info = () => {
       </div>
       <div className=" flex flex-col justify-center mr-20">
         <h2 className="text-2xl text-cyan-600 mb-3">
-          La solución a tú problema.
+          {t("theSolutionToYourProject")}
         </h2>
         <h2 className="text-5xl mb-3 text-black">
-          Núnca dejamos un problema sin resolver.
+          {t("neverLeaveAProblemUnsolved")}
         </h2>
-        <p className="text-xl text-black">
-          Todo nuestro equipo planifica la solución a cada problema posible que
-          pudiera tener tú negocio, incluso sí significa ir más allá de la
-          programación, jamás va a haber un problema imposible.
-        </p>
+        <p className="text-xl text-black">{t("ourTeamPlansTheSolution")}</p>
         <Button className="bg-cyan-700 text-black w-48 p-6 rounded-xl mt-10">
-          <h2 className="text-lg">Contáctanos</h2>
+          <h2 className="text-lg">{t("contactUs")}</h2>
         </Button>
       </div>
     </article>
   );
 };
-
