@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ServicesInfo } from './ServicesInfo';
-import { services } from '@/lib/services';
+import { useServicesList } from '@/lib/useServicesList';
 import { useTranslations } from 'next-intl';
 
 export const Services = () => {
@@ -13,7 +13,7 @@ export const Services = () => {
         {t("ourServices")}
       </h2>
       <ul className="grid grid-cols-3 gap-10 justify-items-center w-11/12">
-        {services().map((service, index) => (
+        {useServicesList().map((service, index) => (
           <Link
             href={'/'}
             key={index}

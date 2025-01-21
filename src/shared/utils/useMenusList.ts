@@ -1,11 +1,11 @@
-import { Formats, TranslationValues, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 type NavbarListType = {
   name: string;
   path: string;
 };
 
-export const menusList = (): NavbarListType[] => {
+export const useMenusList = (): NavbarListType[] => {
   const t = useTranslations("landingPage.navbar");
   return [
     {

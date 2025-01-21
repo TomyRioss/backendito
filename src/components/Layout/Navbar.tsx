@@ -1,6 +1,6 @@
 "use client";
 
-import { menusList } from "../../shared/utils/menusList";
+import { useMenusList } from "../../shared/utils/useMenusList";
 import { useContext } from "react";
 import { ThemeContext } from "@/shared/styles/themes/themeProvider";
 import LanguageDropdown from "../ui/LanguageDropdown";
@@ -38,7 +38,7 @@ function NavBar() {
       {/* Mapeo de menú para el navbar */}
       <nav>
         <ul className="flex gap-10 justify-center items-center">
-          {menusList().map(({ name, path }) => (
+          {useMenusList().map(({ name, path }) => (
             <li
               key={path}
               className="relative text-white hover:text-blue-300 transition duration-300"

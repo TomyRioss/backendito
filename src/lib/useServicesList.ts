@@ -6,7 +6,7 @@ type ServicesItemsType = {
   image: string;
 };
 
-export const services = (): ServicesItemsType[] => {
+export const useServicesList = (): ServicesItemsType[] => {
   const t = useTranslations("landingPage.ourServices.services");
   return [
     {
