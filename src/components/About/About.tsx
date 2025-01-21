@@ -3,7 +3,6 @@
 import type * as React from 'react';
 import { motion } from 'framer-motion';
 import * as Avatar from '@radix-ui/react-avatar';
-import * as HoverCard from '@radix-ui/react-hover-card';
 import {
   featuredPersonnel,
   frontendPersonnel,
