@@ -1,12 +1,12 @@
 import { ReactElement } from "react";
 import LanguageDropdownSwitcher from "./LanguageDropdownSwitcher";
 import { Languages } from "@/i18n/config";
-import { getUserLocale } from "@/shared/utils/getUserLocale";
+import { useLocale } from "next-intl";
 
 const LanguageDropdown = (): ReactElement => {
-  const defaultLang = Languages.find(
-    async (lang) => lang.value === (await getUserLocale())
-  );
+  const userLocale = useLocale();
+  const defaultLang =
+    Languages.find((lang) => lang.value === userLocale) || Languages[1];
 
   return (
     <>

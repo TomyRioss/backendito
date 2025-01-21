@@ -6,12 +6,16 @@ import { ThemeContext } from "@/shared/styles/themes/themeProvider";
 import LanguageDropdown from "../ui/LanguageDropdown";
 import Link from "next/link";
 import Image from "next/image";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 function NavBar() {
-  const themeContext: ThemeContext = useContext(ThemeContext);
+  const {
+    isDarkTheme,
+    toggleThemeHandler: toggleThemeHandlerContext,
+  }: ThemeContext = useContext(ThemeContext);
 
   const toggleThemeHandler = (): void => {
-    themeContext.toggleThemeHandler();
+    toggleThemeHandlerContext();
   };
 
   return (
@@ -46,7 +50,9 @@ function NavBar() {
             </li>
           ))}
           <li className="relative text-white hover:text-blue-300 transition duration-300">
-            <button onClick={toggleThemeHandler}>Change theme</button>
+            <button onClick={toggleThemeHandler}>
+              {isDarkTheme ? <MdLightMode /> : <MdDarkMode />}
+            </button>
           </li>
           <li>
             <LanguageDropdown />

@@ -5,27 +5,22 @@ import { ReactElement, startTransition, useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
 type LanguageDropdownSwitcherType = {
-  defaultLang?: Language;
+  defaultLang: Language;
 };
 
 const LanguageDropdownSwitcher = (
   props: LanguageDropdownSwitcherType
 ): ReactElement => {
   const { defaultLang: defaultLang } = props;
-  const [currentLanguage, setCurrentLanguage] = useState<Language>(
-    defaultLang || Languages[1]
-  );
+  const [currentLanguage, setCurrentLanguage] = useState<Language>(defaultLang);
 
-  const toggleLanguageHandler = (value: Locales): void => {
-    const locale = value as Locale;
+  const toggleLanguageHandler = (language: Language): void => {
+    const locale = language.value as Locale;
     startTransition(() => {
+      setCurrentLanguage(language);
       setUserLocale(locale);
     });
   };
-
-  useEffect(() => {
-    toggleLanguageHandler(currentLanguage.value);
-  }, [currentLanguage]);
 
   return (
     <>
@@ -65,7 +60,9 @@ const LanguageDropdownSwitcher = (
                 <MenuItem key={`${option?.id || option}`}>
                   <button
                     className="relative w-full cursor-pointer select-none hover:bg-dark-background-paper py-2 px-3 text-dark-primary-light"
-                    onClick={() => setCurrentLanguage(option)}
+                    onClick={() => {
+                      toggleLanguageHandler(option);
+                    }}
                   >
                     <div className="flex items-center">
                       {"image" in option && (
