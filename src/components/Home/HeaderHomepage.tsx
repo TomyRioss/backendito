@@ -1,5 +1,4 @@
 import React from 'react';
-import { Icon } from '@/components/Home/Icon';
 
 const HeaderHomepage = () => {
   return (
