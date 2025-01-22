@@ -15,7 +15,7 @@ type AnalysisPackage = {
 };
 
 
-const planesDataAnalytics = (t : any ): AnalysisPackage[] => [
+const planesDataAnalytics = (t: (key: string) => string ): AnalysisPackage[] => [
   {
     id: '1',
     title: t("dataAnalysis.BasicDataAnalysis.title"),

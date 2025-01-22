@@ -15,7 +15,7 @@ type DetailsPlans = {
   support: string;
 };
 
-const planesData = (t: any): DetailsPlans[] => [
+const planesData = (t: (key: string) => string): DetailsPlans[] => [
   {
     id: "7",
     title: t("webDevelopment.simpleWeb.title"),
