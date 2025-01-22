@@ -64,7 +64,7 @@ const ThemeContextProvider = (props: ThemePropsInterface): ReactElement => {
   };
 
   return (
-    <ThemeContext.Provider value={{ isDarkTheme: true, toggleThemeHandler }}>
+    <ThemeContext.Provider value={{ isDarkTheme, toggleThemeHandler }}>
       {props.children}
     </ThemeContext.Provider>
   );
