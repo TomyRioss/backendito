@@ -60,37 +60,47 @@ export default function About() {
 
       <section className="py-20 px-4 md:px-6">
         {[
-          { title: 'Personal Destacado', personnel: featuredPersonnel },
-          { title: 'Departamento Frontend', personnel: frontendPersonnel },
-          { title: 'Departamento Backend', personnel: backendPersonnel },
-          { title: 'Departamento Fullstack', personnel: fullstackPersonnel },
-          { title: 'Departamento Mobile', personnel: mobilePersonnel },
+          {
+            title: 'Personal Destacado',
+            personnel: featuredPersonnel,
+            index: 0,
+          },
+          {
+            title: 'Departamento Frontend',
+            personnel: frontendPersonnel,
+            index: 1,
+          },
+          {
+            title: 'Departamento Backend',
+            personnel: backendPersonnel,
+            index: 2,
+          },
+          {
+            title: 'Departamento Fullstack',
+            personnel: fullstackPersonnel,
+            index: 3,
+          },
+          {
+            title: 'Departamento Mobile',
+            personnel: mobilePersonnel,
+            index: 4,
+          },
         ].map((section, index) => (
           <React.Fragment key={index}>
             <div
-              className={`mb-10 bg-${
-                index % 5 === 0
-                  ? 'yellow-200'
-                  : index % 5 === 1
-                  ? 'orange-300'
-                  : index % 5 === 2
-                  ? 'blue-500'
-                  : index % 5 === 3
-                  ? 'purple-400'
-                  : 'green-400'
-              } dark:bg-${
-                index % 5 === 0
-                  ? 'yellow-800'
-                  : index % 5 === 1
-                  ? 'orange-800'
-                  : index % 5 === 2
-                  ? 'blue-800'
-                  : index % 5 === 3
-                  ? 'purple-800'
-                  : 'green-800'
+              className={`mb-10 ${
+                section.index === 0
+                  ? 'bg-yellow-300 dark:bg-yellow-800'
+                  : section.index === 1
+                  ? 'bg-orange-300 dark:bg-orange-800'
+                  : section.index === 2
+                  ? 'bg-blue-500 dark:bg-blue-800'
+                  : section.index === 3
+                  ? 'bg-purple-400 dark:bg-purple-800'
+                  : 'bg-green-400 dark:bg-green-800'
               } p-4`}
             >
-              <h2 className="text-3xl font-bold text-center mb-2">
+              <h2 className="text-3xl font-bold text-center mb-2 ">
                 {section.title}
               </h2>
               <h4 className="text-center text-xl">
