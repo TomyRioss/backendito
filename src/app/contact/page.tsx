@@ -47,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <div className="min-h-screen  pt-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {isSubmitted && (
         <div className="p-4 mb-4 text-white bg-green-500 rounded-md">
           ¡Formulario enviado con éxito!
@@ -124,9 +124,9 @@ export default function Contact() {
                 {isSubmitting ? 'Enviando...' : 'Enviar'}
               </button>
             </Form>
-            <div className="hidden md:flex imagentexto h-[35rem] w-96 flex flex-col items-start">
+            <div className="hidden md:flex imagentexto h-[35rem] w-96  flex-col items-start">
               <span className="text-blue-700 font-medium text-[2rem]">
-                Backencito
+                Backendito
               </span>
               <span className="text-gray-800 text-[1.2rem]">
                 Hacemos tu proyecto realidad

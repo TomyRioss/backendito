@@ -49,6 +49,132 @@
         "contactUs": "Contact us today and take the first step toward innovative technological solutions that will transform your business.",
         "startNow": "Start Now"
       }
+    },
+
+    "servicePage": {
+      "general": {
+        "deliveryTime": "Delivery Time",
+        "price": "Price",
+        "buy": "Buy",
+        "contact": "Contact",
+        "days": "days",
+        "month": "month",
+        "months": "months",
+        "time": "time",
+        "readMore": "Read more",
+        "features": "Features",
+        "weeks":"weeks"
+      },
+
+      "titleServicePage": "these are our services",
+      "subTitleServicePage": "*All prices are in USD, payments are made by Binance or Paypal.",
+
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "We create fully customized websites from scratch, tailored to the specific needs of your business. Our team of experts focuses on every detail to deliver a professional, responsive, SEO-optimized site with an attractive design that enhances user experience and maximizes conversions. We provide detailed documentation and clean, scalable code, ensuring your project is in safe hands.",
+        "titlePage": "Web Development",
+        "descriptionPage": "Our web development plans are ideal for companies that need websites created by highly experienced programming teams or individuals who want to give visibility to their personal brand with Landing Pages or websites with impeccable SEO for an international audience.",
+        "titlePlans": "Our Development Plans",
+        "simpleWeb": {
+          "title": "Simple Website",
+          "description": "Ideal for small projects and personal brands with basic functionalities."
+        },
+        "premiumWeb": {
+          "title": "Premium Website",
+          "description": "Perfect for businesses looking to scale their online presence, sell products, and manage inventories."
+        },
+        "businessWeb": {
+          "title": "Business Website",
+          "description": "Ideal for established businesses seeking a professional site with advanced features, attractive design, and refined SEO."
+        },
+        "pages": "Number of Pages",
+        "support": "Included Support",
+        "details": {
+          "ecommerceIntegration": "Ecommerce Integration",
+          "seoOptimization": "SEO Optimization",
+          "responsiveDesign": "Responsive Design",
+          "domainIncluded": "Domain Included",
+          "socialMediaIntegration": "Social Media Integration",
+          "multilanguageSupport": "Multilanguage Support",
+          "automaticBackup": "Automatic Backup"
+        }
+      },
+
+      "dataAnalysis": {
+        "title": "Data Analysis",
+        "description": "We offer advanced data analysis to turn large volumes of information into actionable insights and informed decisions. Using specialized techniques like data mining, graphical visualization, and predictive modeling, we help businesses optimize strategies, improve operational efficiency, and maximize ROI.",
+        "titlePage": "Data Analytics Services",
+        "descriptionPage": "Our data analysis plans are designed for businesses and professionals seeking to transform complex data into actionable insights. We offer personalized solutions, from data cleaning to advanced predictive models, helping you make informed decisions and optimize your business with clear and effective visualization tools.",
+        "titlePlans": "Customized Solutions in Data Analytics translation",
+        "BasicDataAnalysis": {
+          "title": "Basic Data Analysis",
+          "description": "Ideal for small businesses or projects looking to understand key trends in their data.",
+          "details": {
+            "DataCollectionAndCleaning": "Data Collection and Cleaning",
+            "AdvancedExploratoryAnalysis": "Exploratory Analysis",
+            "InteractiveDashboards": "Basic Visualization",
+            "PredictiveModels": "Summary Report",
+            "ProcessOptimizationwithData": "Predictive Models",
+            "BIToolsIntegration": "BI Tools Integration"
+          }
+        },
+        "AdvancedDataAnalysis": {
+          "title": "Advanced Data Analysis",
+          "description": "Designed for businesses that need data-driven strategies and advanced analysis.",
+          "details": {
+            "DataCollectionAndCleaning": "Data Collection and Cleaning",
+            "AdvancedExploratoryAnalysis": "Advanced Exploratory Analysis",
+            "InteractiveDashboards": "Interactive Dashboards",
+            "PredictiveModels": "Predictive Models",
+            "ProcessOptimizationwithData": "Process Optimization with Data",
+            "BIToolsIntegration": "BI Tools Integration"
+          }
+        },
+        "BusinessDataConsulting": {
+          "title": "Business Data Consulting",
+          "description": "Ideal for large companies that need advanced and integrated solutions in their operations.",
+          "details": {
+            "DataCollectionAndCleaning": "Data-Driven Strategy",
+            "AdvancedExploratoryAnalysis": "Development of Predictive Models",
+            "InteractiveDashboards": "Full BI Tools Integration",
+            "PredictiveModels": "Real-Time Analysis",
+            "ProcessOptimizationwithData": "Dedicated Technical Support",
+            "BIToolsIntegration": "Process Automation"
+          }
+        }
+      },
+
+      "desktopDevelopment": {
+        "title": "Desktop Development",
+        "description": "We create robust and highly functional desktop applications designed to enhance your business's internal efficiency. Our developments feature intuitive interfaces and optimized performance, ensuring a smooth user experience. Additionally, we provide continuous technical support to keep your applications at their best."
+      },
+      "mobileDevelopment": {
+        "title": "Mobile Development",
+        "description": "We develop innovative and highly customized mobile applications tailored to your audience and adapted to various platforms. With a user-centric approach, we ensure your app is optimized for both performance and usability, providing practical and appealing solutions for your customers on any mobile device."
+      },
+      "scriptingServices": {
+        "title": "Scripting Services",
+        "description": "We offer tailored scripting services to automate tasks, enhance efficiency, and optimize processes. Whether for web development, bot creation, workflow automation, or application customization, our focus is on delivering practical solutions adapted to your specific needs."
+      },
+      "seoConsulting": {
+        "title": "SEO Consulting",
+        "description": "We maximize your website's visibility on search engines through advanced SEO strategies. From content optimization to building effective link strategies, we guarantee a significant increase in web traffic and online presence. Our personalized approach ensures sustainable and measurable results over time."
+      }
+    },
+
+    "payMentInfo": {
+      "title": "How Do We Handle Payments?",
+      "section1": "To handle payments, we first agree on a budget with the client and present the project options we have available based on that.",
+      "section2": "Then, we establish the tasks expected by the halfway point of the project and those expected for completion. This step is essential because, midway through the project, we hold a quality meeting where, if the project's progress is satisfactory to the client, half of the total project value is paid.",
+      "section3": "Similarly, when the project is completed, a quality meeting is scheduled to ensure everything is in order. Once the client is satisfied, the remaining half is paid, and the project is finalized.",
+      "section4": "Users of our website have the special option to pay the total value of the project upfront in a single payment. However, this amount is stored and not distributed until the project is fulfilled."
+    },
+    "workInfo": {
+      "title": "How Do We Work?",
+      "section1": "First, after gathering all the details, confirming our availability, and receiving the client's approval, we organize the project using Trello to efficiently distribute tasks.",
+      "section2": "We plan the technologies to be used and, once decided among the team, inform the client to receive their confirmation. Then, we begin development.",
+      "section3": "We develop websites with highly communicative and specialized teams. We maintain constant contact with the client, organize regular meetings, and provide progress updates.",
+      "section4": "Upon completing development, we conduct quality and security reviews to ensure an impeccable result. Finally, we deliver the website to the client, concluding the project with guaranteed satisfaction."
     }
   },
   "languageSelector": {

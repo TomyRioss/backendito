@@ -3,67 +3,79 @@ import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { MdOutlineInsights, MdOutlineContactSupport } from 'react-icons/md';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
-const planesDataAnalytics = [
+type AnalysisPackage = {
+  id: string;
+  title: string;
+  description: string;
+  details: Record<string, string>;
+  deliveryTime: string;
+  price: string;
+};
+
+
+const planesDataAnalytics = (t : any ): AnalysisPackage[] => [
   {
     id: '1',
-    title: 'Análisis Básico de Datos',
+    title: t("dataAnalysis.BasicDataAnalysis.title"),
     description:
-      'Ideal para pequeñas empresas o proyectos que buscan comprender tendencias clave en sus datos.',
+    t("dataAnalysis.BasicDataAnalysis.description"),
     details: {
-      'Recopilación de Datos': '✅',
-      'Análisis Exploratorio': '✅',
-      'Visualización Básica': '✅',
-      'Informe Resumido': '✅',
-      'Modelos Predictivos': '❌',
-      'Integración de Herramientas BI': '❌',
+      [t("dataAnalysis.BasicDataAnalysis.details.DataCollectionAndCleaning")]: '✅',
+      [t("dataAnalysis.BasicDataAnalysis.details.AdvancedExploratoryAnalysis")]: '✅',
+      [t("dataAnalysis.BasicDataAnalysis.details.InteractiveDashboards")]: '✅',
+      [t("dataAnalysis.BasicDataAnalysis.details.PredictiveModels")]: '✅',
+      [t("dataAnalysis.BasicDataAnalysis.details.ProcessOptimizationwithData")]: '❌',
+      [t("dataAnalysis.BasicDataAnalysis.details.BIToolsIntegration")]: '❌',
     },
-    deliveryTime: '1 - 2 Semanas',
+    deliveryTime: '1 - 2 ' + t("general.weeks"),
     price: '$300 USD',
   },
   {
     id: '2',
-    title: 'Análisis Avanzado de Datos',
-    description:
-      'Diseñado para empresas que necesitan estrategias basadas en datos y análisis avanzados.',
-    details: {
-      'Recopilación y Limpieza de Datos': '✅',
-      'Análisis Exploratorio Avanzado': '✅',
-      'Dashboards Interactivos': '✅',
-      'Modelos Predictivos': '✅',
-      'Optimización de Procesos con Datos': '❌',
-      'Integración de Herramientas BI': '❌',
-    },
-    deliveryTime: '3 - 4 Semanas',
+    title: t("dataAnalysis.AdvancedDataAnalysis.title"),
+    description: t("dataAnalysis.AdvancedDataAnalysis.description"),
+      details: {
+        [t("dataAnalysis.AdvancedDataAnalysis.details.DataCollectionAndCleaning")]: '✅',
+        [t("dataAnalysis.AdvancedDataAnalysis.details.AdvancedExploratoryAnalysis")]: '✅',
+        [t("dataAnalysis.AdvancedDataAnalysis.details.InteractiveDashboards")]: '✅',
+        [t("dataAnalysis.AdvancedDataAnalysis.details.PredictiveModels")]: '✅',
+        [t("dataAnalysis.AdvancedDataAnalysis.details.ProcessOptimizationwithData")]: '❌',
+        [t("dataAnalysis.AdvancedDataAnalysis.details.BIToolsIntegration")]: '❌',
+      },
+    deliveryTime: '3 - 4 ' + t("general.weeks"),
     price: '$800 USD',
   },
   {
     id: '3',
-    title: 'Consultoría Empresarial de Datos',
+    title: t("dataAnalysis.BusinessDataConsulting.title"),
     description:
-      'Ideal para grandes empresas que necesitan soluciones avanzadas e integradas en sus operaciones.',
-    details: {
-      'Estrategia Basada en Datos': '✅',
-      'Desarrollo de Modelos Predictivos': '✅',
-      'Integración Completa de Herramientas BI': '✅',
-      'Análisis en Tiempo Real': '✅',
-      'Soporte Técnico Dedicado': '✅',
-      'Automatización de Procesos': '✅',
-    },
-    deliveryTime: '6 - 8 Semanas',
+    t("dataAnalysis.BusinessDataConsulting.description"),
+      details: {
+        [t("dataAnalysis.BusinessDataConsulting.details.DataCollectionAndCleaning")]: '✅',
+        [t("dataAnalysis.BusinessDataConsulting.details.AdvancedExploratoryAnalysis")]: '✅',
+        [t("dataAnalysis.BusinessDataConsulting.details.InteractiveDashboards")]: '✅',
+        [t("dataAnalysis.BusinessDataConsulting.details.PredictiveModels")]: '✅',
+        [t("dataAnalysis.BusinessDataConsulting.details.ProcessOptimizationwithData")]: '✅',
+        [t("dataAnalysis.BusinessDataConsulting.details.BIToolsIntegration")]: '✅',
+      },
+    deliveryTime: '6 - 8 ' + t("general.weeks"),
     price: '$1.550 USD',
   },
 ];
 
 const PlanesData = () => {
+  const t = useTranslations("landingPage.servicePage");
+
   return (
     <section className="w-full px-4 py-6 bg-gray-50 dark:bg-gray-900">
       <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-white">
-        Soluciones Personalizadas en Data Analytics
+        {t("dataAnalysis.titlePlans")}
       </h2>
 
       <article className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {planesDataAnalytics.map((plan, index) => (
+        {planesDataAnalytics(t).map((plan, index) => (
           <div
             key={index}
             className="p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition-transform transform hover:scale-105"
@@ -77,7 +89,7 @@ const PlanesData = () => {
             <Separator className="my-4" />
             <div>
               <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
-                Características
+              {t("general.features")}
               </h3>
               <ul className="space-y-2">
                 {Object.entries(plan.details).map(([key, value]) => (
@@ -96,7 +108,7 @@ const PlanesData = () => {
             <Separator className="my-4" />
             <div>
               <h4 className="text-md font-semibold text-gray-900 dark:text-white">
-                Plazo de Entrega
+              {t("general.deliveryTime")}
               </h4>
               <p className="text-sm text-gray-700 dark:text-gray-300">
                 {plan.deliveryTime}
@@ -114,12 +126,12 @@ const PlanesData = () => {
             <div className="grid grid-cols-2 gap-4">
               <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white">
                 <MdOutlineInsights />
-                Comprar
+                {t("general.buy")}
               </Button>
               <Link href={'/contact'}>
                 <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white w-full">
                   <MdOutlineContactSupport />
-                  Contactar
+                  {t("general.contact")}
                 </Button>
               </Link>
             </div>

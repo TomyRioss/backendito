@@ -4,8 +4,10 @@ import WorkInfo from '../pagesContent/WorkInfo';
 import PaymentInfo from '../pagesContent/PaymentInfo';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 
-const page = () => {
+const Page = () => {
+   const t = useTranslations('landingPage.servicePage');
   return (
     <>
       <Link href={'/services'}>
@@ -14,14 +16,10 @@ const page = () => {
       <header className="  dark:bg-gray-900">
         <div className=" flex flex-col items-center justify-center text-black dark:bg-gray-900">
           <h1 className="text-4xl mb-5 dark:text-white mt-20">
-            Desarrollo Web
+            {t("webDevelopment.titlePage")}
           </h1>
           <h3 className="text-gray-700 text-xl text-center px-4 w-1/2 dark:text-white">
-            Nuestros planes de desarrollo de sitios web son ideales para
-            empresas que requieren sitios web realizados por equipos de
-            programadores altamente experimentados, o individuales que desean
-            dar visibilidad a su marca personal con Landing Pages o sitios web
-            con un SEO impecable para una audiencia internacional.
+          {t("webDevelopment.descriptionPage")}
           </h3>
         </div>
       </header>
@@ -32,4 +30,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

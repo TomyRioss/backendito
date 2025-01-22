@@ -4,8 +4,11 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import { Separator } from '@radix-ui/react-separator';
+import { useTranslations } from 'next-intl';
 
 const PaymentInfo = () => {
+  const t = useTranslations('landingPage.payMentInfo');
+
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   const scrollNext = () => emblaApi?.scrollNext();
@@ -22,35 +25,23 @@ const PaymentInfo = () => {
   return (
     <section className="py-10 px-6 bg-gray-50 dark:bg-gray-900">
       <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">
-        ¿Cómo trabajamos?
+        {t("title")}
       </h2>
       <Separator className="my-4 bg-gray-300 dark:bg-gray-600 h-1" />
       <article className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">
         {/* Texto explicativo */}
         <div className="space-y-6">
           <p className="text-gray-700 dark:text-gray-400 leading-relaxed mb-4">
-            Para manejar los pagos, primero quedamos en un presupuesto con el
-            cliente, y le comentamos las opciones de proyecto que tenemos
-            disponible en base a aquello.
+          {t("section1")}
           </p>
           <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-            Luego establecemos las tareas que se esperan la mitad del proyecto,
-            y las que se esperan para la mitad, este paso es escencial, ya que a
-            la mitad del proyecto realizamos una reunión de cálidad, dónde sí el
-            progreso del proyecto es satisfactorio para el cliente, se paga la
-            mitad del valor total del proyecto.
+          {t("section2")}
           </p>
           <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-            Luego del mismo modo, cuándo esta finalizado, se agenda una reunión
-            de cálidad para definir que todo este en orden, una vez que sea
-            satisfactorio para el cliente, se paga la otra mitad restante y se
-            finaliza el proyecto.
+          {t("section3")}
           </p>
           <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-            Los usuarios de nuestro sitio web, tienen la opción especial de
-            pagar por el valor total de la página en una sola vez por
-            adelantado, sin embargo esta cnatidad es almacenada y no es
-            repartida hasta que se cumpla el proyecto.
+          {t("section4")}
           </p>
         </div>
 

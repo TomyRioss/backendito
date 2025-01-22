@@ -49,6 +49,132 @@
         "contactUs": "Contáctanos hoy y da el primer paso hacia soluciones tecnológicas innovadoras que transformarán tu negocio.",
         "startNow": "Empezar ahora"
       }
+    },
+
+    "servicePage": {
+      "general": {
+        "deliveryTime": "Plazo de Entrega",
+        "price": "Precio",
+        "buy": "Comprar",
+        "contact": "Contactar",
+        "days": "dias",
+        "month": "mes",
+        "months": "meses",
+        "time": "plazo",
+        "readMore": "Leer mas",
+        "features": "Características",
+        "weeks":"semanas"
+      },
+
+      "titleServicePage": "Estos son nuestros servicios.",
+      "subTitleServicePage": "*Todos los precios son en USD, los pagos se realizan por Binance o Paypal.",
+
+      "webDevelopment": {
+        "title": "Desarrollo Web",
+        "description": "Desarrollamos páginas web personalizadas desde cero, adaptadas a las necesidades específicas de tu negocio. Nuestro equipo de expertos trabaja en cada detalle para ofrecer un sitio profesional, responsivo, optimizado para SEO, y con un diseño atractivo que mejora la experiencia del usuario y maximiza la conversión de visitas en clientes. Contamos con documentación detallada y un código limpio y escalable, garantizando que tu proyecto esté en manos seguras.",
+        "titlePage": "Desarrollo Web",
+        "descriptionPage": "Nuestros planes de desarrollo de sitios web son ideales para empresas que requieren sitios web realizados por equipos de programadores altamente experimentados, o individuales que desean dar visibilidad a su marca personal con Landing Pages o sitios web con un SEO impecable para una audiencia internacional.",
+        "titlePlans": "Nuestros Planes de Desarrollo",
+        "simpleWeb": {
+          "title": "Web Sencilla",
+          "description": "Ideal para pequeños proyectos, marcas personales con funcionalidades básicas."
+        },
+        "premiumWeb": {
+          "title": "Web Premium",
+          "description": "Perfecta para negocios que buscan escalar su presencia en línea, vender productos y gestionar inventarios."
+        },
+        "businessWeb": {
+          "title": "Web Empresarial",
+          "description": "Ideal para negocios consolidados que buscan un sitio profesional con funcionalidades avanzadas, diseño atractivo y SEO perfeccionado."
+        },
+        "pages": "Cantidad de Páginas",
+        "support": "Soporte Incluido",
+
+        "details": {
+          "ecommerceIntegration": "Integración Ecommerce",
+          "seoOptimization": "Optimización SEO",
+          "responsiveDesign": "Diseño Responsivo",
+          "domainIncluded": "Dominio Incluido",
+          "socialMediaIntegration": "Integración de Redes Sociales",
+          "multilanguageSupport": "Soporte Multilenguaje",
+          "automaticBackup": "Backup Automático"
+        }
+      },
+      "dataAnalysis": {
+        "title": "Análisis de Datos",
+        "description": "Ofrecemos análisis avanzado de datos para convertir grandes volúmenes de información en ideas accionables y decisiones informadas. Usando técnicas especializadas como minería de datos, visualización gráfica y modelado predictivo, ayudamos a las empresas a optimizar estrategias, mejorar la eficiencia operativa y maximizar el retorno de inversión.",
+        "titlePage": "Servicios de Análisis de Datos",
+        "descriptionPage": "Nuestros planes de análisis de datos están diseñados para empresas y profesionales que buscan transformar datos complejos en insights accionables. Ofrecemos soluciones personalizadas, desde la limpieza de datos hasta modelos predictivos avanzados, ayudándote a tomar decisiones informadas y optimizar tu negocio con herramientas de visualización claras y efectivas.",
+        "titlePlans": "Soluciones Personalizadas en Data Analytics",
+        "BasicDataAnalysis": {
+          "title": "Análisis Básico de Datos",
+          "description": "Ideal para pequeñas empresas o proyectos que buscan comprender tendencias clave en sus datos.",
+          "details": {
+            "DataCollectionAndCleaning": "Recopilación de Datos",
+            "AdvancedExploratoryAnalysis": "Análisis Exploratorio",
+            "InteractiveDashboards": "Visualización Básica",
+            "PredictiveModels": "Informe Resumido",
+            "ProcessOptimizationwithData": "Modelos Predictivos",
+            "BIToolsIntegration": "Integración de Herramientas BI"
+          }
+        },
+        "AdvancedDataAnalysis": {
+          "title": "Análisis Avanzado de Datos",
+          "description": "Diseñado para empresas que necesitan estrategias basadas en datos y análisis avanzados.",
+          "details": {
+            "DataCollectionAndCleaning": "Data Collection and Cleaning",
+            "AdvancedExploratoryAnalysis": "Advanced Exploratory Analysis",
+            "InteractiveDashboards": "Interactive Dashboards",
+            "PredictiveModels": "Predictive Models",
+            "ProcessOptimizationwithData": "Process Optimization with Data",
+            "BIToolsIntegration": "BI Tools Integration"
+          }
+        },
+        "BusinessDataConsulting": {
+          "title": "Consultoría Empresarial de Datos",
+          "description": "Ideal para grandes empresas que necesitan soluciones avanzadas e integradas en sus operaciones.",
+          "details": {
+            "DataCollectionAndCleaning": "Estrategia Basada en Datos",
+            "AdvancedExploratoryAnalysis": "Desarrollo de Modelos Predictivos",
+            "InteractiveDashboards": "Integración Completa de Herramientas BI",
+            "PredictiveModels": "Análisis en Tiempo Real",
+            "ProcessOptimizationwithData": "Soporte Técnico Dedicado",
+            "BIToolsIntegration": "Automatización de Procesos"
+          }
+        }
+      },
+
+      "desktopDevelopment": {
+        "title": "Desarrollo Desktop",
+        "description": "Creamos aplicaciones de escritorio robustas y altamente funcionales, diseñadas para mejorar la eficiencia interna de tu negocio. Nuestros desarrollos cuentan con interfaces intuitivas y un rendimiento optimizado, garantizando una experiencia fluida para los usuarios. Además, ofrecemos soporte técnico continuo para mantener tus aplicaciones siempre en su mejor estado."
+      },
+      "mobileDevelopment": {
+        "title": "Desarrollo Mobile",
+        "description": "Desarrollamos aplicaciones móviles innovadoras y altamente personalizadas, adecuadas para tu audiencia y adaptadas a diferentes plataformas. Con un enfoque centrado en la experiencia del usuario, aseguramos que tu app esté optimizada tanto en rendimiento como en usabilidad, brindando soluciones prácticas y atractivas para tus clientes en cualquier dispositivo móvil."
+      },
+      "scriptingServices": {
+        "title": "Servicios Scripting",
+        "description": "Ofrecemos servicios de scripting personalizados para automatizar tareas, mejorar la eficiencia y optimizar procesos. Ya sea para desarrollos web, creación de bots, automatización de workflows o personalización de aplicaciones, nuestro enfoque se centra en proporcionar soluciones prácticas y adaptadas a tus necesidades específicas."
+      },
+      "seoConsulting": {
+        "title": "Consultoría SEO",
+        "description": "Maximizamos la visibilidad de tu sitio web en motores de búsqueda a través de estrategias SEO avanzadas. Desde la optimización del contenido hasta la creación de estrategias de enlaces efectivos, garantizamos un aumento significativo en tu tráfico web y una mayor presencia online. Nuestro enfoque personalizado asegura resultados sostenibles y medibles en el tiempo."
+      }
+    },
+
+    "payMentInfo": {
+      "title": "¿Cómo manejamos el pago?",
+      "section1": "Para manejar los pagos, primero quedamos en un presupuesto con el cliente, y le comentamos las opciones de proyecto que tenemos disponible en base a aquello.",
+      "section2": "Luego establecemos las tareas que se esperan la mitad del proyecto, y las que se esperan para la mitad, este paso es escencial, ya que a la mitad del proyecto realizamos una reunión de cálidad, dónde sí el progreso del proyecto es satisfactorio para el cliente, se paga la mitad del valor total del proyecto.",
+      "section3": "Luego del mismo modo, cuándo esta finalizado, se agenda una reunión de cálidad para definir que todo este en orden, una vez que sea satisfactorio para el cliente, se paga la otra mitad restante y se finaliza el proyecto.",
+      "section4": "Los usuarios de nuestro sitio web, tienen la opción especial de pagar por el valor total de la página en una sola vez por adelantado, sin embargo esta cnatidad es almacenada y no es repartida hasta que se cumpla el proyecto."
+    },
+    "workInfo": {
+      "title": "¿Cómo trabajamos?",
+      "section1": "Primero, luego de obtener todos los detalles, confirmar nuestra disponibilidad y recibir la confirmación del cliente, comenzamos la organización del proyecto por medio de Trello, para repartir de forma eficiente las tareas.",
+      "section2": "Planificamos las tecnologías a utilizar y, una vez decididas entre el equipo, las informamos al cliente para recibir su confirmación. Luego, iniciamos el desarrollo.",
+      "section3": "Desarrollamos las páginas web con equipos altamente comunicados y especializados. Mantenemos contacto constante con el cliente, organizamos reuniones periódicas y proporcionamos actualizaciones sobre el progreso.",
+      "section4": "Al finalizar el desarrollo, realizamos revisiones de calidad y seguridad para garantizar un resultado impecable. Finalmente, entregamos la página al cliente, concluyendo el proyecto con satisfacción garantizada."
     }
   },
   "languageSelector": {

@@ -1,7 +1,7 @@
-import React from 'react';
-import cardsLogic from './cardsLogic';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import cardsLogic from "./cardsLogic";
+import Image from "next/image";
+import Link from "next/link";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -12,13 +12,14 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from '@/components/ui/alert-dialog';
+} from "@/components/ui/alert-dialog";
+
 
 const Cards = () => {
   return (
     <div className="flex flex-col min-h-screen dark:bg-gray-800">
       <div className="flex flex-col gap-4 w-full p-10">
-        {cardsLogic.map(card => (
+        {cardsLogic.map((card) => (
           <div
             key={card.id}
             className="flex items-center gap-16 p-8 mx-10  bg-cyan-100 dark:bg-gray-900 rounded-md border-2 border-gray-700 shadow-lg transition-transform transform hover:scale-105 duration-300"
