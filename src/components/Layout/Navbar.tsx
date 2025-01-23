@@ -19,7 +19,6 @@ function NavBar() {
     toggleThemeHandler: toggleThemeHandlerContext,
   }: ThemeContext = useContext(ThemeContext);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState("EN");
   const [themeIcon, setThemeIcon] = useState<ReactNode>(<MdDarkMode />);
 
   // Cerrar el menú móvil cuando la pantalla se hace más grande
@@ -38,10 +37,6 @@ function NavBar() {
     setThemeIcon(isDarkTheme ? <MdDarkMode /> : <MdLightMode />);
     toggleThemeHandlerContext();
   }, [setThemeIcon, isDarkTheme, toggleThemeHandlerContext]);
-
-  const toggleLanguage = () => {
-    setCurrentLanguage(currentLanguage === "EN" ? "ES" : "EN");
-  };
 
   return (
     <header className="fixed top-0 z-50 w-full bg-white dark:bg-blue-900 shadow-lg">
