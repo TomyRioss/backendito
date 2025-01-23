@@ -11,6 +11,7 @@ import Link from "next/link";
 import { ThemeContext } from "@/shared/styles/themes/themeProvider";
 import { useMenusList } from "@/shared/utils/useMenusList";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import LanguageDropdown from "../ui/LanguageDropdown";
 
 function NavBar() {
   const {
@@ -74,25 +75,20 @@ function NavBar() {
                 onClick={toggleThemeHandler}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors"
               >
-                <span className="block w-5 h-5">
+                <span className="block">
                   <span className="text-gray-800 dark:text-white">
                     {themeIcon}
                   </span>
                 </span>
               </button>
               {/* Language Toggle Button */}
-              <button
-                onClick={toggleLanguage}
-                className="px-3 py-1 rounded-md text-sm bg-gray-100 dark:bg-blue-800 hover:bg-gray-200 dark:hover:bg-blue-700 transition-colors"
-              >
-                {currentLanguage}
-              </button>
+              <LanguageDropdown/>
             </div>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="flex md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors text-black w-screen md:justify-between sm:justify-between"
+            className="flex md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors text-black dark:text-white w-screen md:justify-between sm:justify-between"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -145,18 +141,13 @@ function NavBar() {
                 onClick={toggleThemeHandler}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors"
               >
-                <span className="block w-5 h-5">
+                <span className="block">
                   <span className="text-gray-800 dark:text-white">
                     {themeIcon}
                   </span>
                 </span>
               </button>
-              <button
-                onClick={toggleLanguage}
-                className="px-3 py-1 rounded-md text-sm bg-gray-100 dark:bg-blue-800 hover:bg-gray-200 dark:hover:bg-blue-700 transition-colors"
-              >
-                {currentLanguage}
-              </button>
+              <LanguageDropdown/>
             </div>
           </nav>
         </div>
