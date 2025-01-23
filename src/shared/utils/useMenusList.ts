@@ -13,12 +13,12 @@ export const useMenusList = (): NavbarListType[] => {
       path: "/",
     },
     {
-      name: t("services"),
-      path: "/services",
-    },
-    {
       name: t("aboutUs"),
       path: "/about",
+    },
+    {
+      name: t("services"),
+      path: "/services",
     },
     {
       name: t("contact"),

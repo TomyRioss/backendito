@@ -1,20 +1,25 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React, {
+  useState,
+  useEffect,
+  useContext,
+  ReactNode,
+  useCallback,
+} from "react";
+import Link from "next/link";
+import { ThemeContext } from "@/shared/styles/themes/themeProvider";
+import { useMenusList } from "@/shared/utils/useMenusList";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
+import LanguageDropdown from "../ui/LanguageDropdown";
 
 function NavBar() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const {
+    isDarkTheme,
+    toggleThemeHandler: toggleThemeHandlerContext,
+  }: ThemeContext = useContext(ThemeContext);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState('EN');
-
-  // Ejemplo de menús para demostración
-  const menus = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Contact', path: '/contact' },
-  ];
+  const [themeIcon, setThemeIcon] = useState<ReactNode>(<MdDarkMode />);
 
   // Cerrar el menú móvil cuando la pantalla se hace más grande
   useEffect(() => {
@@ -24,19 +29,14 @@ function NavBar() {
       }
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
-    // Aquí podrías agregar la lógica para cambiar el tema a nivel de documento
-    document.documentElement.classList.toggle('dark');
-  };
-
-  const toggleLanguage = () => {
-    setCurrentLanguage(currentLanguage === 'EN' ? 'ES' : 'EN');
-  };
+  const toggleThemeHandler = useCallback((): void => {
+    setThemeIcon(isDarkTheme ? <MdDarkMode /> : <MdLightMode />);
+    toggleThemeHandlerContext();
+  }, [setThemeIcon, isDarkTheme, toggleThemeHandlerContext]);
 
   return (
     <header className="fixed top-0 z-50 w-full bg-white dark:bg-blue-900 shadow-lg">
@@ -55,7 +55,7 @@ function NavBar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-4 lg:gap-8">
             <ul className="flex items-center gap-4 lg:gap-6">
-              {menus.map(item => (
+              {useMenusList().map((item) => (
                 <li
                   key={item.path}
                   className="dark:text-slate-300 text-gray-800 hover:text-blue-600 dark:hover:text-slate-400 transition duration-300"
@@ -67,49 +67,42 @@ function NavBar() {
             <div className="flex items-center gap-4">
               {/* Theme Toggle Button */}
               <button
-                onClick={toggleTheme}
+                onClick={toggleThemeHandler}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors"
               >
-                <span className="block w-5 h-5">
-                  {isDarkTheme ? (
-                    <span className="text-white">☀️</span>
-                  ) : (
-                    <span>🌙</span>
-                  )}
+                <span className="block">
+                  <span className="text-gray-800 dark:text-white">
+                    {themeIcon}
+                  </span>
                 </span>
               </button>
               {/* Language Toggle Button */}
-              <button
-                onClick={toggleLanguage}
-                className="px-3 py-1 rounded-md text-sm bg-gray-100 dark:bg-blue-800 hover:bg-gray-200 dark:hover:bg-blue-700 transition-colors"
-              >
-                {currentLanguage}
-              </button>
+              <LanguageDropdown/>
             </div>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="flex md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors text-black w-screen md:justify-between sm:justify-between"
+            className="flex md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors text-black dark:text-white w-screen md:justify-between sm:justify-between"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
             <span className="block w-6 h-6 relative ">
               <span
                 className={`block absolute h-0.5 w-full bg-current transform transition duration-300 ${
-                  isMobileMenuOpen ? 'rotate-45 translate-y-2' : 'translate-y-0'
+                  isMobileMenuOpen ? "rotate-45 translate-y-2" : "translate-y-0"
                 }`}
               ></span>
               <span
                 className={`block absolute h-0.5 w-full bg-current transform transition duration-300 translate-y-2 ${
-                  isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
+                  isMobileMenuOpen ? "opacity-0" : "opacity-100"
                 }`}
               ></span>
               <span
                 className={`block absolute h-0.5 w-full bg-current transform transition duration-300 ${
                   isMobileMenuOpen
-                    ? '-rotate-45 translate-y-2'
-                    : 'translate-y-4'
+                    ? "-rotate-45 translate-y-2"
+                    : "translate-y-4"
                 }`}
               ></span>
             </span>
@@ -120,13 +113,13 @@ function NavBar() {
         <div
           className={`md:hidden transition-all duration-300 ease-in-out ${
             isMobileMenuOpen
-              ? 'max-h-96 opacity-100'
-              : 'max-h-0 opacity-0 overflow-hidden'
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
           }`}
         >
           <nav className="py-4 space-y-4">
             <ul className="space-y-2">
-              {menus.map(item => (
+              {useMenusList().map((item) => (
                 <li key={item.path}>
                   <a
                     href={item.path}
@@ -140,23 +133,16 @@ function NavBar() {
             </ul>
             <div className="flex items-center justify-between px-4 pt-2 border-t border-gray-200 dark:border-blue-800">
               <button
-                onClick={toggleTheme}
+                onClick={toggleThemeHandler}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors"
               >
-                <span className="block w-5 h-5">
-                  {isDarkTheme ? (
-                    <span className="text-white">☀️</span>
-                  ) : (
-                    <span>🌙</span>
-                  )}
+                <span className="block">
+                  <span className="text-gray-800 dark:text-white">
+                    {themeIcon}
+                  </span>
                 </span>
               </button>
-              <button
-                onClick={toggleLanguage}
-                className="px-3 py-1 rounded-md text-sm bg-gray-100 dark:bg-blue-800 hover:bg-gray-200 dark:hover:bg-blue-700 transition-colors"
-              >
-                {currentLanguage}
-              </button>
+              <LanguageDropdown/>
             </div>
           </nav>
         </div>
