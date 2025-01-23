@@ -26,14 +26,11 @@ const LanguageDropdownSwitcher = (
 
   return (
     <>
-      <div className="relative">
+      <div className="relative rounded-md text-sm bg-gray-100 dark:bg-blue-800 hover:bg-gray-200 dark:hover:bg-blue-700 transition-colors">
         <Menu>
           <MenuButton
             type="button"
-            className="inline-flex items-center gap-2 cursor-pointer  bg-dark-background-default data-[open]:bg-dark-background-paper hover:bg-dark-background-paper  py-1.5 pl-2 text-left text-dark-primary-light "
-            aria-haspopup="listbox"
-            aria-expanded="true"
-            aria-labelledby="listbox-label"
+            className="cursor-pointer dark:text-slate-300 text-gray-800 bg-dark-background-default data-[open]:bg-dark-background-paper hover:bg-dark-background-paper  py-1.5 pl-2 text-left"
           >
             <div className="col-start-1 row-start-1 flex items-center pr-1">
               {currentLanguage ? (
@@ -53,9 +50,7 @@ const LanguageDropdownSwitcher = (
             </div>
           </MenuButton>
           <MenuItems
-            transition
-            anchor="bottom end"
-            className="absolute bg-slate-100 mt-4 z-10 right-0 pr-0 max-h-56 w-32 overflow-auto rounded-md bg-dark-background-default py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm"
+            className="absolute bg-slate-100 dark:bg-blue-900 dark:text-slate-300 text-gray-800 mt-4 z-auto right-0 pr-0 max-h-56 w-32 rounded-md py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm"
           >
             {Languages ? (
               Languages.map(option => (
