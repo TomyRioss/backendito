@@ -3,7 +3,34 @@
     "title": "Backendito | Soluciones Profesionales de Desarrollo Web",
     "description": "Descubre Backendito, tu aliado en el desarrollo web profesional. Creamos sitios web rápidos, optimizados para SEO, y con diseño atractivo para llevar tu negocio al siguiente nivel."
   },
+  "contactUs": {
+    "header": "Contáctanos",
+    "thanks": "Gracias por contactarnos, le responderemos lo antes posible.",
+    "title": "Contáctanos",
+    "tagline": "Hacemos tu proyecto realidad",
+    "sending": "Enviando...",
+    "send": "Enviar",
 
+    "placeholders": {
+      "name": "Tu nombre",
+      "email": "Tu correo electrónico",
+      "subject": "Asunto",
+      "message": "Tu consulta"
+    },
+
+    "errors": {
+      "nameRequired": "Introduce tu nombre.",
+      "nameInvalid": "El nombre solo puede contener letras.",
+      "emailRequired": "Introduce tu correo electrónico.",
+      "emailInvalid": "Introduce un correo electrónico válido.",
+      "subjectInvalid": "El asunto es obligatorio.",
+      "messageRequired": "Este campo es obligatorio.",
+      "3charsName": "El nombre debe tener al menos 3 caracteres.",
+      "3charsSubject": "El asunto debe tener al menos 3 caracteres.",
+      "3charsMessage": "El mensaje debe tener al menos 3 caracteres.",
+      "sendFailed": "Error al enviar el mensaje. Inténtalo de nuevo."
+    }
+  },
   "landingPage": {
     "navbar": {
       "home": "Inicio",

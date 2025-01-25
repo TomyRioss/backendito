@@ -3,6 +3,34 @@
     "title": "Backendito | Web Development",
     "description": "Backendito, a website for professional web development."
   },
+  "contactUs": {
+    "header": "Contact Us",
+    "thanks": "Thank you for contacting us. We will get back to you as soon as possible.",
+    "title": "Contact Us",
+    "tagline": "We make your project a reality",
+    "sending": "Sending...",
+    "send": "Send",
+
+    "placeholders": {
+      "name": "Your name",
+      "email": "Your email",
+      "subject": "Subject",
+      "message": "Your message"
+    },
+
+    "errors": {
+      "nameRequired": "Please enter your name.",
+      "nameInvalid": "The name can only contain letters.",
+      "emailRequired": "Please enter your email.",
+      "emailInvalid": "Please enter a valid email address.",
+      "subjectInvalid": "The subject is required.",
+      "messageRequired": "This field is required.",
+      "3charsName": "The name must be at least 3 characters long.",
+      "3charsSubject": "The subject must be at least 3 characters long.",
+      "3charsMessage": "The message must be at least 3 characters long.",
+      "sendFailed": "Failed to send the message. Please try again."
+    }
+  },
 
   "landingPage": {
     "navbar": {
