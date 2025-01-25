@@ -31,6 +31,21 @@ const featuredPersonnel = [
     CV: 'https://drive.google.com/file/d/1FfHo7TlMrROQ75E8eXlX5N0QNV1MwoOf/view?usp=sharing.',
     portfolio: '',
   },
+  {
+    id: 5,
+    initials: 'TR',
+    name: 'Tomas Rios',
+    role: 'CEO',
+  },
+];
+
+const staffPersonnel = [
+  {
+    id: 1,
+    initials: 'TR',
+    name: 'Tomas Rios',
+    role: 'CEO',
+  },
 ];
 
 const frontendPersonnel = [
@@ -55,8 +70,8 @@ const frontendPersonnel = [
     initials: 'SF',
     name: 'Sebastian Fallas',
     role: 'Frontend Developer',
-    CV: 'https://github.com/FallasDev.',
-    portfolio: '',
+    CV: 'https://drive.google.com/file/d/1zTD-BFjkVTWAsxO1RneQxRveD5hfvC_m/view?usp=drive_link.',
+    portfolio: 'https://fallasdev.site/',
   },
   {
     id: 4,
@@ -96,8 +111,8 @@ const frontendPersonnel = [
 const backendPersonnel = [
   {
     id: 1,
-    initials: 'JP',
-    name: 'Jere Programa Ingrid',
+    initials: 'JR',
+    name: 'Jere Rivelli',
     role: 'Backend Developer',
     CV: 'https://drive.google.com/file/d/13v5xQ4jCtpqKcOnY47_m_059zXK1eqVz/view?usp=drive_link',
     portfolio: 'https://jereprograma.com.ar/',
@@ -113,7 +128,7 @@ const backendPersonnel = [
   {
     id: 3,
     initials: 'KK',
-    name: 'Karina Kauffman',
+    name: 'Karenina Kauffman',
     role: 'Backend Developer',
     CV: 'https://drive.google.com/file/d/1OGW0-YWaRotDlqO6CFWxDqqIVsr2UJOO/view?usp=drive_link',
     portfolio: '',
@@ -132,6 +147,30 @@ const backendPersonnel = [
     name: 'Ley Ayalo',
     role: 'Backend Developer',
     CV: 'https://drive.google.com/file/d/1YYiR5Q4446mxaizV3DaPZt3HnS-jT8nY/view?usp=drive_link',
+    portfolio: '',
+  },
+  {
+    id: 6,
+    initials: 'AC',
+    name: 'Aldo de la Cruz',
+    role: 'Backend Developer',
+    CV: 'https://drive.google.com/file/d/1qe_KgbkKDghudonPKocoruqZe691n-DX/view?usp=drive_link',
+    portfolio: 'https://kleytus-portfolio.vercel.app/',
+  },
+  {
+    id: 7,
+    initials: 'ML',
+    name: 'Michael Liendo',
+    role: 'Backend Developer',
+    CV: 'https://michaelliendo.com/',
+    portfolio: 'https://michaelliendo.com/',
+  },
+  {
+    id: 8,
+    initials: 'NA',
+    name: 'Nicolle Andujar',
+    role: 'Backend Developer',
+    CV: 'https://drive.google.com/file/d/1YkXtO9buvzWApoA6zHH2bCZY1XvzvqTf/view?usp=drive_link',
     portfolio: '',
   },
 ];
@@ -188,4 +227,5 @@ export {
   backendPersonnel,
   fullstackPersonnel,
   mobilePersonnel,
+  staffPersonnel,
 };

@@ -8,11 +8,12 @@ import {
   backendPersonnel,
   fullstackPersonnel,
   mobilePersonnel,
+  staffPersonnel,
 } from './aboutPersonnel';
 import { Button } from '../ui/button';
 import { Separator } from '../ui/separator';
-import values from './valuesLogic';
-import Link from 'next/link';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 const FadeIn = ({ children }: { children: React.ReactNode }) => (
   <motion.div
@@ -25,181 +26,166 @@ const FadeIn = ({ children }: { children: React.ReactNode }) => (
   </motion.div>
 );
 
-export default function About() {
+const PersonCard = ({ person, color }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      <FadeIn>
-        <section className="py-20 px-4 md:px-6 text-center mt-10">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            Sobre Nosotros
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Somos una start-up de Desarrollo Web, damos servicios de desarrollo
-            con nuestros equipos de programadores altamente calificados, para
-            entregar constantemente código optimizado, responsivo, y de alta
-            calidad para todos nuestros clientes.
+    <motion.div
+      className={`relative bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden group ${color}`}
+      whileHover={{ scale: 1.05 }}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      transition={{ type: 'spring', stiffness: 300 }}
+    >
+      <div className="p-6 relative z-10">
+        <div className="flex flex-col items-center text-center">
+          <Avatar.Root className="flex w-32 h-32 rounded-full border-4 border-white dark:border-gray-700 shadow-lg mb-4 justify-center items-center ">
+            <Avatar.Image
+              src="/placeholder.svg?height=200&width=200"
+              alt={`Team Member ${person.name}`}
+              className="w-full h-full object-cover"
+            />
+            <Avatar.Fallback className=" text-dark dark:text-white flex items-center justify-center font-bold p-4 rounded-xl">
+              {person.initials}
+            </Avatar.Fallback>
+          </Avatar.Root>
+
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+            {person.name}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+            {person.role}
           </p>
+
+          <div className="flex space-x-2 w-full">
+            <a
+              href={person.CV}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1"
+            >
+              <Button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white">
+                CV
+              </Button>
+            </a>
+            {person.portfolio && (
+              <a
+                href={person.portfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1"
+              >
+                <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white">
+                  Portafolio
+                </Button>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300 ${
+          isHovered ? 'bg-gradient-to-br from-blue-500 to-purple-500' : ''
+        }`}
+      ></div>
+    </motion.div>
+  );
+};
+
+export default function About() {
+  const t = useTranslations('aboutUs');
+
+  return (
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-light">
+      <FadeIn>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 py-16 px-4 md:px-10 text-center md:text-left items-center max-w-7xl mx-auto mt-10 ">
+          <div className="flex flex-col justify-center items-center md:items-start w-full md:w-3/4 ">
+            <h2 className="text-lg font-mono text-gray-500 mb-2 self-start dark:text-white">
+              {t('header')}
+            </h2>
+            <h1 className="text-3xl font-extrabold tracking-tight sm:text-5xl md:text-6xl text-gray-900 mb-4 dark:text-white">
+              {t('headerTitle')}
+            </h1>
+            <p className="text-gray-600 text-base leading-relaxed dark:text-white">
+              {t('description')}
+            </p>
+          </div>
+          <div className="flex justify-center md:justify-end w-full ">
+            <Image
+              src={'/personnel.svg'}
+              alt="personnel"
+              width={400}
+              height={400}
+            />
+          </div>
         </section>
       </FadeIn>
 
       <Separator />
 
-      <FadeIn>
-        <section className="py-16 px-4 md:px-6 dark:bg-gray-800">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Nuestra Misión</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Nuestra misión es brindar a nuestros clientes seguridad y la mayor
-              calidad posible en el menor tiempo. Nos esforzamos por conseguir
-              esto y estamos comprometidos con siempre dar una atención
-              excepcional a nuestros clientes.
-            </p>
-          </div>
-        </section>
-      </FadeIn>
-
       <section className="py-20 px-4 md:px-6">
         {[
           {
-            title: 'Personal Destacado',
+            title: t('departments.starredPersonnel'),
             personnel: featuredPersonnel,
+            description: t('departments.starredPersonnelInfo'),
+            color: 'border-l-4 border-yellow-500 hover:border-yellow-600',
             index: 0,
           },
           {
-            title: 'Departamento Frontend',
+            title: 'Staff',
+            personnel: staffPersonnel,
+            description: t('departments.staffInfo'),
+            color: 'border-l-4 border-blue-500 hover:border-blue-600',
+            index: 1,
+          },
+
+          {
+            title: t('departments.frontendTitle'),
             personnel: frontendPersonnel,
+            description: t('departments.frontend'),
+            color: 'border-l-4 border-orange-500 hover:border-orange-600',
             index: 1,
           },
           {
-            title: 'Departamento Backend',
+            title: t('departments.backendTitle'),
             personnel: backendPersonnel,
+            description: t('departments.backend'),
+            color: 'border-l-4 border-blue-500 hover:border-blue-600',
             index: 2,
           },
           {
-            title: 'Departamento Fullstack',
+            title: t('departments.fullstackTitle'),
             personnel: fullstackPersonnel,
+            description: t('departments.fullstack'),
+            color: 'border-l-4 border-purple-500 hover:border-purple-600',
             index: 3,
           },
           {
-            title: 'Departamento Mobile',
+            title: t('departments.mobileTitle'),
             personnel: mobilePersonnel,
+            description: t('departments.mobile'),
+            color: 'border-l-4 border-green-500 hover:border-green-600',
             index: 4,
           },
         ].map((section, index) => (
           <React.Fragment key={index}>
+            <h2 className="text-3xl font-bold text-left pl-16 mb-2 ">
+              {section.title}
+            </h2>
+            <h4 className="text-left pl-16 text-xl">{section.description}</h4>
             <div
-              className={`mb-10 ${
-                section.index === 0
-                  ? 'bg-yellow-300 dark:bg-yellow-800'
-                  : section.index === 1
-                  ? 'bg-orange-300 dark:bg-orange-800'
-                  : section.index === 2
-                  ? 'bg-blue-500 dark:bg-blue-800'
-                  : section.index === 3
-                  ? 'bg-purple-400 dark:bg-purple-800'
-                  : 'bg-green-400 dark:bg-green-800'
-              } p-4`}
-            >
-              <h2 className="text-3xl font-bold text-center mb-2 ">
-                {section.title}
-              </h2>
-              <h4 className="text-center text-xl">
-                Ellos ayudaron a programar este sitio web, ¡Gracias!
-              </h4>
-            </div>
-            <div
-              className={`grid grid-cols-1 md:grid-cols-3 p-14 gap-12 max-w-6xl mx-auto mt-20`}
+              className={`grid grid-cols-1 md:grid-cols-3 p-14 gap-12 max-w-6xl mx-auto`}
             >
               {section.personnel.map(person => (
                 <FadeIn key={person.id}>
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    className="text-center cursor-pointer"
-                  >
-                    <Avatar.Root className="inline-flex bg-slate-200 dark:bg-gray-700 items-center justify-center overflow-hidden w-32 h-32 rounded-full border-2 border-black">
-                      <Avatar.Image
-                        src="/placeholder.svg?height=200&width=200"
-                        alt={`Team Member ${person.name}`}
-                        className="w-full h-full object-cover"
-                      />
-                      <Avatar.Fallback delayMs={600}>
-                        {person.initials}
-                      </Avatar.Fallback>
-                    </Avatar.Root>
-                    <h3 className="font-semibold text-lg mt-4">
-                      {person.name}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      {person.role}
-                    </p>
-                    <div className="grid grid-cols-2 gap-2 mt-6 w-full">
-                      <a
-                        href={person.CV}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button className="bg-cyan-300 hover:bg-cyan-400 text-black w-full">
-                          CV
-                        </Button>
-                      </a>
-                      {person.portfolio && (
-                        <a
-                          href={person.portfolio}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Button
-                            className={`bg-${
-                              person.portfolio === ''
-                                ? 'red-500 hover:bg-red-600'
-                                : 'cyan-300 hover:bg-cyan-400'
-                            } text-black w-full`}
-                          >
-                            Port.
-                          </Button>
-                        </a>
-                      )}
-                    </div>
-                  </motion.div>
+                  <PersonCard person={person} color={section.color} />
                 </FadeIn>
               ))}
             </div>
           </React.Fragment>
         ))}
-
-        <FadeIn>
-          <section className="py-16 px-4 md:px-6 bg-gray-100 dark:bg-gray-800">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-center mb-8">
-                Nuestros Valores
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {values.map(value => (
-                  <motion.div
-                    key={value.id}
-                    className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow"
-                    whileHover={{ scale: 1.03 }}
-                    transition={{ type: 'spring', stiffness: 300 }}
-                  >
-                    <h3 className="font-semibold text-xl mb-2">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      {value.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-              <div className="text-center mt-8">
-                <Link href="/contact">
-                  <Button className="bg-blue-500 hover:bg-blue-600 text-white w-full">
-                    Contáctanos
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </section>
-        </FadeIn>
       </section>
     </div>
   );

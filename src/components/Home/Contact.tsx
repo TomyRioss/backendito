@@ -1,26 +1,27 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 const Contact = () => {
+  const t = useTranslations('landingPage.contact');
+
   return (
     <article className="bg-blue-900 dark:bg-blue-950 w-full py-12 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
         <div className="flex flex-col justify-center text-center lg:text-left lg:ml-6 xl:ml-20">
           <h2 className="text-xl lg:text-2xl text-cyan-300 mb-3">
-            La solución a tú proyecto.
+            {t('theSolutionToYourProject')}
           </h2>
           <h2 className="text-3xl lg:text-5xl mb-3 text-white">
-            Núnca dejamos un problema sin solucionar.
+            {t('neverLeaveAProblemUnsolved')}
           </h2>
           <p className="text-lg lg:text-xl text-white">
-            Nuestro equipo no cree que exista problema imposible, siempre
-            encontramos la forma de arreglarnosla para resolver cualquiér
-            inconveniente, incluso si significa ir más allá de la programación.
+            {t('ourTeamPlansTheSolution')}
           </p>
           <Link href={'/services'}>
             <div className="flex justify-center lg:justify-start">
               <button className="bg-blue-400 hover:bg-blue-500 w-40 lg:w-48 py-3 lg:py-6 rounded-xl mt-6 text-base lg:text-lg">
-                Soluciones
+                {t('contactUs')}
               </button>
             </div>
           </Link>

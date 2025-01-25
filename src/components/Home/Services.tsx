@@ -3,12 +3,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ServicesInfo from './ServicesInfo';
 import { useServicesList } from '@/lib/useServicesList';
+import { useTranslations } from 'next-intl';
 
 const Services = () => {
+  const t = useTranslations('landingPage.ourServices');
   return (
     <div className="flex flex-col items-center bg-blue-800 dark:bg-blue-950 py-12 md:py-20 px-4">
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 md:mb-12 text-center">
-        Nuestros Servicios
+        {t('ourServices')}
       </h2>
       <div className="w-full max-w-7xl mx-auto">
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">

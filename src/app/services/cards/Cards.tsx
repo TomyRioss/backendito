@@ -64,7 +64,7 @@ const Cards = () => {
                     hover:bg-blue-500 dark:hover:bg-cyan-700 text-white p-3 sm:p-4
                     rounded-md text-sm sm:text-base transition-colors"
                   >
-                    Precio: {card.price}
+                    Precio desde: {card.price}
                   </AlertDialogTrigger>
                   <AlertDialogContent className="max-w-lg mx-4 dark:bg-slate-900">
                     <AlertDialogHeader>

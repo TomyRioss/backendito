@@ -22,7 +22,7 @@ const PaymentInfo = () => {
   return (
     <section className="py-10 px-6 bg-gray-50 dark:bg-gray-900">
       <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">
-        ¿Cómo trabajamos?
+        ¿Cómo pagarnos?
       </h2>
       <Separator className="my-4 bg-gray-300 dark:bg-gray-600 h-1" />
       <article className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8">

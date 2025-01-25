@@ -1,4 +1,9 @@
 {
+  "layout": {
+    "title": "Backendito | Web Development",
+    "description": "Backendito, a website for professional web development."
+  },
+
   "landingPage": {
     "navbar": {
       "home": "Home",
@@ -14,6 +19,12 @@
       "neverLeaveAProblemUnsolved": "We never leave a problem unsolved.",
       "ourTeamPlansTheSolution": "Our entire team plans the solution to every possible problem your business could have, even if it means going beyond programming, there will never be an impossible problem.",
       "contactUs": "Contact us"
+    },
+    "info": {
+      "profile": "Outstanding profiles.",
+      "hands": "Your work in the best hands.",
+      "ourProgrammers": "Our programmers are highly qualified to tackle any task in front of them. We have departments for each specialty to ensure that someone fully experienced in the area can solve any possible problem.",
+      "ourTeam": "About Us"
     },
     "ourServices": {
       "ourServices": "Our Services",
@@ -49,6 +60,37 @@
         "contactUs": "Contact us today and take the first step toward innovative technological solutions that will transform your business.",
         "startNow": "Start Now"
       }
+    }
+  },
+  "aboutUs": {
+    "header": "About Us",
+    "headerTitle": "Helping businesses stand out with the full potential of the web.",
+    "description": "We are a software development company dedicated to creating innovative solutions for your business. Our team of experts works on every detail to deliver a professional, responsive, SEO-optimized website with an attractive design that enhances user experience and maximizes the conversion of visitors into customers. We provide detailed documentation and clean, scalable code, ensuring your project is in safe hands.",
+    "departments": {
+      "starredPersonnel": "Featured Personnel",
+      "starredPersonnelInfo": "They helped program this website, thank you!",
+      "staffInfo": "Company administration, project management, etc.",
+      "frontend": "They handle the design of web applications and everything the user can see.",
+      "backend": "They handle the logic of web applications and everything the user cannot see.",
+      "fullstack": "They handle everything from design to the logic of web applications.",
+      "mobile": "They handle the creation of mobile applications.",
+      "frontendTitle": "Frontend Department",
+      "backendTitle": "Backend Department",
+      "fullstackTitle": "Fullstack Department",
+      "mobileTitle": "Mobile Department"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "legal": {
+      "contact": "Contact",
+      "politics": "Policies",
+      "terms": "Terms"
+    },
+    "contactAndLinks": {
+      "contact": "Contact",
+      "privacyPolicy": "Privacy Policy",
+      "terms": "Terms"
     }
   },
   "languageSelector": {

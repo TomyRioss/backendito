@@ -1,4 +1,9 @@
 {
+  "layout": {
+    "title": "Backendito | Soluciones Profesionales de Desarrollo Web",
+    "description": "Descubre Backendito, tu aliado en el desarrollo web profesional. Creamos sitios web rápidos, optimizados para SEO, y con diseño atractivo para llevar tu negocio al siguiente nivel."
+  },
+
   "landingPage": {
     "navbar": {
       "home": "Inicio",
@@ -7,13 +12,19 @@
       "contact": "Contacto"
     },
     "head": {
-      "slogan": "Tu idea, nuestro trabajo."
+      "slogan": "Tú idea, nuestro trabajo."
     },
     "contact": {
       "theSolutionToYourProject": "La solución a tu problema.",
       "neverLeaveAProblemUnsolved": "Núnca dejamos un problema sin resolver.",
       "ourTeamPlansTheSolution": "Todo nuestro equipo planifica la solución a cada problema posible que pudiera tener tu negocio, incluso si significa ir más allá de la programación, jamás va a haber un problema imposible.",
       "contactUs": "Contáctanos"
+    },
+    "info": {
+      "profile": "Perfiles sobresalientes.",
+      "hands": "Tú trabajo en las mejores manos.",
+      "ourProgrammers": "Nuestros programadores están altamente calificados para resolver cualquier tarea enfrente de ellos, contamos con departaments en cada especialidad, para asegurarnos que alguién experto totalmente en el area pueda resolver cualquier problema posible.",
+      "ourTeam": "Nosostros"
     },
     "ourServices": {
       "ourServices": "Nuestros Servicios",
@@ -49,6 +60,37 @@
         "contactUs": "Contáctanos hoy y da el primer paso hacia soluciones tecnológicas innovadoras que transformarán tu negocio.",
         "startNow": "Empezar ahora"
       }
+    }
+  },
+  "aboutUs": {
+    "header": "Sobre Nosotros",
+    "headerTitle": "Ayudando a negocios a destacar, con todo el potencial de la web.",
+    "description": "Nosotros somos una empresa de desarrollo de software, que nos dedicamos a crear soluciones innovadoras para tu negocio. Nuestro equipo de expertos trabaja en cada detalle para ofrecer un sitio profesional, responsivo, optimizado para SEO, y con un diseño atractivo que mejora la experiencia del usuario y maximiza la conversión de visitas en clientes. Contamos con documentación detallada y un código limpio y escalable, garantizando que tu proyecto esté en manos seguras.",
+    "departments": {
+      "starredPersonnel": "Personal Destacado",
+      "starredPersonnelInfo": "Ellos ayudaron a programar este sitio web, ¡Gracias!",
+      "staffInfo": "Administración de la empresa, gestión de proyectos, etc.",
+      "frontend": "Se ocupan del diseño de las aplicaciones web y todo lo que el usuario pueda ver.",
+      "backend": "Se ocupan de la lógica de las aplicaaciones web y todo lo que el usuario no puede ver.",
+      "fullstack": "Se ocupan de todo, desde el diseño hasta la lógica de las aplicaciones web.",
+      "mobile": "Se ocupan de la creación de aplicaciones móviles.",
+      "frontendTitle": "Departamento Frontend",
+      "backendTitle": "Departamento Backend",
+      "fullstackTitle": "Departamento Fullstack",
+      "mobileTitle": "Departamento Mobile"
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "legal": {
+      "contact": "Contacto",
+      "politics": "Políticas",
+      "terms": "Términos"
+    },
+    "contactAndLinks": {
+      "contact": "Contacto",
+      "privacyPolicy": "Políticas",
+      "terms": "Términos"
     }
   },
   "languageSelector": {
