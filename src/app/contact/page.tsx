@@ -124,11 +124,11 @@ export default function Contact() {
                 {isSubmitting ? 'Enviando...' : 'Enviar'}
               </button>
             </Form>
-            <div className="hidden md:flex imagentexto h-[35rem] w-96 flex flex-col items-start">
+            <div className="hidden md:flex imagentexto h-[35rem] w-96  flex-col items-start">
               <span className="text-blue-700 font-medium text-[2rem]">
                 Backencito
               </span>
-              <span className="text-gray-800 text-[1.2rem]">
+              <span className="text-gray-800 dark:text-white text-[1.2rem]">
                 Hacemos tu proyecto realidad
               </span>
               <Image

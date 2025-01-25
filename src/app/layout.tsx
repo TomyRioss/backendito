@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'title',
-  description: 'description',
+  title: 'Backendito | Desarrollo Web',
+  description: 'Backendito es un proyecto de desarrollo web',
 };
 
 export default async function RootLayout({
