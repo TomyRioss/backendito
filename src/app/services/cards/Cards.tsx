@@ -12,121 +12,136 @@ import {
 } from '@/components/ui/alert-dialog';
 import cardsLogic from './cardsLogic';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Cards = () => {
-  // Ejemplo de datos para demostración
-
   return (
-    <div className="flex flex-col min-h-screen dark:bg-gray-800">
-      <div className="flex flex-col gap-4 w-full p-4 sm:p-6 md:p-8 lg:p-10">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-white dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto space-y-8">
         {cardsLogic.map(card => (
-          <div
+          <motion.div
             key={card.id}
-            className="flex flex-col md:flex-row items-center gap-6 md:gap-8 lg:gap-16 p-4 sm:p-6 md:p-8
-            mx-2 sm:mx-4 md:mx-6 lg:mx-10 bg-cyan-100 dark:bg-gray-900 rounded-md border-2
-            border-gray-700 shadow-lg transition-transform transform hover:scale-105 duration-300"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.5,
+              ease: 'easeInOut',
+              delay: 0.2,
+            }}
+            viewport={{ once: true }}
+            className="group relative"
           >
-            {/* Placeholder para la imagen */}
             <div
-              className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56
-               rounded-lg flex items-center justify-center
-              overflow-hidden flex-shrink-0"
+              className="absolute -inset-0.5 bg-cyan-200 dark:bg-gray-700 rounded-2xl
+              opacity-50 group-hover:opacity-100 transition duration-300
+              blur-sm group-hover:blur-lg"
+            ></div>
+
+            <div
+              className="relative flex flex-col md:flex-row items-center
+              bg-white dark:bg-gray-800/80 rounded-2xl shadow-2xl
+              overflow-hidden border border-gray-100 dark:border-gray-700
+              hover:border-cyan-200 dark:hover:border-cyan-800
+              transition-all duration-300 p-6 gap-8"
             >
-              <Image
-                src={card.icon}
-                alt={card.title}
-                width={750}
-                height={750}
-              />
-            </div>
-
-            <div className="flex flex-col gap-4 w-full">
-              <div className="text-center md:text-left">
-                <h2 className="text-xl sm:text-2xl font-bold text-black dark:text-gray-300">
-                  {card.title}
-                </h2>
-                <a
-                  href={card.path}
-                  className="inline-block underline text-blue-600 hover:text-blue-700"
-                >
-                  Obtén detalles
-                </a>
-                <p className="mt-2 text-sm sm:text-base text-black dark:text-white">
-                  {card.description}
-                </p>
+              {/* Image Section */}
+              <div
+                className="w-48 h-48 shrink-0 rounded-2xl overflow-hidden
+                shadow-lg transform group-hover:scale-105 transition duration-300"
+              >
+                <Image
+                  src={card.icon}
+                  alt={card.title}
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-6">
-                {/* Botón de Precio */}
-                <AlertDialog>
-                  <AlertDialogTrigger
-                    className="w-full bg-blue-400 dark:bg-cyan-600
-                    hover:bg-blue-500 dark:hover:bg-cyan-700 text-white p-3 sm:p-4
-                    rounded-md text-sm sm:text-base transition-colors"
+              {/* Content Section */}
+              <div className="flex-1 space-y-4">
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                    {card.title}
+                  </h2>
+                  <a
+                    href={card.path}
+                    className="text-cyan-600 dark:text-cyan-400
+                    hover:underline text-lg font-medium"
                   >
-                    Precio desde: {card.price}
-                  </AlertDialogTrigger>
-                  <AlertDialogContent className="max-w-lg mx-4 dark:bg-slate-900">
-                    <AlertDialogHeader>
-                      <AlertDialogTitle className="text-lg sm:text-xl dark:text-white">
-                        Somos flexibles
-                      </AlertDialogTitle>
-                      <AlertDialogDescription className="text-sm sm:text-base dark:text-white">
-                        Tenemos servicios desde este precio, dependiendo cuál
-                        sea tu proyecto variamos nuestros precios para que sean
-                        acordes a cualquier necesidad u proyecto existente.
-                      </AlertDialogDescription>
-                    </AlertDialogHeader>
-                    <AlertDialogFooter className="flex-col sm:flex-row gap-2">
-                      <AlertDialogCancel className="dark:bg-slate-300 dark:hover:bg-slate-400">
-                        Cancelar
-                      </AlertDialogCancel>
-                      <AlertDialogAction
-                        className="w-full sm:w-auto px-4 sm:px-8 py-2 sm:py-4
-                        text-base sm:text-lg bg-green-500 hover:bg-green-600"
-                      >
-                        <a href="/contact">Contactar</a>
-                      </AlertDialogAction>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialog>
+                    Obtén detalles
+                  </a>
+                  <p className="mt-3 text-gray-600 dark:text-gray-300">
+                    {card.description}
+                  </p>
+                </div>
 
-                {/* Botón de Plazo */}
-                <AlertDialog>
-                  <AlertDialogTrigger
-                    className="w-full bg-blue-400 dark:bg-cyan-600
-                    hover:bg-blue-500 dark:hover:bg-cyan-700 text-white p-3 sm:p-4
-                    rounded-md text-sm sm:text-base transition-colors"
-                  >
-                    Plazo: {card.timeout}
-                  </AlertDialogTrigger>
-                  <AlertDialogContent className="max-w-lg mx-4 dark:bg-slate-900">
-                    <AlertDialogHeader>
-                      <AlertDialogTitle className="text-lg sm:text-xl dark:text-white">
-                        Nos ajustamos a tus necesidades
-                      </AlertDialogTitle>
-                      <AlertDialogDescription className="text-sm sm:text-base dark:text-white">
-                        Nuestros plazos de entrega son flexibles y se ajustan
-                        según la complejidad del proyecto y tus necesidades
-                        específicas.
-                      </AlertDialogDescription>
-                    </AlertDialogHeader>
-                    <AlertDialogFooter className="flex-col sm:flex-row gap-2">
-                      <AlertDialogCancel className="dark:bg-slate-300 dark:hover:bg-slate-400">
-                        Cancelar
-                      </AlertDialogCancel>
-                      <AlertDialogAction
-                        className="w-full sm:w-auto px-4 sm:px-8 py-2 sm:py-4
-                        text-base sm:text-lg bg-green-500 hover:bg-green-600"
-                      >
-                        <a href="/contact">Contactar</a>
-                      </AlertDialogAction>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialog>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {/* Price Dialog */}
+                  <AlertDialog>
+                    <AlertDialogTrigger
+                      className="w-full bg-cyan-500 dark:bg-cyan-700
+                      text-white font-semibold py-3 rounded-lg
+                      hover:bg-cyan-600 dark:hover:bg-cyan-800
+                      transition-colors duration-300
+                      flex items-center justify-center space-x-2"
+                    >
+                      <span>Precio desde: {card.price}</span>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>Somos flexibles</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Tenemos servicios desde este precio, dependiendo cuál
+                          sea tu proyecto variamos nuestros precios para que
+                          sean acordes a cualquier necesidad u proyecto
+                          existente.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Cancelar</AlertDialogCancel>
+                        <AlertDialogAction>
+                          <a href="/contact">Contactar</a>
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+
+                  {/* Timeout Dialog */}
+                  <AlertDialog>
+                    <AlertDialogTrigger
+                      className="w-full bg-cyan-500 dark:bg-cyan-700
+                      text-white font-semibold py-3 rounded-lg
+                      hover:bg-cyan-600 dark:hover:bg-cyan-800
+                      transition-colors duration-300
+                      flex items-center justify-center space-x-2"
+                    >
+                      <span>Plazo: {card.timeout}</span>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>
+                          Nos ajustamos a tus necesidades
+                        </AlertDialogTitle>
+                        <AlertDialogDescription>
+                          Nuestros plazos de entrega son flexibles y se ajustan
+                          según la complejidad del proyecto y tus necesidades
+                          específicas.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Cancelar</AlertDialogCancel>
+                        <AlertDialogAction>
+                          <a href="/contact">Contactar</a>
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

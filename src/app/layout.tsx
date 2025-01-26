@@ -34,6 +34,12 @@ export default async function RootLayout({
     <html lang={locale}>
       <head>
         <link rel="icon" href="/backenditoIcon.ico" />
+        {/* Código de Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4141031787649415"
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
