@@ -4,6 +4,8 @@ type = "javascript"
 bucket = "./.next"
 
 account_id = "8103442525fb7d50503fb738fda817e2"
+output_dir = "out"
+pages_build_output_dir = "./.next"
 
 [build]
 command = "pnpm build"
