@@ -4,6 +4,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import { useTranslations } from 'next-intl';
 import { ReactElement, startTransition, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
+import Image from 'next/image';
 
 type LanguageDropdownSwitcherType = {
   defaultLang: Language;
@@ -36,7 +37,7 @@ const LanguageDropdownSwitcher = (
               {currentLanguage ? (
                 <>
                   {'image' in currentLanguage && (
-                    <img
+                    <Image
                       src={currentLanguage.image}
                       alt={currentLanguage.name}
                       className="size-5 shrink-0 rounded-full mr-1"
@@ -49,9 +50,7 @@ const LanguageDropdownSwitcher = (
               <IoIosArrowDown />
             </div>
           </MenuButton>
-          <MenuItems
-            className="absolute bg-slate-100 dark:bg-blue-900 dark:text-slate-300 text-gray-800 mt-4 z-auto right-0 pr-0 max-h-56 w-32 rounded-md py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm"
-          >
+          <MenuItems className="absolute bg-slate-100 dark:bg-blue-900 dark:text-slate-300 text-gray-800 mt-4 z-auto right-0 pr-0 max-h-56 w-32 rounded-md py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
             {Languages ? (
               Languages.map(option => (
                 <MenuItem key={`${option?.id || option}`}>
@@ -63,7 +62,7 @@ const LanguageDropdownSwitcher = (
                   >
                     <div className="flex items-center">
                       {'image' in option && (
-                        <img
+                        <Image
                           src={option.image}
                           alt={option.name}
                           className="size-5 shrink-0 rounded-full"

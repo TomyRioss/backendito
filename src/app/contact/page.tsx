@@ -1,7 +1,7 @@
 'use client';
 import backendito from '../../../public/backendito.png';
 import { GoPerson } from 'react-icons/go';
-import { MdSubject, MdMessage, MdEmail } from 'react-icons/md';
+import { MdSubject, MdMessage } from 'react-icons/md';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useState } from 'react';
