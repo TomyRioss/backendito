@@ -1,20 +1,24 @@
-import React from 'react';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from '@/components/ui/alert-dialog';
-import cardsLogic from './cardsLogic';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import cardsLogic from './cardsLogic';
 
 const Cards = () => {
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [dialogType, setDialogType] = useState(null);
+
+  const openDialog = (card, type) => {
+    setSelectedCard(card);
+    setDialogType(type);
+  };
+
+  const closeDialog = () => {
+    setSelectedCard(null);
+    setDialogType(null);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-white dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">
@@ -78,72 +82,67 @@ const Cards = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {/* Price Dialog */}
-                  <AlertDialog>
-                    <AlertDialogTrigger
-                      className="w-full bg-cyan-500 dark:bg-cyan-700
-                      text-white font-semibold py-3 rounded-lg
-                      hover:bg-cyan-600 dark:hover:bg-cyan-800
-                      transition-colors duration-300
-                      flex items-center justify-center space-x-2"
-                    >
-                      <span>Precio desde: {card.price}</span>
-                    </AlertDialogTrigger>
-                    <AlertDialogContent>
-                      <AlertDialogHeader>
-                        <AlertDialogTitle>Somos flexibles</AlertDialogTitle>
-                        <AlertDialogDescription>
-                          Tenemos servicios desde este precio, dependiendo cuál
-                          sea tu proyecto variamos nuestros precios para que
-                          sean acordes a cualquier necesidad u proyecto
-                          existente.
-                        </AlertDialogDescription>
-                      </AlertDialogHeader>
-                      <AlertDialogFooter>
-                        <AlertDialogCancel>Cancelar</AlertDialogCancel>
-                        <AlertDialogAction>
-                          <a href="/contact">Contactar</a>
-                        </AlertDialogAction>
-                      </AlertDialogFooter>
-                    </AlertDialogContent>
-                  </AlertDialog>
+                  {/* Price Dialog Trigger */}
+                  <button
+                    onClick={() => openDialog(card, 'price')}
+                    className="w-full bg-cyan-500 dark:bg-cyan-700
+                    text-white font-semibold py-3 rounded-lg
+                    hover:bg-cyan-600 dark:hover:bg-cyan-800
+                    transition-colors duration-300
+                    flex items-center justify-center space-x-2"
+                  >
+                    <span>Precio desde: {card.price}</span>
+                  </button>
 
-                  {/* Timeout Dialog */}
-                  <AlertDialog>
-                    <AlertDialogTrigger
-                      className="w-full bg-cyan-500 dark:bg-cyan-700
-                      text-white font-semibold py-3 rounded-lg
-                      hover:bg-cyan-600 dark:hover:bg-cyan-800
-                      transition-colors duration-300
-                      flex items-center justify-center space-x-2"
-                    >
-                      <span>Plazo: {card.timeout}</span>
-                    </AlertDialogTrigger>
-                    <AlertDialogContent>
-                      <AlertDialogHeader>
-                        <AlertDialogTitle>
-                          Nos ajustamos a tus necesidades
-                        </AlertDialogTitle>
-                        <AlertDialogDescription>
-                          Nuestros plazos de entrega son flexibles y se ajustan
-                          según la complejidad del proyecto y tus necesidades
-                          específicas.
-                        </AlertDialogDescription>
-                      </AlertDialogHeader>
-                      <AlertDialogFooter>
-                        <AlertDialogCancel>Cancelar</AlertDialogCancel>
-                        <AlertDialogAction>
-                          <a href="/contact">Contactar</a>
-                        </AlertDialogAction>
-                      </AlertDialogFooter>
-                    </AlertDialogContent>
-                  </AlertDialog>
+                  {/* Timeout Dialog Trigger */}
+                  <button
+                    onClick={() => openDialog(card, 'timeout')}
+                    className="w-full bg-cyan-500 dark:bg-cyan-700
+                    text-white font-semibold py-3 rounded-lg
+                    hover:bg-cyan-600 dark:hover:bg-cyan-800
+                    transition-colors duration-300
+                    flex items-center justify-center space-x-2"
+                  >
+                    <span>Plazo: {card.timeout}</span>
+                  </button>
                 </div>
               </div>
             </div>
           </motion.div>
         ))}
       </div>
+
+      {/* Dialog */}
+      {selectedCard && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-md w-full p-6">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+              {dialogType === 'price'
+                ? 'Somos flexibles'
+                : 'Nos ajustamos a tus necesidades'}
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300">
+              {dialogType === 'price'
+                ? 'Tenemos servicios desde este precio, dependiendo cuál sea tu proyecto variamos nuestros precios para que sean acordes a cualquier necesidad u proyecto existente.'
+                : 'Nuestros plazos de entrega son flexibles y se ajustan según la complejidad del proyecto y tus necesidades específicas.'}
+            </p>
+            <div className="mt-6 flex justify-end space-x-4">
+              <button
+                onClick={closeDialog}
+                className="bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded-lg hover:bg-gray-400 dark:hover:bg-gray-600"
+              >
+                Cancelar
+              </button>
+              <a
+                href="/contact"
+                className="bg-cyan-500 dark:bg-cyan-700 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 dark:hover:bg-cyan-800"
+              >
+                Contactar
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
