@@ -4,6 +4,7 @@ import WorkInfo from '../pagesContent/WorkInfo';
 import PaymentInfo from '../pagesContent/PaymentInfo';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
+const runtime = 'edge';
 
 const page = () => {
   return (
