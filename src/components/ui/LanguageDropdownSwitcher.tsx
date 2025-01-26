@@ -49,9 +49,7 @@ const LanguageDropdownSwitcher = (
               <IoIosArrowDown />
             </div>
           </MenuButton>
-          <MenuItems
-            className="absolute bg-slate-100 dark:bg-blue-900 dark:text-slate-300 text-gray-800 mt-4 z-auto right-0 pr-0 max-h-56 w-32 rounded-md py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm"
-          >
+          <MenuItems className="absolute bg-slate-100 dark:bg-blue-900 dark:text-slate-300 text-gray-800 mt-4 z-auto right-0 pr-0 max-h-56 w-32 rounded-md py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
             {Languages ? (
               Languages.map(option => (
                 <MenuItem key={`${option?.id || option}`}>
