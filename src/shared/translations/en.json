@@ -34,10 +34,10 @@
 
   "landingPage": {
     "navbar": {
-      "home": "Home",
-      "services": "Services",
-      "aboutUs": "About Us",
-      "contact": "Contact"
+      "home": "HOME",
+      "services": "SERVICES",
+      "aboutUs": "ABOUT US",
+      "contact": "CONTACT"
     },
     "head": {
       "slogan": "Your idea, our work."

@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslations } from 'next-intl';
 
 type NavbarListType = {
   name: string;
@@ -6,23 +6,23 @@ type NavbarListType = {
 };
 
 export const useMenusList = (): NavbarListType[] => {
-  const t = useTranslations("landingPage.navbar");
+  const t = useTranslations('landingPage.navbar');
   return [
     {
-      name: t("home"),
-      path: "/",
+      name: t('home'),
+      path: '/',
     },
     {
-      name: t("aboutUs"),
-      path: "/about",
+      name: t('aboutUs'),
+      path: '/about',
     },
     {
-      name: t("services"),
-      path: "/services",
+      name: t('services'),
+      path: '/services',
     },
     {
-      name: t("contact"),
-      path: "/contact",
+      name: t('contact'),
+      path: '/contact',
     },
   ];
 };

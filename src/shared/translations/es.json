@@ -33,10 +33,10 @@
   },
   "landingPage": {
     "navbar": {
-      "home": "Inicio",
-      "services": "Servicios",
-      "aboutUs": "Nosotros",
-      "contact": "Contacto"
+      "home": "INICIO",
+      "services": "SERVICIOS",
+      "aboutUs": "NOSOTROS",
+      "contact": "CONTACTO"
     },
     "head": {
       "slogan": "Tú idea, nuestro trabajo."

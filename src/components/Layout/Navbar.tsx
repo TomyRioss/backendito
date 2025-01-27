@@ -42,7 +42,7 @@ function NavBar() {
     <header className="fixed top-0 z-50 w-full bg-white dark:bg-blue-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3  justify-evenly items-center h-16">
-          <section>
+          <section className="flex justify-start">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 flex-shrink-0">
               <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-full flex items-center justify-center">
@@ -56,7 +56,7 @@ function NavBar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-4 lg:gap-8">
-            <ul className="flex items-center gap-4 lg:gap-6">
+            <ul className="flex items-center justify-between gap-4 lg:gap-6 font-bold">
               {useMenusList().map(item => (
                 <li
                   key={item.path}
@@ -67,7 +67,7 @@ function NavBar() {
               ))}
             </ul>
           </nav>
-          <div className="flex items-center gap-4">
+          <div className="flex justify-end gap-4">
             {/* Theme Toggle Button */}
             <button
               onClick={toggleThemeHandler}
