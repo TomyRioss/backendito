@@ -4,7 +4,7 @@ import { Separator } from '@/components/ui/separator';
 export default function Services() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full text-white dark:bg-gradient-to-b dark:from-blue-900 dark:via-gray-800 dark:to-gray-900 ">
+      <div className="flex flex-col items-center justify-center w-full text-white bg-from-blue-900 via-gray-200 to-gray-100 dark:bg-gradient-to-b dark:from-blue-900 dark:via-gray-800 dark:to-gray-900 ">
         <div className="mt-10">
           <h2 className="text-4xl font-bold mt-10 text-blue-400 dark:text-blue-800">
             Estos son nuestros servicios.

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, {
   useState,
@@ -6,12 +6,12 @@ import React, {
   useContext,
   ReactNode,
   useCallback,
-} from "react";
-import Link from "next/link";
-import { ThemeContext } from "@/shared/styles/themes/themeProvider";
-import { useMenusList } from "@/shared/utils/useMenusList";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
-import LanguageDropdown from "../ui/LanguageDropdown";
+} from 'react';
+import Link from 'next/link';
+import { ThemeContext } from '@/shared/styles/themes/themeProvider';
+import { useMenusList } from '@/shared/utils/useMenusList';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
+import LanguageDropdown from '../ui/LanguageDropdown';
 
 function NavBar() {
   const {
@@ -29,8 +29,8 @@ function NavBar() {
       }
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const toggleThemeHandler = useCallback((): void => {
@@ -41,21 +41,23 @@ function NavBar() {
   return (
     <header className="fixed top-0 z-50 w-full bg-white dark:bg-blue-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold">B</span>
-            </div>
-            <h2 className="text-lg sm:text-2xl dark:text-white text-blue-900 hover:text-blue-600 transition duration-300">
-              Backendito
-            </h2>
-          </Link>
+        <div className="grid grid-cols-3  justify-evenly items-center h-16">
+          <section>
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold">B</span>
+              </div>
+              <h2 className="text-lg sm:text-2xl dark:text-white text-blue-900 hover:text-blue-600 transition duration-300">
+                Backendito
+              </h2>
+            </Link>
+          </section>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-4 lg:gap-8">
             <ul className="flex items-center gap-4 lg:gap-6">
-              {useMenusList().map((item) => (
+              {useMenusList().map(item => (
                 <li
                   key={item.path}
                   className="dark:text-slate-300 text-gray-800 hover:text-blue-600 dark:hover:text-slate-400 transition duration-300"
@@ -64,23 +66,22 @@ function NavBar() {
                 </li>
               ))}
             </ul>
-            <div className="flex items-center gap-4">
-              {/* Theme Toggle Button */}
-              <button
-                onClick={toggleThemeHandler}
-                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors"
-              >
-                <span className="block">
-                  <span className="text-gray-800 dark:text-white">
-                    {themeIcon}
-                  </span>
-                </span>
-              </button>
-              {/* Language Toggle Button */}
-              <LanguageDropdown/>
-            </div>
           </nav>
-
+          <div className="flex items-center gap-4">
+            {/* Theme Toggle Button */}
+            <button
+              onClick={toggleThemeHandler}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors"
+            >
+              <span className="block">
+                <span className="text-gray-800 dark:text-white">
+                  {themeIcon}
+                </span>
+              </span>
+            </button>
+            {/* Language Toggle Button */}
+            <LanguageDropdown />
+          </div>
           {/* Mobile Menu Button */}
           <button
             className="flex md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-blue-800 transition-colors text-black dark:text-white w-screen md:justify-between sm:justify-between"
@@ -90,19 +91,19 @@ function NavBar() {
             <span className="block w-6 h-6 relative ">
               <span
                 className={`block absolute h-0.5 w-full bg-current transform transition duration-300 ${
-                  isMobileMenuOpen ? "rotate-45 translate-y-2" : "translate-y-0"
+                  isMobileMenuOpen ? 'rotate-45 translate-y-2' : 'translate-y-0'
                 }`}
               ></span>
               <span
                 className={`block absolute h-0.5 w-full bg-current transform transition duration-300 translate-y-2 ${
-                  isMobileMenuOpen ? "opacity-0" : "opacity-100"
+                  isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
                 }`}
               ></span>
               <span
                 className={`block absolute h-0.5 w-full bg-current transform transition duration-300 ${
                   isMobileMenuOpen
-                    ? "-rotate-45 translate-y-2"
-                    : "translate-y-4"
+                    ? '-rotate-45 translate-y-2'
+                    : 'translate-y-4'
                 }`}
               ></span>
             </span>
@@ -113,13 +114,13 @@ function NavBar() {
         <div
           className={`md:hidden transition-all duration-300 ease-in-out ${
             isMobileMenuOpen
-              ? "max-h-96 opacity-100"
-              : "max-h-0 opacity-0 overflow-hidden"
+              ? 'max-h-96 opacity-100'
+              : 'max-h-0 opacity-0 overflow-hidden'
           }`}
         >
           <nav className="py-4 space-y-4">
             <ul className="space-y-2">
-              {useMenusList().map((item) => (
+              {useMenusList().map(item => (
                 <li key={item.path}>
                   <a
                     href={item.path}
@@ -142,7 +143,7 @@ function NavBar() {
                   </span>
                 </span>
               </button>
-              <LanguageDropdown/>
+              <LanguageDropdown />
             </div>
           </nav>
         </div>
