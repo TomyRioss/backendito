@@ -6,6 +6,7 @@ import { Footer } from '@/components/Layout/Footer';
 import { getLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import ThemeContextProvider from '@/shared/styles/themes/themeProvider';
+import { Analytics } from '@vercel/analytics/react';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -44,6 +45,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
+        <Analytics />
         <ThemeContextProvider>
           <NextIntlClientProvider messages={messages}>
             <NavBar />

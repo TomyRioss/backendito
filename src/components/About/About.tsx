@@ -27,17 +27,11 @@ const FadeIn = ({ children }: { children: React.ReactNode }) => (
     {children}
   </motion.div>
 );
-// eslint-disable-next-line
-const PersonCard = ({ person, color }) => {
-  // eslint-disable-next-line
-  const [isHovered, setIsHovered] = React.useState(false);
-
+const PersonCard = ({ person }) => {
   return (
     <motion.div
       className="group relative"
       whileHover={{ scale: 1.02 }}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
       transition={{ type: 'spring', stiffness: 300 }}
     >
       {/* Ambient card background */}
@@ -220,7 +214,7 @@ export default function About() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {section.personnel.map(person => (
                   <FadeIn key={person.id}>
-                    <PersonCard person={person} color={null} />
+                    <PersonCard person={person} />
                   </FadeIn>
                 ))}
               </div>
