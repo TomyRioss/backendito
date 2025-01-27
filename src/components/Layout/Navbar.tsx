@@ -55,12 +55,12 @@ function NavBar() {
           </section>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-4 lg:gap-8">
-            <ul className="flex items-center justify-between gap-4 lg:gap-6 font-bold">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-8 justify-center">
+            <ul className="flex items-center justify-between gap-4 lg:gap-6 font-light">
               {useMenusList().map(item => (
                 <li
                   key={item.path}
-                  className="dark:text-slate-300 text-gray-800 hover:text-blue-600 dark:hover:text-slate-400 transition duration-300"
+                  className="dark:text-slate-300 text-gray-800 hover:text-blue-600 dark:hover:text-slate-200 transition duration-300"
                 >
                   <a href={item.path}>{item.name}</a>
                 </li>
