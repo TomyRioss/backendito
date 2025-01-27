@@ -38,55 +38,122 @@
       "aboutUs": "NOSOTROS",
       "contact": "CONTACTO"
     },
-    "head": {
-      "slogan": "Tú idea, nuestro trabajo."
-    },
-    "contact": {
-      "theSolutionToYourProject": "La solución a tu problema.",
-      "neverLeaveAProblemUnsolved": "Núnca dejamos un problema sin resolver.",
-      "ourTeamPlansTheSolution": "Todo nuestro equipo planifica la solución a cada problema posible que pudiera tener tu negocio, incluso si significa ir más allá de la programación, jamás va a haber un problema imposible.",
-      "contactUs": "Contáctanos"
-    },
-    "info": {
-      "profile": "Perfiles sobresalientes.",
-      "hands": "Tú trabajo en las mejores manos.",
-      "ourProgrammers": "Nuestros programadores están altamente calificados para resolver cualquier tarea enfrente de ellos, contamos con departaments en cada especialidad, para asegurarnos que alguién experto totalmente en el area pueda resolver cualquier problema posible.",
-      "ourTeam": "Nosostros"
-    },
-    "ourServices": {
-      "ourServices": "Nuestros Servicios",
-      "services": {
+    "services": {
+      "header": "Estos son nuestros servicios.",
+      "description": "*Todos los precios son en USD, los pagos se realizan por Binance o Paypal.",
+      "headerTitle": "Nuestros Servicios",
+      "headerDescription": "Soluciones diseñadas para transformar tu visión en realidad.",
+      "premium": "Servicio Premium",
+      "price": "Precio:",
+      "timeout": "Tiempo estimado:",
+      "from": "Desde",
+      "weeks": "semanas",
+      "days": "días",
+      "explore": "Explorar servicio",
+      "request": "Solicitar presupuesto",
+      "servicesInfo": {
         "web": {
           "title": "Desarrollo Web",
-          "description": "Creamos sitios web rápidos y modernos, adaptados a tu negocio."
+          "description": "Desarrollamos páginas web personalizadas desde cero, adaptadas a las necesidades específicas de tu negocio. Nuestro equipo de expertos trabaja en cada detalle para ofrecer un sitio profesional, responsivo, optimizado para SEO, y con un diseño atractivo que mejora la experiencia del usuario y maximiza la conversión de visitas en clientes. Contamos con documentación detallada y un código limpio y escalable, garantizando que tu proyecto esté en manos seguras."
         },
         "data": {
           "title": "Análisis de Datos",
-          "description": "Análisis avanzado basado en dato para la toma de decisiones."
+          "description": "Ofrecemos análisis de datos avanzado para convertir grandes volúmenes de información en insights útiles y decisiones informadas. A través de técnicas especializadas como minería de datos, visualización gráfica y modelado predictivo, ayudamos a las empresas a optimizar sus estrategias, mejorar la eficiencia operativa y maximizar el retorno de inversión."
         },
         "desktop": {
-          "title": "Diseño Aplicaciones de Escritorio",
-          "description": "Aplicaciones simples o complejas, para cualquier tarea."
+          "title": "Desarrollo Desktop",
+          "description": "Creamos aplicaciones de escritorio robustas y altamente funcionales, diseñadas para mejorar la eficiencia interna de tu negocio. Nuestros desarrollos cuentan con interfaces intuitivas y un rendimiento optimizado, garantizando una experiencia fluida para los usuarios. Además, ofrecemos soporte técnico continuo para mantener tus aplicaciones siempre en su mejor estado."
         },
         "mobile": {
           "title": "Desarrollo Mobile",
-          "description": "Implementamos sistemas escalables y eficientes para tu negocio."
+          "description": "Desarrollamos aplicaciones móviles innovadoras y altamente personalizadas, adecuadas para tu audiencia y adaptadas a diferentes plataformas. Con un enfoque centrado en la experiencia del usuario, aseguramos que tu app esté optimizada tanto en rendimiento como en usabilidad, brindando soluciones prácticas y atractivas para tus clientes en cualquier dispositivo móvil."
         },
         "script": {
           "title": "Servicio de Scripting",
-          "description": "Scripts para automatizar tareas."
+          "description": "Ofrecemos servicios de scripting personalizados para automatizar tareas, mejorar la eficiencia y optimizar procesos. Ya sea para desarrollos web, creación de bots, automatización de workflows o personalización de aplicaciones, nuestro enfoque se centra en proporcionar soluciones prácticas y adaptadas a tus necesidades específicas."
         },
         "seo": {
           "title": "Consultoría SEO",
-          "description": "Ten enseñamos cómo es que optimizamos nuestro SEO, para que tu sitio web sea más fácil de encontrar."
+          "description": "Maximizamos la visibilidad de tu sitio web en motores de búsqueda a través de estrategias SEO avanzadas. Desde la optimización del contenido hasta la creación de estrategias de enlaces efectivos, garantizamos un aumento significativo en tu tráfico web y una mayor presencia online. Nuestro enfoque personalizado asegura resultados sostenibles y medibles en el tiempo."
         }
-      },
-      "servicesInfo": {
-        "join": "Únete a la innovación",
-        "getStarted": "Empieza tu proyecto con nosotros en minutos",
-        "contactUs": "Contáctanos hoy y da el primer paso hacia soluciones tecnológicas innovadoras que transformarán tu negocio.",
-        "startNow": "Empezar ahora"
       }
+    },
+    "servicesRoutes": {
+      "data": {
+        "title": "Data Analysis",
+        "description": "We offer advanced data analysis to convert large volumes of information into useful insights and informed decisions. Through specialized techniques like data mining, graphical visualization, and predictive modeling, we help companies optimize their strategies, improve operational efficiency, and maximize ROI."
+      },
+      "web": {
+        "title": "Web Development",
+        "description": "We develop custom websites from scratch, tailored to the specific needs of your business."
+      },
+      "desktop": {
+        "title": "Desktop Development",
+        "description": "We create robust and highly functional desktop applications."
+      },
+      "mobile": {
+        "title": "Mobile Development",
+        "description": "We develop mobile applications tailored to your needs."
+      },
+      "script": {
+        "title": "Scripting Service",
+        "description": "We offer personalized scripting services."
+      },
+      "seo": {
+        "title": "SEO Consultancy",
+        "description": "We help you increase your website's traffic through SEO."
+      }
+    }
+  },
+  "head": {
+    "slogan": "Tú idea, nuestro trabajo."
+  },
+  "contact": {
+    "theSolutionToYourProject": "La solución a tu problema.",
+    "neverLeaveAProblemUnsolved": "Núnca dejamos un problema sin resolver.",
+    "ourTeamPlansTheSolution": "Todo nuestro equipo planifica la solución a cada problema posible que pudiera tener tu negocio, incluso si significa ir más allá de la programación, jamás va a haber un problema imposible.",
+    "contactUs": "Contáctanos"
+  },
+  "info": {
+    "profile": "Perfiles sobresalientes.",
+    "hands": "Tú trabajo en las mejores manos.",
+    "ourProgrammers": "Nuestros programadores están altamente calificados para resolver cualquier tarea enfrente de ellos, contamos con departaments en cada especialidad, para asegurarnos que alguién experto totalmente en el area pueda resolver cualquier problema posible.",
+    "ourTeam": "Nosostros"
+  },
+  "ourServices": {
+    "ourServices": "Nuestros Servicios",
+    "learnMore": "Más información",
+    "services": {
+      "web": {
+        "title": "Desarrollo Web",
+        "description": "Creamos sitios web rápidos y modernos, adaptados a tu negocio."
+      },
+      "data": {
+        "title": "Análisis de Datos",
+        "description": "Análisis avanzado basado en dato para la toma de decisiones."
+      },
+      "desktop": {
+        "title": "Diseño Aplicaciones de Escritorio",
+        "description": "Aplicaciones simples o complejas, para cualquier tarea."
+      },
+      "mobile": {
+        "title": "Desarrollo Mobile",
+        "description": "Implementamos sistemas escalables y eficientes para tu negocio."
+      },
+      "script": {
+        "title": "Servicio de Scripting",
+        "description": "Scripts para automatizar tareas."
+      },
+      "seo": {
+        "title": "Consultoría SEO",
+        "description": "Ten enseñamos cómo es que optimizamos nuestro SEO, para que tu sitio web sea más fácil de encontrar."
+      }
+    },
+    "servicesInfo": {
+      "join": "Únete a la innovación",
+      "getStarted": "Empieza tu proyecto con nosotros en minutos",
+      "contactUs": "Contáctanos hoy y da el primer paso hacia soluciones tecnológicas innovadoras que transformarán tu negocio.",
+      "startNow": "Empezar ahora"
     }
   },
   "aboutUs": {

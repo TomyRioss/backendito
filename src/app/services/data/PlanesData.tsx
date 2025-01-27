@@ -59,7 +59,7 @@ const PlanesData = () => {
   return (
     <section className="w-full px-4 py-6 bg-gray-50 dark:bg-gray-900">
       <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-white">
-        Soluciones Personalizadas en Data Analytics
+        Planes Data Analytics
       </h2>
 
       <article className="grid grid-cols-1 md:grid-cols-3 gap-6">

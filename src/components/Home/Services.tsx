@@ -4,43 +4,81 @@ import Image from 'next/image';
 import ServicesInfo from './ServicesInfo';
 import { useServicesList } from '@/lib/useServicesList';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 const Services = () => {
   const t = useTranslations('landingPage.ourServices');
-  return (
-    <div className="flex flex-col items-center bg-blue-800 dark:bg-blue-950 py-12 md:py-20 px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 md:mb-12 text-center">
-        {t('ourServices')}
-      </h2>
-      <div className="w-full max-w-7xl mx-auto">
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
-          {useServicesList().map(services => (
-            <Link
-              href={services.path}
-              key={services.title}
-              className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-950 shadow-lg rounded-lg p-6 md:p-8 flex flex-col items-center text-center"
-            >
-              <li className="flex flex-col justify-center items-center">
-                <Image
-                  src={services.image}
-                  alt={services.title}
-                  width={100}
-                  height={100}
-                />
 
-                <h3 className="text-lg md:text-xl font-bold text-black dark:text-white">
-                  {services.title}
+  return (
+    <section
+      className="relative overflow-hidden bg-gradient-to-b from-blue-800 to-blue-900 dark:from-blue-950 dark:to-blue-900 py-16 md:py-24 px-4"
+      aria-labelledby="services-heading"
+    >
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10 dark:opacity-5">
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+      </div>
+
+      <div className="relative w-full max-w-7xl mx-auto">
+        <h2
+          id="services-heading"
+          className="text-4xl md:text-5xl font-bold text-white mb-12 text-center tracking-tight"
+        >
+          {t('ourServices')}
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          {useServicesList().map((service, index) => (
+            <Link
+              href={service.path}
+              key={service.title}
+              className="group focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-xl"
+            >
+              <article className="h-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center text-center group-hover:translate-y-[-4px]">
+                <div className="relative w-24 h-24 mb-6">
+                  <Image
+                    src={service.image}
+                    alt=""
+                    fill
+                    className="object-contain transition-transform duration-300 group-hover:scale-110"
+                    sizes="(max-width: 768px) 96px, 96px"
+                  />
+                </div>
+
+                <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  {service.title}
                 </h3>
-                <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mt-2">
-                  {services.description}
+
+                <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                  {service.description}
                 </p>
-              </li>
+
+                <div className="mt-6 inline-flex items-center text-blue-600 dark:text-blue-400 font-medium">
+                  {t('learnMore')}
+                  <svg
+                    className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </div>
+              </article>
             </Link>
           ))}
-        </ul>
+        </div>
+
+        <div className="mt-16">
+          <ServicesInfo />
+        </div>
       </div>
-      <ServicesInfo />
-    </div>
+    </section>
   );
 };
 

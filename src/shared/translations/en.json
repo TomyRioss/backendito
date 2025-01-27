@@ -39,6 +39,72 @@
       "aboutUs": "ABOUT US",
       "contact": "CONTACT"
     },
+    "services": {
+      "header": "These are our services.",
+      "description": "*All prices are in USD, and payments are made via Binance or PayPal.",
+      "headerTitle": "Our Services",
+      "headerDescription": "Solutions designed to turn your vision into reality.",
+      "premium": "Premium Service",
+      "price": "Price:",
+      "timeout": "Completion Time: ",
+      "from": "From",
+      "weeks": "weeks",
+      "days": "days",
+      "explore": "Explore service",
+      "request": "Request a quote",
+      "servicesInfo": {
+        "web": {
+          "title": "Web Development",
+          "description": "We develop custom websites from scratch, tailored to your business's specific needs. Our team of experts focuses on every detail to deliver a professional, responsive, SEO-optimized site with an attractive design that improves user experience and maximizes conversions. We provide detailed documentation and clean, scalable code, ensuring your project is in safe hands."
+        },
+        "data": {
+          "title": "Data Analysis",
+          "description": "We offer advanced data analysis services to transform large volumes of information into actionable insights and informed decisions. Using specialized techniques such as data mining, graphical visualization, and predictive modeling, we help businesses optimize strategies, improve operational efficiency, and maximize ROI."
+        },
+        "desktop": {
+          "title": "Desktop Development",
+          "description": "We create robust and highly functional desktop applications designed to enhance your business's internal efficiency. Our solutions feature intuitive interfaces and optimized performance, ensuring a seamless user experience. Additionally, we provide ongoing technical support to keep your applications in top condition."
+        },
+        "mobile": {
+          "title": "Mobile Development",
+          "description": "We develop innovative and highly customized mobile applications tailored to your audience and adapted to different platforms. With a user-centric approach, we ensure that your app is optimized for both performance and usability, delivering practical and appealing solutions for your customers on any mobile device."
+        },
+        "script": {
+          "title": "Scripting Service",
+          "description": "We offer custom scripting services to automate tasks, enhance efficiency, and optimize processes. Whether it's for web development, bot creation, workflow automation, or application customization, our focus is on providing practical solutions tailored to your specific needs."
+        },
+        "seo": {
+          "title": "SEO Consulting",
+          "description": "We maximize your website's visibility on search engines through advanced SEO strategies. From content optimization to creating effective link-building strategies, we ensure a significant increase in web traffic and greater online presence. Our personalized approach guarantees sustainable and measurable results over time."
+        }
+      }
+    },
+    "servicesRoutes": {
+      "data": {
+        "title": "Data Analysis",
+        "description": "We offer advanced data analysis to convert large volumes of information into useful insights and informed decisions. Through specialized techniques like data mining, graphical visualization, and predictive modeling, we help companies optimize their strategies, improve operational efficiency, and maximize ROI."
+      },
+      "web": {
+        "title": "Web Development",
+        "description": "We develop custom websites from scratch, tailored to the specific needs of your business."
+      },
+      "desktop": {
+        "title": "Desktop Development",
+        "description": "We create robust and highly functional desktop applications."
+      },
+      "mobile": {
+        "title": "Mobile Development",
+        "description": "We develop mobile applications tailored to your needs."
+      },
+      "script": {
+        "title": "Scripting Service",
+        "description": "We offer personalized scripting services."
+      },
+      "seo": {
+        "title": "SEO Consultancy",
+        "description": "We help you increase your website's traffic through SEO."
+      }
+    },
     "head": {
       "slogan": "Your idea, our work."
     },
@@ -56,6 +122,7 @@
     },
     "ourServices": {
       "ourServices": "Our Services",
+      "learnMore": "Learn more",
       "services": {
         "web": {
           "title": "Web Development",

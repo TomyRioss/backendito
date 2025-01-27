@@ -46,23 +46,12 @@ export default function Contact() {
   };
 
   return (
-    <div
-      className={`min-h-screen transition-colors duration-500 ${
-        isDark
-          ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'
-          : 'bg-gradient-to-br from-blue-50 via-white to-indigo-50'
-      } py-16 px-4 relative overflow-hidden`}
-    >
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 py-16 px-4 relative overflow-hidden transition-colors duration-500">
       {/* Theme toggle */}
       <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className={`fixed top-6 right-6 p-3 rounded-full z-50 transition-colors duration-300
-          ${
-            isDark
-              ? 'bg-slate-800 text-yellow-400 hover:bg-slate-700'
-              : 'bg-white text-slate-700 hover:bg-slate-100 shadow-lg'
-          }`}
+        className="fixed top-6 right-6 p-3 rounded-full z-50 bg-white dark:bg-slate-800 text-slate-700 dark:text-yellow-400 hover:bg-slate-100 dark:hover:bg-slate-700 shadow-lg transition-colors duration-300"
         onClick={() => setIsDark(!isDark)}
         aria-label="Cambiar tema"
       >
@@ -76,12 +65,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 py-3 px-6
-              rounded-full shadow-lg flex items-center gap-2 ${
-                isDark
-                  ? 'bg-green-500 text-white'
-                  : 'bg-green-50 text-green-700 border border-green-100'
-              }`}
+            className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 py-3 px-6 rounded-full shadow-lg flex items-center gap-2 bg-green-50 dark:bg-green-500 text-green-700 dark:text-white border border-green-100 dark:border-transparent"
           >
             <Sparkles className="w-4 h-4" />
             <span className="font-medium">{t('thanks')}</span>
@@ -91,20 +75,8 @@ export default function Contact() {
 
       {/* Background decorations */}
       <div className="absolute inset-0">
-        <div
-          className={`absolute inset-0 ${
-            isDark
-              ? 'bg-[radial-gradient(circle_at_50%_-20%,rgba(120,119,198,0.1),rgba(0,0,0,0))]'
-              : 'bg-[radial-gradient(circle_at_50%_-20%,rgba(120,119,198,0.05),rgba(255,255,255,0))]'
-          }`}
-        />
-        <div
-          className={`absolute inset-0 ${
-            isDark
-              ? 'bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)]'
-              : 'bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)]'
-          } bg-[size:24px_24px]`}
-        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,rgba(120,119,198,0.05),rgba(255,255,255,0))] dark:bg-[radial-gradient(circle_at_50%_-20%,rgba(120,119,198,0.1),rgba(0,0,0,0))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
       </div>
 
       <Formik
@@ -119,32 +91,16 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`relative p-8 md:p-10 rounded-2xl ${
-                  isDark
-                    ? 'bg-slate-900/50 backdrop-blur-xl'
-                    : 'bg-white/80 backdrop-blur-xl'
-                } shadow-2xl`}
+                className="relative p-8 md:p-10 rounded-2xl bg-white/80 dark:bg-slate-900/50 backdrop-blur-xl shadow-2xl"
               >
                 {/* Decorative gradient borders */}
                 <div className="absolute inset-px rounded-2xl overflow-hidden">
-                  <div
-                    className={`absolute inset-0 opacity-10 ${
-                      isDark
-                        ? 'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'
-                        : 'bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200'
-                    }`}
-                  />
+                  <div className="absolute inset-0 opacity-10 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 dark:from-indigo-500 dark:via-purple-500 dark:to-pink-500" />
                 </div>
 
                 <div className="relative">
                   <div className="text-center mb-8">
-                    <h2
-                      className={`text-3xl font-bold mb-2 ${
-                        isDark
-                          ? 'bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-200 to-indigo-200'
-                          : 'bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600'
-                      }`}
-                    >
+                    <h2 className="text-3xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 dark:from-white dark:via-blue-200 dark:to-indigo-200">
                       {t('header')}
                     </h2>
                   </div>
@@ -153,29 +109,19 @@ export default function Contact() {
                     {/* Name field */}
                     <div className="space-y-1">
                       <div
-                        className={`group relative rounded-xl transition-all duration-300 ${
+                        className={`group relative rounded-xl transition-all duration-300 bg-slate-100 dark:bg-slate-800/50 focus-within:ring-2 ring-indigo-500 ${
                           touched.name && errors.name
                             ? 'ring-2 ring-red-500'
-                            : isDark
-                            ? 'bg-slate-800/50 focus-within:ring-2 ring-indigo-500'
-                            : 'bg-slate-100 focus-within:ring-2 ring-indigo-500'
+                            : ''
                         }`}
                       >
                         <div className="flex items-center px-4 gap-3">
-                          <User
-                            className={`w-5 h-5 ${
-                              isDark ? 'text-slate-400' : 'text-slate-500'
-                            }`}
-                          />
+                          <User className="w-5 h-5 text-slate-500 dark:text-slate-400" />
                           <Field
                             type="text"
                             name="name"
                             placeholder={t('placeholders.name')}
-                            className={`w-full py-4 bg-transparent outline-none ${
-                              isDark
-                                ? 'text-white placeholder:text-slate-500'
-                                : 'text-slate-900 placeholder:text-slate-500'
-                            }`}
+                            className="w-full py-4 bg-transparent outline-none text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-500"
                           />
                         </div>
                       </div>
@@ -189,23 +135,19 @@ export default function Contact() {
                     {/* Subject field */}
                     <div className="space-y-1">
                       <div
-                        className={`group relative rounded-xl transition-all duration-300 ${
+                        className={`group relative rounded-xl transition-all duration-300 bg-slate-100 dark:bg-slate-800/50 focus-within:ring-2 ring-indigo-500 ${
                           touched.subject && errors.subject
                             ? 'ring-2 ring-red-500'
-                            : 'bg-slate-100 dark:bg-slate-800/50 focus-within:ring-2 ring-indigo-500'
+                            : ''
                         }`}
                       >
                         <div className="flex items-center px-4 gap-3">
-                          <MessageSquare
-                            className={`w-5 h-5 ${
-                              isDark ? 'text-slate-400' : 'text-slate-500'
-                            }`}
-                          />
+                          <MessageSquare className="w-5 h-5 text-slate-500 dark:text-slate-400" />
                           <Field
                             type="text"
                             name="subject"
                             placeholder={t('placeholders.subject')}
-                            className="w-full py-4 bg-transparent outline-none text-slate-900 placeholder:text-slate-500 dark:text-white dark:placeholder:text-slate-500"
+                            className="w-full py-4 bg-transparent outline-none text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-500"
                           />
                         </div>
                       </div>
@@ -219,10 +161,10 @@ export default function Contact() {
                     {/* Message field */}
                     <div className="space-y-1">
                       <div
-                        className={`group relative rounded-xl transition-all duration-300 ${
+                        className={`group relative rounded-xl transition-all duration-300 bg-slate-100 dark:bg-slate-800/50 focus-within:ring-2 ring-indigo-500 ${
                           touched.consult && errors.consult
                             ? 'ring-2 ring-red-500'
-                            : 'bg-slate-100  focus-within:ring-2 ring-indigo-500'
+                            : ''
                         }`}
                       >
                         <Field
@@ -230,11 +172,7 @@ export default function Contact() {
                           name="consult"
                           placeholder={t('placeholders.message')}
                           rows={4}
-                          className={`w-full p-4 bg-transparent outline-none rounded-xl resize-none ${
-                            isDark
-                              ? 'text-white placeholder:text-slate-500'
-                              : 'text-slate-900 placeholder:text-slate-500'
-                          }`}
+                          className="w-full p-4 bg-transparent outline-none rounded-xl resize-none text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-500"
                         />
                       </div>
                       <ErrorMessage
@@ -248,11 +186,9 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className={`w-full py-4 rounded-xl flex items-center justify-center gap-2
-                      font-medium transition-all duration-300
-                         bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:opacity-90
-                        dark:bg-gradient-to-r dark:from-indigo-600 dark:via-purple-600 dark:to-indigo-600 dark:text-white dark:hover:opacity-90
-                      } ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                      className={`w-full py-4 rounded-xl flex items-center justify-center gap-2 font-medium transition-all duration-300 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-600 dark:via-purple-600 dark:to-indigo-600 text-white hover:opacity-90 ${
+                        isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                      }`}
                     >
                       <Send className="w-5 h-5" />
                       <span>{isSubmitting ? t('sending') : t('send')}</span>
@@ -269,20 +205,13 @@ export default function Contact() {
               transition={{ delay: 0.2 }}
               className="w-full max-w-md lg:w-1/2 space-y-6"
             >
-              <div
-                className="space-y-4
-                dark:text-white text-slate-900"
-              >
+              <div className="space-y-4 text-slate-900 dark:text-white">
                 <h3 className="text-4xl font-bold">Backendito</h3>
                 <p className="text-xl opacity-80">{t('tagline')}</p>
               </div>
 
               <div className="relative group">
-                <div
-                  className="absolute -inset-1 rounded-2xl opacity-50 blur-xl transition-all duration-500 group-hover:opacity-100
-                      dark:bg-gradient-to-r dark:from-indigo-500 dark:via-purple-500 dark:to-pink-500
-                      bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200"
-                />
+                <div className="absolute -inset-1 rounded-2xl opacity-50 blur-xl transition-all duration-500 group-hover:opacity-100 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 dark:from-indigo-500 dark:via-purple-500 dark:to-pink-500" />
                 <div className="relative">
                   <Image
                     src={backendito}
