@@ -56,7 +56,6 @@ const Cards = () => {
                 ease: [0.22, 1, 0.36, 1],
                 delay: index * 0.1,
               }}
-              onHoverStart={() => setHoveredCard(card.id)}
               onHoverEnd={() => setHoveredCard(null)}
               className="group relative"
             >

@@ -7,6 +7,7 @@ import { getLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import ThemeContextProvider from '@/shared/styles/themes/themeProvider';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -46,6 +47,7 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <Analytics />
+        <SpeedInsights />
         <ThemeContextProvider>
           <NextIntlClientProvider messages={messages}>
             <NavBar />
