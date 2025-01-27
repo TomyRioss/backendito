@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Mail, Phone } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 
 const Contact = () => {
   const t = useTranslations('landingPage.contact');
