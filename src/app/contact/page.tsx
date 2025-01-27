@@ -6,15 +6,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Sun,
-  Moon,
-  User,
-  MessageSquare,
-  Send,
-  Sparkles,
-  X,
-} from 'lucide-react';
+import { Sun, Moon, User, MessageSquare, Send, Sparkles } from 'lucide-react';
 import backendito from '../../../public/backendito.png';
 import { useTranslations } from 'next-intl';
 
