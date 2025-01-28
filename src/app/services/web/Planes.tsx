@@ -1,87 +1,66 @@
-import React from "react";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { MdOutlineShoppingCart, MdOutlineMessage } from "react-icons/md";
+import React from 'react';
+import { Separator } from '@/components/ui/separator';
+import { Button } from '@/components/ui/button';
+import { MdOutlineShoppingCart, MdOutlineMessage } from 'react-icons/md';
 
 // Datos dinámicos para los planes
 const planesData = [
   {
-    id: "7",
-    title: "Web Sencilla",
+    id: '7',
+    title: 'Web Sencilla',
     description:
-      "Ideal para pequeños proyectos, marcas personales con funcionalidades básicas.",
+      'Ideal para pequeños proyectos, marcas personales con funcionalidades básicas.',
     details: {
-      "Integración Ecommerce": "❌",
-      "Optimización SEO": "❌",
-      "Diseño Responsivo": "✅",
-      "Dominio Incluido": "❌",
-      "Integración de Redes Sociales": "✅",
-      "Soporte Multilenguaje": "❌",
-      "Backup Automático": "❌",
+      'Integración Ecommerce': '❌',
+      'Optimización SEO': '❌',
+      'Diseño Responsivo': '✅',
+      'Dominio Incluido': '❌',
+      'Integración de Redes Sociales': '✅',
+      'Soporte Multilenguaje': '❌',
+      'Backup Automático': '❌',
     },
-<<<<<<< HEAD
     pages: '1',
     deliveryTime: '3 - 5 Días',
     price: '$65 USD',
     support: '1 mes',
-=======
-    pages: "1",
-    deliveryTime: "3 - 5 Días",
-    price: "$150 USD",
-    support: "1 mes",
->>>>>>> 164536528b04e4c98f8c44fe7d96b57dec87e3fd
   },
   {
-    id: "8",
-    title: "Web Premium",
+    id: '8',
+    title: 'Web Premium',
     description:
-      "Perfecta para negocios que buscan escalar su presencia en línea, vender productos y gestionar inventarios.",
+      'Perfecta para negocios que buscan escalar su presencia en línea, vender productos y gestionar inventarios.',
     details: {
-      "Integración Ecommerce": "✅",
-      "Optimización SEO": "✅",
-      "Diseño Responsivo": "✅",
-      "Dominio Incluido": "✅",
-      "Integración de Redes Sociales": "✅",
-      "Soporte Multilenguaje": "❌",
-      "Backup Automático": "❌",
+      'Integración Ecommerce': '✅',
+      'Optimización SEO': '✅',
+      'Diseño Responsivo': '✅',
+      'Dominio Incluido': '✅',
+      'Integración de Redes Sociales': '✅',
+      'Soporte Multilenguaje': '❌',
+      'Backup Automático': '❌',
     },
-<<<<<<< HEAD
     pages: '4',
     deliveryTime: '7 - 14 Días',
     price: '$250 USD',
     support: '3 meses',
-=======
-    pages: "4",
-    deliveryTime: "7 - 14 Días",
-    price: "$500 USD",
-    support: "3 meses",
->>>>>>> 164536528b04e4c98f8c44fe7d96b57dec87e3fd
   },
   {
-    id: "9",
-    title: "Web Empresarial",
+    id: '9',
+    title: 'Web Empresarial',
     description:
-      "Ideal para negocios consolidados que buscan un sitio profesional con funcionalidades avanzadas, diseño atractivo y SEO perfeccionado.",
+      'Ideal para negocios consolidados que buscan un sitio profesional con funcionalidades avanzadas, diseño atractivo y SEO perfeccionado.',
     details: {
-      "Integración Ecommerce": "✅",
-      "Optimización SEO": "✅",
-      "Diseño Responsivo": "✅",
-      "Dominio Incluido": "✅",
-      "Integración de Redes Sociales": "✅",
-      "Soporte Multilenguaje": "✅",
-      "Backup Automático": "✅",
+      'Integración Ecommerce': '✅',
+      'Optimización SEO': '✅',
+      'Diseño Responsivo': '✅',
+      'Dominio Incluido': '✅',
+      'Integración de Redes Sociales': '✅',
+      'Soporte Multilenguaje': '✅',
+      'Backup Automático': '✅',
     },
-<<<<<<< HEAD
     pages: '6+',
     deliveryTime: '31 Días',
     price: '$550 USD',
     support: '6 meses',
-=======
-    pages: "6+",
-    deliveryTime: "31 Días",
-    price: "$1,200 USD",
-    support: "6 meses",
->>>>>>> 164536528b04e4c98f8c44fe7d96b57dec87e3fd
   },
 ];
 
@@ -115,7 +94,7 @@ const Planes = () => {
                     key={key}
                     className="flex justify-between text-sm dark:text-gray-300"
                   >
-                    <span>{key}:</span>{" "}
+                    <span>{key}:</span>{' '}
                     <span className="text-gray-900 dark:text-gray-300">
                       {value}
                     </span>
