@@ -1,7 +1,7 @@
 {
   "layout": {
-    "title": "Backendito | Web Development",
-    "description": "Backendito, a website for professional web development."
+    "title": "Backendito | Professional Web Development Solutions",
+    "description": "Discover Backendito, your ally in professional web development. We create fast, SEO-optimized websites with attractive designs to take your business to the next level."
   },
   "contactUs": {
     "header": "Contact Us",
@@ -15,23 +15,22 @@
       "name": "Your name",
       "email": "Your email",
       "subject": "Subject",
-      "message": "Your message"
+      "message": "Your query"
     },
 
     "errors": {
-      "nameRequired": "Please enter your name.",
+      "nameRequired": "Enter your name.",
       "nameInvalid": "The name can only contain letters.",
-      "emailRequired": "Please enter your email.",
-      "emailInvalid": "Please enter a valid email address.",
+      "emailRequired": "Enter your email.",
+      "emailInvalid": "Enter a valid email.",
       "subjectInvalid": "The subject is required.",
       "messageRequired": "This field is required.",
       "3charsName": "The name must be at least 3 characters long.",
       "3charsSubject": "The subject must be at least 3 characters long.",
       "3charsMessage": "The message must be at least 3 characters long.",
-      "sendFailed": "Failed to send the message. Please try again."
+      "sendFailed": "Error sending the message. Try again."
     }
   },
-
   "landingPage": {
     "navbar": {
       "home": "HOME",
@@ -41,12 +40,12 @@
     },
     "services": {
       "header": "These are our services.",
-      "description": "*All prices are in USD, and payments are made via Binance or PayPal.",
+      "description": "*All prices are in USD, payments are made via Binance or PayPal.",
       "headerTitle": "Our Services",
-      "headerDescription": "Solutions designed to turn your vision into reality.",
+      "headerDescription": "Solutions designed to transform your vision into reality.",
       "premium": "Premium Service",
       "price": "Price:",
-      "timeout": "Completion Time: ",
+      "timeout": "Estimated time:",
       "from": "From",
       "weeks": "weeks",
       "days": "days",
@@ -55,74 +54,74 @@
       "servicesInfo": {
         "web": {
           "title": "Web Development",
-          "description": "We develop custom websites from scratch, tailored to your business's specific needs. Our team of experts focuses on every detail to deliver a professional, responsive, SEO-optimized site with an attractive design that improves user experience and maximizes conversions. We provide detailed documentation and clean, scalable code, ensuring your project is in safe hands."
+          "description": "We develop custom websites from scratch, tailored to your business's specific needs. Our team of experts works on every detail to deliver a professional, responsive, SEO-optimized website with an attractive design that enhances user experience and maximizes the conversion of visitors into clients. We provide detailed documentation and clean, scalable code to ensure your project is in safe hands."
         },
         "data": {
           "title": "Data Analysis",
-          "description": "We offer advanced data analysis services to transform large volumes of information into actionable insights and informed decisions. Using specialized techniques such as data mining, graphical visualization, and predictive modeling, we help businesses optimize strategies, improve operational efficiency, and maximize ROI."
+          "description": "We offer advanced data analysis to convert large volumes of information into actionable insights and informed decisions. Using specialized techniques such as data mining, graphical visualization, and predictive modeling, we help businesses optimize strategies, improve operational efficiency, and maximize ROI."
         },
         "desktop": {
           "title": "Desktop Development",
-          "description": "We create robust and highly functional desktop applications designed to enhance your business's internal efficiency. Our solutions feature intuitive interfaces and optimized performance, ensuring a seamless user experience. Additionally, we provide ongoing technical support to keep your applications in top condition."
+          "description": "We create robust and highly functional desktop applications designed to enhance your business's internal efficiency. Our developments feature intuitive interfaces and optimized performance, ensuring a smooth user experience. We also provide continuous technical support to keep your applications at their best."
         },
         "mobile": {
           "title": "Mobile Development",
-          "description": "We develop innovative and highly customized mobile applications tailored to your audience and adapted to different platforms. With a user-centric approach, we ensure that your app is optimized for both performance and usability, delivering practical and appealing solutions for your customers on any mobile device."
+          "description": "We develop innovative and highly customized mobile applications tailored to your audience and compatible with various platforms. With a user-focused approach, we ensure your app is optimized for performance and usability, providing practical and attractive solutions for your customers on any mobile device."
         },
         "script": {
           "title": "Scripting Service",
-          "description": "We offer custom scripting services to automate tasks, enhance efficiency, and optimize processes. Whether it's for web development, bot creation, workflow automation, or application customization, our focus is on providing practical solutions tailored to your specific needs."
+          "description": "We offer personalized scripting services to automate tasks, improve efficiency, and optimize processes. Whether for web development, bot creation, workflow automation, or application customization, our approach focuses on delivering practical solutions tailored to your specific needs."
         },
         "seo": {
-          "title": "SEO Consulting",
-          "description": "We maximize your website's visibility on search engines through advanced SEO strategies. From content optimization to creating effective link-building strategies, we ensure a significant increase in web traffic and greater online presence. Our personalized approach guarantees sustainable and measurable results over time."
+          "title": "SEO Consultancy",
+          "description": "We maximize your website's visibility on search engines through advanced SEO strategies. From content optimization to creating effective link strategies, we ensure a significant increase in your web traffic and online presence. Our personalized approach delivers sustainable and measurable results over time."
         }
       }
     },
     "servicesRoutes": {
       "data": {
         "title": "Data Analysis",
-        "description": "We offer advanced data analysis to convert large volumes of information into useful insights and informed decisions. Through specialized techniques like data mining, graphical visualization, and predictive modeling, we help companies optimize their strategies, improve operational efficiency, and maximize ROI."
+        "description": "We offer advanced data analysis to turn large volumes of information into useful insights and informed decisions. Through techniques such as data mining, graphical visualization, and predictive modeling, we help companies optimize strategies, improve operational efficiency, and maximize ROI."
       },
       "web": {
         "title": "Web Development",
-        "description": "We develop custom websites from scratch, tailored to the specific needs of your business."
+        "description": "We create custom websites from scratch tailored to your business's specific needs."
       },
       "desktop": {
         "title": "Desktop Development",
-        "description": "We create robust and highly functional desktop applications."
+        "description": "We develop robust and highly functional desktop applications."
       },
       "mobile": {
         "title": "Mobile Development",
-        "description": "We develop mobile applications tailored to your needs."
+        "description": "We create mobile applications tailored to your needs."
       },
       "script": {
         "title": "Scripting Service",
-        "description": "We offer personalized scripting services."
+        "description": "We provide personalized scripting services."
       },
       "seo": {
         "title": "SEO Consultancy",
-        "description": "We help you increase your website's traffic through SEO."
+        "description": "We help you increase your website traffic through SEO."
       }
     },
     "head": {
       "slogan": "Your idea, our work."
     },
     "contact": {
-      "theSolutionToYourProject": "The solution to your project.",
+      "theSolutionToYourProject": "The solution to your problem.",
       "neverLeaveAProblemUnsolved": "We never leave a problem unsolved.",
-      "ourTeamPlansTheSolution": "Our entire team plans the solution to every possible problem your business could have, even if it means going beyond programming, there will never be an impossible problem.",
-      "contactUs": "Contact us"
+      "ourTeamPlansTheSolution": "Our entire team plans the solution to every possible problem your business could face. Even if it means going beyond programming, there will never be an impossible problem.",
+      "contactUs": "Contact Us"
     },
     "info": {
       "profile": "Outstanding profiles.",
-      "hands": "Your work in the best hands.",
-      "ourProgrammers": "Our programmers are highly qualified to tackle any task in front of them. We have departments for each specialty to ensure that someone fully experienced in the area can solve any possible problem.",
-      "ourTeam": "About Us"
+      "hands": "Your project in the best hands.",
+      "ourProgrammers": "Our programmers are highly skilled to tackle any task in front of them. We have departments specializing in each area to ensure that an expert can handle any possible problem.",
+      "ourTeam": "Our Team"
     },
     "ourServices": {
       "ourServices": "Our Services",
-      "learnMore": "Learn more",
+      "learnMore": "Learn More",
       "services": {
         "web": {
           "title": "Web Development",
@@ -133,12 +132,12 @@
           "description": "Advanced data analysis for decision-making."
         },
         "desktop": {
-          "title": "Desktop Development",
+          "title": "Desktop Application Design",
           "description": "Simple or complex applications for any task."
         },
         "mobile": {
           "title": "Mobile Development",
-          "description": "Implement scalable and efficient systems for your business."
+          "description": "We implement scalable and efficient systems for your business."
         },
         "script": {
           "title": "Scripting Service",
@@ -146,50 +145,50 @@
         },
         "seo": {
           "title": "SEO Consultancy",
-          "description": "We teach you how we optimize SEO, so your website is easier to find."
+          "description": "We teach you how we optimize SEO to make your website easier to find."
         }
       },
       "servicesInfo": {
         "join": "Join the innovation",
-        "getStarted": "Get your project started with us in just minutes",
+        "getStarted": "Start your project with us in minutes",
         "contactUs": "Contact us today and take the first step toward innovative technological solutions that will transform your business.",
         "startNow": "Start Now"
       }
-    }
-  },
-  "aboutUs": {
-    "header": "About Us",
-    "headerTitle": "Helping businesses stand out with the full potential of the web.",
-    "description": "We are a software development company dedicated to creating innovative solutions for your business. Our team of experts works on every detail to deliver a professional, responsive, SEO-optimized website with an attractive design that enhances user experience and maximizes the conversion of visitors into customers. We provide detailed documentation and clean, scalable code, ensuring your project is in safe hands.",
-    "departments": {
-      "starredPersonnel": "Featured Personnel",
-      "starredPersonnelInfo": "They helped program this website, thank you!",
-      "staffInfo": "Company administration, project management, etc.",
-      "frontend": "They handle the design of web applications and everything the user can see.",
-      "backend": "They handle the logic of web applications and everything the user cannot see.",
-      "fullstack": "They handle everything from design to the logic of web applications.",
-      "mobile": "They handle the creation of mobile applications.",
-      "frontendTitle": "Frontend Department",
-      "backendTitle": "Backend Department",
-      "fullstackTitle": "Fullstack Department",
-      "mobileTitle": "Mobile Department"
-    }
-  },
-  "footer": {
-    "rights": "All rights reserved.",
-    "legal": {
-      "contact": "Contact",
-      "politics": "Policies",
-      "terms": "Terms"
     },
-    "contactAndLinks": {
-      "contact": "Contact",
-      "privacyPolicy": "Privacy Policy",
-      "terms": "Terms"
+    "aboutUs": {
+      "header": "About Us",
+      "headerTitle": "Helping businesses stand out with the full potential of the web.",
+      "description": "We are a software development company dedicated to creating innovative solutions for your business. Our team of experts works on every detail to deliver a professional, responsive, SEO-optimized website with an attractive design that enhances user experience and maximizes conversion rates. We provide detailed documentation and clean, scalable code to ensure your project is in safe hands.",
+      "departments": {
+        "starredPersonnel": "Outstanding Personnel",
+        "starredPersonnelInfo": "They helped program this website. Thank you!",
+        "staffInfo": "Company administration, project management, etc.",
+        "frontend": "Responsible for web application design and everything the user can see.",
+        "backend": "Handle the logic of web applications and everything the user can't see.",
+        "fullstack": "Take care of everything, from design to logic for web applications.",
+        "mobile": "Specialized in mobile application development.",
+        "frontendTitle": "Frontend Department",
+        "backendTitle": "Backend Department",
+        "fullstackTitle": "Fullstack Department",
+        "mobileTitle": "Mobile Department"
+      }
+    },
+    "footer": {
+      "rights": "All rights reserved.",
+      "legal": {
+        "contact": "Contact",
+        "politics": "Policies",
+        "terms": "Terms"
+      },
+      "contactAndLinks": {
+        "contact": "Contact",
+        "privacyPolicy": "Policies",
+        "terms": "Terms"
+      }
+    },
+    "languageSelector": {
+      "noDefaultOrCurrentLanguage": "No default or current option available to display.",
+      "noOptionsToShow": "No options to display."
     }
-  },
-  "languageSelector": {
-    "noDefaultOrCurrentLanguage": "There is no default, current option or info to show",
-    "noOptionsToShow": "There is no options to show"
   }
 }

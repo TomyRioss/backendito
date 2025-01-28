@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 export const Footer = () => {
-  const t = useTranslations('footer');
+  const t = useTranslations('landingPage.footer');
 
   const socialLinks = [
     {
