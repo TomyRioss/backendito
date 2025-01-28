@@ -16,7 +16,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.web.title'),
       description: t('servicesInfo.web.description'),
       icon: '/web.png',
-      price: '75.00',
+      price: '65.00',
       timeout: '4 ' + t('days'),
     },
     {
@@ -52,7 +52,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.script.title'),
       description: t('servicesInfo.script.description'),
       icon: '/script.png',
-      price: '175.00',
+      price: '85.00',
       timeout: '1 ' + t('weeks'),
     },
     {
