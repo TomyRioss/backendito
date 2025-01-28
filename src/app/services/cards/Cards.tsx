@@ -3,20 +3,13 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Clock,
-  DollarSign,
-  Sparkles,
-  ChevronRight,
-} from 'lucide-react';
+import { Clock, DollarSign, Sparkles, ChevronRight } from 'lucide-react';
 import cardsLogic from './cardsLogic';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 const Cards = () => {
   const t = useTranslations('landingPage.services');
-  const [hoveredCard, setHoveredCard] = React.useState(null);
   const cards = cardsLogic(t);
 
   return (
@@ -62,7 +55,6 @@ const Cards = () => {
                 ease: [0.22, 1, 0.36, 1],
                 delay: index * 0.1,
               }}
-              onHoverEnd={() => setHoveredCard(null)}
               className="group relative flex flex-col h-full"
               itemScope
               itemType="https://schema.org/Service"

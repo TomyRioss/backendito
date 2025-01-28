@@ -4,7 +4,6 @@ import Image from 'next/image';
 import ServicesInfo from './ServicesInfo';
 import { useServicesList } from '@/lib/useServicesList';
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 
 const Services = () => {
   const t = useTranslations('landingPage.ourServices');
@@ -28,7 +27,7 @@ const Services = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {useServicesList().map((service, index) => (
+          {useServicesList().map(service => (
             <Link
               href={service.path}
               key={service.title}
