@@ -14,7 +14,7 @@ const LanguageDropdownSwitcher = (
 ): ReactElement => {
   const { defaultLang: defaultLang } = props;
   const [currentLanguage, setCurrentLanguage] = useState<Language>(defaultLang);
-  const t = useTranslations('languageSelector');
+  const t = useTranslations('landingPage.languageSelector');
 
   const toggleLanguageHandler = (language: Language): void => {
     const locale = language.value as Locale;

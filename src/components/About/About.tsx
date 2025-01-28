@@ -109,7 +109,7 @@ const DepartmentHeader = ({ icon: Icon, title, description }) => (
 );
 
 export default function About() {
-  const t = useTranslations('aboutUs');
+  const t = useTranslations('landingPage.aboutUs');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 transition-colors duration-500">
