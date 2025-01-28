@@ -16,6 +16,7 @@ import { Separator } from '../ui/separator';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { ArrowRight, Phone, Users, Code, Star } from 'lucide-react';
+import Link from 'next/link';
 
 const FadeIn = ({ children }: { children: React.ReactNode }) => (
   <motion.div
@@ -38,7 +39,7 @@ const PersonCard = ({ person }) => {
       <div className="absolute -inset-px rounded-xl transition-all duration-500 bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 dark:from-indigo-500 dark:via-purple-500 dark:to-pink-500 opacity-0 group-hover:opacity-100 blur-md" />
 
       <div className="relative rounded-xl overflow-hidden bg-white/80 dark:bg-slate-900/50 backdrop-blur-xl transition-colors duration-500">
-        <div className="p-8 relative z-10">
+        <div className="p-8 relative ">
           <div className="flex flex-col items-center text-center">
             <Avatar.Root className="relative flex w-32 h-32 rounded-full mb-6">
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-400 dark:from-indigo-500 dark:to-purple-500 rounded-full blur opacity-20" />
@@ -132,18 +133,24 @@ export default function About() {
                   {t('description')}
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                  <a href="#team">
-                    <Button className="bg-gradient-to-r from-indigo-400 to-purple-400 dark:from-indigo-500 dark:to-purple-500 text-white shadow-lg shadow-indigo-200/50 dark:shadow-indigo-500/25 transform hover:scale-[1.02] active:scale-[0.98] transition duration-300">
-                      Conoce al equipo
+                  <Button
+                    asChild
+                    className="bg-gradient-to-r from-indigo-400 to-purple-400 dark:from-indigo-500 dark:to-purple-500 text-white shadow-lg shadow-indigo-200/50 dark:shadow-indigo-500/25 transform hover:scale-[1.02] active:scale-[0.98] transition duration-300"
+                  >
+                    <a href="#team">
+                      {t('meetTeam')}
                       <Users className="w-4 h-4 ml-2" />
-                    </Button>
-                  </a>
-                  <a href="/contact">
-                    <Button className="bg-white dark:bg-white/10 text-slate-700 dark:text-white border border-slate-200 dark:border-white/10 shadow-lg transform hover:scale-[1.02] active:scale-[0.98] transition duration-300">
-                      Contáctanos
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    className="bg-white dark:bg-white/10 text-slate-700 dark:text-white border border-slate-200 dark:border-white/10 shadow-lg transform hover:scale-[1.02] active:scale-[0.98] transition duration-300"
+                  >
+                    <Link href="/contact">
+                      {t('contactUs')}
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </a>
+                    </Link>
+                  </Button>
                 </div>
               </div>
               <div className="relative">

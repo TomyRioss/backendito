@@ -21,7 +21,7 @@ const planesData = [
     },
     pages: '1',
     deliveryTime: '3 - 5 Días',
-    price: '$150 USD',
+    price: '$65 USD',
     support: '1 mes',
   },
   {
@@ -40,7 +40,7 @@ const planesData = [
     },
     pages: '4',
     deliveryTime: '7 - 14 Días',
-    price: '$500 USD',
+    price: '$250 USD',
     support: '3 meses',
   },
   {
@@ -59,7 +59,7 @@ const planesData = [
     },
     pages: '6+',
     deliveryTime: '31 Días',
-    price: '$1,200 USD',
+    price: '$550 USD',
     support: '6 meses',
   },
 ];

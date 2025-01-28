@@ -159,6 +159,9 @@
       "header": "Sobre Nosotros",
       "headerTitle": "Ayudando a negocios a destacar, con todo el potencial de la web.",
       "description": "Nosotros somos una empresa de desarrollo de software, que nos dedicamos a crear soluciones innovadoras para tu negocio. Nuestro equipo de expertos trabaja en cada detalle para ofrecer un sitio profesional, responsivo, optimizado para SEO, y con un diseño atractivo que mejora la experiencia del usuario y maximiza la conversión de visitas en clientes. Contamos con documentación detallada y un código limpio y escalable, garantizando que tu proyecto esté en manos seguras.",
+      "us": "Nosotros",
+      "meetTeam": "Conoce al equipo",
+      "contactUs": "Contáctanos",
       "departments": {
         "starredPersonnel": "Personal Destacado",
         "starredPersonnelInfo": "Ellos ayudaron a programar este sitio web, ¡Gracias!",

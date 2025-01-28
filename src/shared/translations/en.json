@@ -159,6 +159,9 @@
       "header": "About Us",
       "headerTitle": "Helping businesses stand out with the full potential of the web.",
       "description": "We are a software development company dedicated to creating innovative solutions for your business. Our team of experts works on every detail to deliver a professional, responsive, SEO-optimized website with an attractive design that enhances user experience and maximizes conversion rates. We provide detailed documentation and clean, scalable code to ensure your project is in safe hands.",
+      "us": "About Us",
+      "meetTeam": "Meet the team",
+      "contactUs": "Contact us",
       "departments": {
         "starredPersonnel": "Outstanding Personnel",
         "starredPersonnelInfo": "They helped program this website. Thank you!",
