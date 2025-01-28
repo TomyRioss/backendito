@@ -19,7 +19,7 @@ const planesDataAnalytics = [
       'Integración de Herramientas BI': '❌',
     },
     deliveryTime: '1 - 2 Semanas',
-    price: '$300 USD',
+    price: '$150.00 USD',
   },
   {
     id: '2',
@@ -35,7 +35,7 @@ const planesDataAnalytics = [
       'Integración de Herramientas BI': '❌',
     },
     deliveryTime: '3 - 4 Semanas',
-    price: '$800 USD',
+    price: '$400 USD',
   },
   {
     id: '3',
@@ -51,7 +51,7 @@ const planesDataAnalytics = [
       'Automatización de Procesos': '✅',
     },
     deliveryTime: '6 - 8 Semanas',
-    price: '$1.550 USD',
+    price: '$775 USD',
   },
 ];
 

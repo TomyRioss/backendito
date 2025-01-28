@@ -16,7 +16,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.web.title'),
       description: t('servicesInfo.web.description'),
       icon: '/web.png',
-      price: '150.00',
+      price: '75.00',
       timeout: '4 ' + t('days'),
     },
     {
@@ -25,7 +25,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.data.title'),
       description: t('servicesInfo.data.description'),
       icon: '/data.png',
-      price: '300.00',
+      price: '150.00',
       timeout: '1 ' + t('weeks'),
     },
     {
@@ -34,7 +34,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.desktop.title'),
       description: t('servicesInfo.desktop.description'),
       icon: '/desktop.png',
-      price: '750.00',
+      price: '375.00',
       timeout: '2 ' + t('weeks'),
     },
     {
@@ -43,7 +43,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.mobile.title'),
       description: t('servicesInfo.mobile.description'),
       icon: '/mobile.png',
-      price: '300.00',
+      price: '150.00',
       timeout: '2 ' + t('weeks'),
     },
     {
@@ -52,7 +52,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.script.title'),
       description: t('servicesInfo.script.description'),
       icon: '/script.png',
-      price: '350.00',
+      price: '175.00',
       timeout: '1 ' + t('weeks'),
     },
     {
@@ -61,7 +61,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.seo.title'),
       description: t('servicesInfo.seo.description'),
       icon: '/seo.png',
-      price: '50.00',
+      price: '25.00',
       timeout: '1 ' + t('weeks'),
     },
   ];

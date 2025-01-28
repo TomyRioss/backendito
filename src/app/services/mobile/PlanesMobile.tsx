@@ -19,7 +19,7 @@ const planesData = [
       'Actualizaciones Incluidas': '❌',
     },
     deliveryTime: '2 - 3 Semanas',
-    price: '$400.00 USD',
+    price: '$200.00 USD',
   },
   {
     id: '1',
@@ -35,7 +35,7 @@ const planesData = [
       'Actualizaciones Incluidas': '❌',
     },
     deliveryTime: '4 - 6 Semanas',
-    price: '$650.00 USD',
+    price: '$325.00 USD',
   },
   {
     id: '2',
@@ -51,7 +51,7 @@ const planesData = [
       'Actualizaciones Incluidas': '✅',
     },
     deliveryTime: '8 - 10 Semanas',
-    price: '$1,100.00 USD',
+    price: '$550.00 USD',
   },
 ];
 
