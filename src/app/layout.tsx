@@ -39,8 +39,8 @@ export default async function RootLayout({
         {/* Código de Google AdSense */}
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4141031787649415"
-          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2613517057651087"
+          crossorigin="anonymous"
         ></script>
       </head>
       <body
