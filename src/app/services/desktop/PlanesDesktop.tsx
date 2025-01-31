@@ -21,7 +21,7 @@ const planesData = [
       'Optimización de Rendimiento': '❌',
     },
     deliveryTime: '2 - 3 Semanas',
-    price: '$375.00 USD',
+    price: 'AR$ 375.000 / $375 USD',
   },
   {
     id: '13',
@@ -37,7 +37,7 @@ const planesData = [
       'Optimización de Rendimiento': '✅',
     },
     deliveryTime: '4 - 6 Semanas',
-    price: '$750.00 USD',
+    price: 'AR$ 750.000 / $750 USD',
   },
   {
     id: '14',
@@ -53,7 +53,7 @@ const planesData = [
       'Optimización de Rendimiento Avanzada': '✅',
     },
     deliveryTime: '6 - 8 Semanas',
-    price: '$1,250.00 USD',
+    price: 'AR$ 1.250.000 / $1,250 USD',
   },
 ];
 

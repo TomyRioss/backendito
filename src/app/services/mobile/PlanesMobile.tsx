@@ -19,7 +19,7 @@ const planesData = [
       'Actualizaciones Incluidas': '❌',
     },
     deliveryTime: '2 - 3 Semanas',
-    price: '$150.00 USD',
+    price: 'AR$ 150.000 / $150 USD',
   },
   {
     id: '1',
@@ -35,7 +35,7 @@ const planesData = [
       'Actualizaciones Incluidas': '❌',
     },
     deliveryTime: '4 - 6 Semanas',
-    price: '$325.00 USD',
+    price: 'AR$ 325.000 / $325 USD',
   },
   {
     id: '2',
@@ -51,7 +51,7 @@ const planesData = [
       'Actualizaciones Incluidas': '✅',
     },
     deliveryTime: '8 - 10 Semanas',
-    price: '$550.00 USD',
+    price: 'AR$ 550.000 / $550 USD',
   },
 ];
 

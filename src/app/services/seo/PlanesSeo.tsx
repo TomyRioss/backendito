@@ -19,7 +19,7 @@ const planesSeoData = [
       'Enlace Interno y Externo': '❌',
     },
     deliveryTime: '1 - 2 Semanas',
-    price: '$25 USD',
+    price: 'AR$ 25.000 / $25 USD',
   },
   {
     id: '2',
@@ -35,7 +35,7 @@ const planesSeoData = [
       'Enlace Interno y Externo': '❌',
     },
     deliveryTime: '3 - 4 Semanas',
-    price: '$45 USD',
+    price: 'AR$ 45.000 / $45 USD',
   },
   {
     id: '3',
@@ -51,7 +51,7 @@ const planesSeoData = [
       'Soporte Técnico Dedicado': '✅',
     },
     deliveryTime: '6 - 8 Semanas',
-    price: '$75 USD',
+    price: 'AR$ 75.000 / $75 USD',
   },
 ];
 

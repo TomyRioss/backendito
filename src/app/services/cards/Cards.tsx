@@ -117,7 +117,7 @@ const Cards = () => {
                           className="font-semibold text-slate-700 dark:text-blue-200/90"
                           itemProp="price"
                         >
-                          ${card.price} USD
+                          AR$ {card.price}
                         </p>
                       </div>
                     </div>

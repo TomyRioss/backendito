@@ -19,7 +19,7 @@ const planesData = [
       'Optimización del Rendimiento': '❌',
     },
     deliveryTime: '1 - 2 Semanas',
-    price: '$85.00 USD',
+    price: 'AR$ 85.000 / $85 USD',
   },
   {
     id: '10',
@@ -35,7 +35,7 @@ const planesData = [
       'Optimización Avanzada': '✅',
     },
     deliveryTime: '3 - 4 Semanas',
-    price: '$125.00 USD',
+    price: 'AR$ 125.000 / $125 USD',
   },
   {
     id: '11',
@@ -51,7 +51,7 @@ const planesData = [
       'Optimización y Seguridad Avanzada': '✅',
     },
     deliveryTime: '4 - 6 Semanas',
-    price: '$195.00 USD',
+    price: 'AR$ 195.000 / $195 USD',
   },
 ];
 
