@@ -105,7 +105,21 @@
       }
     },
     "head": {
-      "slogan": "Tú idea, nuestro trabajo."
+      "slogan": "Tú idea, nuestro trabajo.",
+      "cta": "Empezar ahora",
+      "secondaryCta": "Contáctanos",
+      "launch": "Nuevo lanzamiento",
+      "description": "Transformando ideas en experiencias digitales excepcionales para el mundo moderno",
+      "keywords": {
+        "code": "Desarrollo Web",
+        "desing": "Diseño Web",
+        "seo": "SEO Optimizado"
+      },
+      "stats": {
+        "projects": "Proyectos completados",
+        "clients": "Clientes satisfechos",
+        "support": "Soporte Técnico"
+      }
     },
     "contact": {
       "theSolutionToYourProject": "La solución a tu problema.",

@@ -105,7 +105,21 @@
       }
     },
     "head": {
-      "slogan": "Your idea, our work."
+      "slogan": "Your idea, our work.",
+      "cta": "Get Started Now",
+      "secondaryCta": "Contact Us",
+      "launch": "New Launch",
+      "description": "Transforming ideas into exceptional digital experiences for the modern world",
+      "keywords": {
+        "code": "Web Development",
+        "desing": "Web Design",
+        "seo": "SEO Optimized"
+      },
+      "stats": {
+        "projects": "Completed Projects",
+        "clients": "Satisfied Clients",
+        "support": "Technical Support"
+      }
     },
     "contact": {
       "theSolutionToYourProject": "The solution to your problem.",
