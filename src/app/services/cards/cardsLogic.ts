@@ -17,7 +17,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       description: t('servicesInfo.web.description'),
       icon: '/web.png',
       price: '65.000 / $65 USD',
-      timeout: '4 ' + t('days'),
+      timeout: '3 ' + t('days'),
     },
     {
       id: 1,
@@ -25,8 +25,8 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.data.title'),
       description: t('servicesInfo.data.description'),
       icon: '/data.png',
-      price: '150.000 / $150 USD',
-      timeout: '1 ' + t('weeks'),
+      price: '65.000 / $65 USD',
+      timeout: '3 ' + t('days'),
     },
     {
       id: 2,
@@ -34,8 +34,8 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.desktop.title'),
       description: t('servicesInfo.desktop.description'),
       icon: '/desktop.png',
-      price: '375.000 / $375 USD',
-      timeout: '2 ' + t('weeks'),
+      price: '350.000 / $350 USD',
+      timeout: '3 ' + t('weeks'),
     },
     {
       id: 3,
@@ -52,8 +52,8 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       title: t('servicesInfo.script.title'),
       description: t('servicesInfo.script.description'),
       icon: '/script.png',
-      price: '85.000 / $85 USD',
-      timeout: '1 ' + t('weeks'),
+      price: '50.000 / $50 USD',
+      timeout: '2 ' + t('days'),
     },
     {
       id: 5,
@@ -62,7 +62,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       description: t('servicesInfo.seo.description'),
       icon: '/seo.png',
       price: '25.000 / $25 USD',
-      timeout: '1 ' + t('weeks'),
+      timeout: '1 ' + t('days'),
     },
   ];
 };

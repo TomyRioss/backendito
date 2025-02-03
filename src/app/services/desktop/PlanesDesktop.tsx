@@ -1,133 +1,176 @@
 'use client';
 
-import React from 'react';
-import { Separator } from '@/components/ui/separator';
-import { Button } from '@/components/ui/button';
-import { MdOutlineDesktopMac, MdOutlineMessage } from 'react-icons/md';
+import { motion } from 'framer-motion';
+import Plan from '../pagesContent/Plan';
 import Link from 'next/link';
 
-const planesData = [
+interface PlanData {
+  id: string;
+  title: string;
+  description: string;
+  details: Record<string, string>;
+  features: Record<string, string>;
+}
+
+const planesData: PlanData[] = [
   {
-    id: '12',
-    title: 'Aplicación Básica',
+    id: '7',
+    title: 'Software de Escritorio Básico',
     description:
-      'Ideal para pequeñas empresas o emprendedores que necesitan una solución rápida y funcional.',
+      'Ideal para pequeñas empresas o emprendedores que requieren una solución de software de escritorio sencilla y funcional.',
     details: {
-      'Compatibilidad con Windows y Mac': '✅',
+      'Compatibilidad con Windows y macOS': '✅',
       'Interfaz Personalizada': '✅',
-      'Soporte Técnico Básico': '✅',
+      'Soporte Técnico Básico': '❌',
       'Actualizaciones Incluidas': '❌',
       'Integración con APIs': '❌',
-      'Optimización de Rendimiento': '❌',
+      'Optimización de Rendimiento': '✅',
     },
-    deliveryTime: '2 - 3 Semanas',
-    price: 'AR$ 375.000 / $375 USD',
+    features: {
+      'Licencias Incluidas': '1',
+      'Tiempo de Desarrollo': '3 - 4 Semanas',
+      Precio: 'AR $350.000 / $350 USD',
+      'Soporte Post-Lanzamiento': '1 mes',
+    },
   },
   {
-    id: '13',
-    title: 'Aplicación Avanzada',
+    id: '8',
+    title: 'Software de Escritorio Premium',
     description:
-      'Diseñado para empresas que requieren aplicaciones personalizadas y optimizadas.',
+      'Ideal para empresas en crecimiento que buscan una solución robusta y escalable, con mayor personalización y soporte técnico.',
     details: {
-      'Compatibilidad con Windows y Mac': '✅',
+      'Compatibilidad con Windows y macOS': '✅',
       'Interfaz Personalizada Avanzada': '✅',
       'Soporte Técnico Premium': '✅',
-      'Actualizaciones Incluidas': '✅',
+      'Actualizaciones Incluidas': '❌',
       'Integración con APIs': '✅',
       'Optimización de Rendimiento': '✅',
     },
-    deliveryTime: '4 - 6 Semanas',
-    price: 'AR$ 750.000 / $750 USD',
+    features: {
+      'Licencias Incluidas': '3',
+      'Tiempo de Desarrollo': '5 - 7 Semanas',
+      Precio: 'AR $750.000 / $750 USD',
+      'Soporte Post-Lanzamiento': '3 meses',
+    },
   },
   {
-    id: '14',
-    title: 'Aplicación Empresarial',
+    id: '9',
+    title: 'Software de Escritorio Empresarial',
     description:
-      'Perfecto para empresas consolidadas que necesitan aplicaciones robustas, escalables y seguras.',
+      'La solución integral para grandes empresas que demandan sistemas robustos, escalables y con soporte completo.',
     details: {
-      'Compatibilidad con Windows y Mac': '✅',
+      'Compatibilidad con Windows y macOS': '✅',
       'Interfaz Diseñada a Medida': '✅',
       'Soporte Técnico Dedicado': '✅',
       'Actualizaciones Incluidas': '✅',
       'Integración con APIs y Sistemas Legados': '✅',
       'Optimización de Rendimiento Avanzada': '✅',
     },
-    deliveryTime: '6 - 8 Semanas',
-    price: 'AR$ 1.250.000 / $1,250 USD',
+    features: {
+      'Licencias Incluidas': 'Ilimitado',
+      'Tiempo de Desarrollo': '8 - 10 Semanas',
+      Precio: 'AR $1.250.000 / $1,250 USD',
+      'Soporte Post-Lanzamiento': '6 meses',
+    },
   },
 ];
 
 const PlanesDesktop = () => {
   return (
-    <section className="w-full px-4 py-6 bg-gray-50 dark:bg-gray-900">
-      <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-200 mb-6">
-        Nuestros Planes de Desarrollo Desktop
-      </h2>
+    <section className="relative min-h-screen py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden mt-10">
+      {/* Se agrega pointer-events-none para que el fondo no capture clics */}
+      <div className="absolute inset-0 opacity-5 dark:opacity-[0.02] pointer-events-none bg-[url('/grid.svg')] bg-repeat" />
 
-      <article className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {planesData.map((plan, index) => (
-          <div
-            key={index}
-            className="p-4 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition-transform transform hover:scale-105"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-20"
+        >
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-5xl font-bold text-gray-900 dark:text-white mb-6 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
           >
-            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-              {plan.title}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
-              {plan.description}
-            </p>
-            <Separator className="my-4" />
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-gray-800 dark:text-gray-200">
-                Características
-              </h3>
-              <ul className="space-y-2">
-                {Object.entries(plan.details).map(([key, value]) => (
-                  <li
-                    key={key}
-                    className="flex justify-between text-sm dark:text-gray-200"
-                  >
-                    <span>{key}:</span> <span>{value}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <Separator className="my-4" />
-            <div>
-              <h4 className="text-md font-semibold text-gray-300 dark:text-gray-500">
-                Plazo de Entrega
-              </h4>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                {plan.deliveryTime}
-              </p>
-            </div>
-            <div>
-              <h4 className="text-md font-semibold text-green-400 dark:text-green-500">
-                Precio
-              </h4>
-              <p className="text-lg font-bold text-green-500 dark:text-green-400">
-                {plan.price}
-              </p>
-            </div>
-            <Separator className="my-4" />
-            <p className="text-xs text-gray-500 dark:text-gray-300 mb-4">
-              ¡Aprovecha este precio exclusivo! Contáctanos para más detalles.
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-              <Button className="flex justify-center items-center gap-2">
-                <MdOutlineDesktopMac />
-                Comprar
-              </Button>
-              <Link href={'/contact'}>
-                <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 hover:bg-gray-300 dark:text-white w-full">
-                  <MdOutlineMessage />
-                  Contactar
-                </Button>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </article>
+            Desarrollo de Software para Desktop
+          </motion.h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Soluciones nativas y personalizadas para Windows y macOS, diseñadas
+            para potenciar tu negocio.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
+          {planesData.map((plan, index) => (
+            <motion.div
+              key={plan.id}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <Plan
+                title={plan.title}
+                description={plan.description}
+                details={plan.details}
+                features={plan.features}
+                colorScheme={
+                  index === 0
+                    ? 'primary'
+                    : index === 1
+                    ? 'premium'
+                    : 'enterprise'
+                }
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          className="mt-20 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            ¿Necesitas una solución a la medida o tienes requerimientos
+            específicos?
+          </p>
+          <Link href="/contact" passHref legacyBehavior>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl"
+            >
+              Agenda una Consultoría Gratuita
+              <svg
+                className="ml-2 w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </motion.a>
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 };

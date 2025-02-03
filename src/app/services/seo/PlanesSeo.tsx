@@ -1,131 +1,178 @@
-import React from 'react';
-import { Separator } from '@/components/ui/separator';
-import { Button } from '@/components/ui/button';
-import { MdOutlineSearch, MdOutlineContactSupport } from 'react-icons/md';
+'use client';
+
+import { motion } from 'framer-motion';
+import Plan from '../pagesContent/Plan';
 import Link from 'next/link';
 
-const planesSeoData = [
+interface PlanData {
+  id: string;
+  title: string;
+  description: string;
+  details: Record<string, string>;
+  features: Record<string, string>;
+}
+
+const planesData: PlanData[] = [
   {
     id: '1',
-    title: 'Consultoría SEO Básica',
+    title: 'SEO Básico',
     description:
-      'Ideal para sitios web pequeños o startups que buscan optimización inicial y un análisis básico de SEO.',
+      'Ideal para pequeños proyectos o marcas personales que buscan mejorar su visibilidad en buscadores con estrategias esenciales.',
     details: {
-      'Análisis de Palabras Clave': '✅',
-      'Auditoría SEO Inicial': '✅',
+      'Auditoría SEO': '✅',
       'Optimización On-Page': '✅',
-      'Informe Resumido': '✅',
-      'Optimización de Contenidos': '❌',
-      'Enlace Interno y Externo': '❌',
+      'Investigación de Palabras Clave': '✅',
+      'Creación de Contenido SEO': '❌',
+      'Link Building': '❌',
+      'Análisis de Competencia': '❌',
+      'Reportes Mensuales': '❌',
     },
-    deliveryTime: '1 - 2 Semanas',
-    price: 'AR$ 25.000 / $25 USD',
+    features: {
+      Duración: '1 Mes',
+      'Plazo de Entrega': '7 - 10 Días',
+      Precio: 'AR$ 25.000 / $25 USD',
+      'Soporte Incluido': '1 mes',
+    },
   },
   {
     id: '2',
-    title: 'Consultoría SEO Avanzada',
+    title: 'SEO Avanzado',
     description:
-      'Perfecto para negocios que necesitan una optimización más profunda y estrategias de largo plazo.',
+      'Perfecto para negocios que buscan optimizar su presencia online y mejorar su posicionamiento con estrategias más profundas.',
     details: {
-      'Análisis Profundo de Competencia': '✅',
-      'Auditoría SEO Completa': '✅',
-      'Optimización Avanzada On-Page y Off-Page': '✅',
-      'Informe Detallado': '✅',
-      'Optimización de Contenidos': '✅',
-      'Enlace Interno y Externo': '❌',
+      'Auditoría SEO': '✅',
+      'Optimización On-Page': '✅',
+      'Investigación de Palabras Clave': '✅',
+      'Creación de Contenido SEO': '✅',
+      'Link Building': '✅',
+      'Análisis de Competencia': '✅',
+      'Reportes Mensuales': '❌',
     },
-    deliveryTime: '3 - 4 Semanas',
-    price: 'AR$ 45.000 / $45 USD',
+    features: {
+      Duración: '3 Meses',
+      'Plazo de Entrega': '15 - 20 Días',
+      Precio: 'AR$ 75.000 / $75 USD',
+      'Soporte Incluido': '3 meses',
+    },
   },
   {
     id: '3',
-    title: 'Consultoría SEO Empresarial',
+    title: 'SEO Empresarial',
     description:
-      'Diseñado para grandes empresas que requieren soluciones avanzadas y personalizadas para mejorar su presencia en buscadores.',
+      'Ideal para empresas consolidadas que buscan una estrategia SEO completa y a largo plazo para un crecimiento sostenido.',
     details: {
-      'Estrategia SEO Personalizada': '✅',
-      'Auditoría SEO Completa': '✅',
-      'Optimización Integral de Contenidos': '✅',
-      'Link Building Avanzado': '✅',
-      'Análisis en Tiempo Real': '✅',
-      'Soporte Técnico Dedicado': '✅',
+      'Auditoría SEO': '✅',
+      'Optimización On-Page': '✅',
+      'Investigación de Palabras Clave': '✅',
+      'Creación de Contenido SEO': '✅',
+      'Link Building': '✅',
+      'Análisis de Competencia': '✅',
+      'Reportes Mensuales': '✅',
     },
-    deliveryTime: '6 - 8 Semanas',
-    price: 'AR$ 75.000 / $75 USD',
+    features: {
+      Duración: '6 Meses',
+      'Plazo de Entrega': '30 - 45 Días',
+      Precio: 'AR$ 150.000 / $150 USD',
+      'Soporte Incluido': '6 meses',
+    },
   },
 ];
 
 const PlanesSeo = () => {
   return (
-    <section className="w-full px-4 py-6 bg-gray-50 dark:bg-gray-900">
-      <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-white">
-        Soluciones Personalizadas en Consultoría SEO
-      </h2>
+    <section className="relative min-h-screen py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden mt-10">
+      {/* Se agrega pointer-events-none para que este fondo no capture los clics */}
+      <div className="absolute inset-0 opacity-5 dark:opacity-[0.02] pointer-events-none bg-[url('/grid.svg')] bg-repeat" />
 
-      <article className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {planesSeoData.map((plan, index) => (
-          <div
-            key={index}
-            className="p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition-transform transform hover:scale-105"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-20"
+        >
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-5xl font-bold text-gray-900 dark:text-white mb-6 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
           >
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-              {plan.title}
-            </h3>
-            <p className="text-gray-600 text-sm mt-2 dark:text-gray-400">
-              {plan.description}
-            </p>
-            <Separator className="my-4" />
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
-                Características
-              </h3>
-              <ul className="space-y-2">
-                {Object.entries(plan.details).map(([key, value]) => (
-                  <li
-                    key={key}
-                    className="flex justify-between text-sm dark:text-white"
-                  >
-                    <span>{key}:</span>{' '}
-                    <span className="text-gray-900 dark:text-gray-300">
-                      {value}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <Separator className="my-4" />
-            <div>
-              <h4 className="text-md font-semibold text-gray-900 dark:text-white">
-                Plazo de Entrega
-              </h4>
-              <p className="text-sm text-gray-700 dark:text-gray-300">
-                {plan.deliveryTime}
-              </p>
-            </div>
-            <div>
-              <h4 className="text-md font-semibold text-green-600">Precio</h4>
-              <p className="text-lg font-bold text-green-600">{plan.price}</p>
-            </div>
-            <Separator className="my-4" />
-            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
-              ¡Optimiza tu presencia en línea hoy mismo! Contáctanos para más
-              información.
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-              <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white">
-                <MdOutlineSearch />
-                Comprar
-              </Button>
-              <Link href={'/contact'}>
-                <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white w-full">
-                  <MdOutlineContactSupport />
-                  Contactar
-                </Button>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </article>
+            Desarrollo Web Profesional
+          </motion.h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Transformamos tu visión digital en realidades interactivas con
+            tecnología de punta y diseño innovador
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
+          {planesData.map((plan, index) => (
+            <motion.div
+              key={plan.id}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <Plan
+                title={plan.title}
+                description={plan.description}
+                details={plan.details}
+                features={plan.features}
+                colorScheme={
+                  index === 0
+                    ? 'primary'
+                    : index === 1
+                    ? 'premium'
+                    : 'enterprise'
+                }
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          className="mt-20 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            ¿Buscas algo personalizado o tienes necesidades específicas?
+          </p>
+          <Link href="/contact" passHref legacyBehavior>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl"
+            >
+              Agenda una Consultoría Gratuita
+              <svg
+                className="ml-2 w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </motion.a>
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 };

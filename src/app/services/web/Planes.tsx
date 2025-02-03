@@ -1,10 +1,18 @@
-import React from 'react';
-import { Separator } from '@/components/ui/separator';
-import { Button } from '@/components/ui/button';
-import { MdOutlineShoppingCart, MdOutlineMessage } from 'react-icons/md';
+'use client';
 
-// Datos dinámicos para los planes
-const planesData = [
+import { motion } from 'framer-motion';
+import Plan from '../pagesContent/Plan';
+import Link from 'next/link';
+
+interface PlanData {
+  id: string;
+  title: string;
+  description: string;
+  details: Record<string, string>;
+  features: Record<string, string>;
+}
+
+const planesData: PlanData[] = [
   {
     id: '7',
     title: 'Web Sencilla',
@@ -19,10 +27,12 @@ const planesData = [
       'Soporte Multilenguaje': '❌',
       'Backup Automático': '❌',
     },
-    pages: '1',
-    deliveryTime: '3 - 5 Días',
-    price: '$65 USD',
-    support: '1 mes',
+    features: {
+      'Cantidad de Páginas': '1',
+      'Plazo de Entrega': '3 - 5 Días',
+      Precio: 'AR $65.000 / $65 USD',
+      'Soporte Incluido': '1 mes',
+    },
   },
   {
     id: '8',
@@ -38,10 +48,12 @@ const planesData = [
       'Soporte Multilenguaje': '❌',
       'Backup Automático': '❌',
     },
-    pages: '4',
-    deliveryTime: '7 - 14 Días',
-    price: '$250 USD',
-    support: '3 meses',
+    features: {
+      'Cantidad de Páginas': '4',
+      'Plazo de Entrega': '7 - 14 Días',
+      Precio: 'AR$ 250.000 / $250 USD',
+      'Soporte Incluido': '3 meses',
+    },
   },
   {
     id: '9',
@@ -57,91 +69,110 @@ const planesData = [
       'Soporte Multilenguaje': '✅',
       'Backup Automático': '✅',
     },
-    pages: '6+',
-    deliveryTime: '31 Días',
-    price: '$550 USD',
-    support: '6 meses',
+    features: {
+      'Cantidad de Páginas': '6+',
+      'Plazo de Entrega': '31 Días',
+      Precio: 'AR$ 550.000 / $550 USD',
+      'Soporte Incluido': '6 meses',
+    },
   },
 ];
 
 const Planes = () => {
   return (
-    <section className="w-full px-4 py-6 bg-gray-50 dark:bg-gray-900">
-      <h2 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-white">
-        Nuestros Planes de Desarrollo
-      </h2>
+    <section className="relative min-h-screen py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden mt-10">
+      {/* Se agrega pointer-events-none para que este fondo no capture los clics */}
+      <div className="absolute inset-0 opacity-5 dark:opacity-[0.02] pointer-events-none bg-[url('/grid.svg')] bg-repeat" />
 
-      <article className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {planesData.map((plan, index) => (
-          <div
-            key={index}
-            className="p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg bg-white dark:bg-gray-800 transition-transform transform hover:scale-105"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-20"
+        >
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-5xl font-bold text-gray-900 dark:text-white mb-6 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
           >
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-              {plan.title}
-            </h3>
-            <p className="text-gray-600 text-sm mt-2 dark:text-gray-400">
-              {plan.description}
-            </p>
-            <Separator className="my-4" />
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
-                Características
-              </h3>
-              <ul className="space-y-2">
-                {Object.entries(plan.details).map(([key, value]) => (
-                  <li
-                    key={key}
-                    className="flex justify-between text-sm dark:text-gray-300"
-                  >
-                    <span>{key}:</span>{' '}
-                    <span className="text-gray-900 dark:text-gray-300">
-                      {value}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <Separator className="my-4" />
-            <h4 className="text-md font-semibold text-gray-900 dark:text-white">
-              Cantidad de Páginas
-            </h4>
-            <h4 className="text-md text-gray-900 dark:text-gray-100">
-              {plan.pages}
-            </h4>
-            <Separator />
-            <h4 className="text-md font-bold text-gray-800 dark:text-gray-200">
-              Soporte Incluido
-            </h4>
-            <h4 className="mt-2 text-gray-900 dark:text-gray-100">
-              {plan.support}
-            </h4>
-            <Separator />
-            <h4 className="text-md font-bold text-gray-800 dark:text-gray-200">
-              Plazo de Entrega
-            </h4>
-            <h4 className="text-md text-gray-900 dark:text-gray-100">
-              {plan.deliveryTime}
-            </h4>
-            <Separator />
-            <h4 className="text-lg font-bold text-gray-800 dark:text-gray-200">
-              Precio
-            </h4>
-            <h4 className="text-lg text-green-500">{plan.price}</h4>
-            <div className="grid grid-flow-col grid-cols-2 justify-center items-center w-full mt-10 gap-4 ">
-              <Button>
-                <MdOutlineShoppingCart />
-                Comprar
-              </Button>
-              <Button>
-                <MdOutlineMessage />
-                Contactar
-              </Button>
-            </div>
-          </div>
-        ))}
-      </article>
-      <Separator />
+            Desarrollo Web Profesional
+          </motion.h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Transformamos tu visión digital en realidades interactivas con
+            tecnología de punta y diseño innovador
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
+          {planesData.map((plan, index) => (
+            <motion.div
+              key={plan.id}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <Plan
+                title={plan.title}
+                description={plan.description}
+                details={plan.details}
+                features={plan.features}
+                colorScheme={
+                  index === 0
+                    ? 'primary'
+                    : index === 1
+                    ? 'premium'
+                    : 'enterprise'
+                }
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          className="mt-20 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            ¿Buscas algo personalizado o tienes necesidades específicas?
+          </p>
+          <Link href="/contact" passHref legacyBehavior>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl"
+            >
+              Agenda una Consultoría Gratuita
+              <svg
+                className="ml-2 w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </motion.a>
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 };

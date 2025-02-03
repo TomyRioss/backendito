@@ -1,126 +1,175 @@
-import React from 'react';
-import { Separator } from '@/components/ui/separator';
-import { Button } from '@/components/ui/button';
-import { MdOutlineMobileFriendly, MdOutlineMessage } from 'react-icons/md';
+'use client';
+
+import { motion } from 'framer-motion';
+import Plan from '../pagesContent/Plan';
 import Link from 'next/link';
 
-const planesData = [
-  {
-    id: '0',
-    title: 'Aplicación Básica',
-    description:
-      'Perfecta para emprendedores que buscan una app sencilla para iniciar su negocio.',
-    details: {
-      'Compatibilidad iOS y Android': '✅',
-      'Diseño Personalizado': '✅',
-      'Integración con Redes Sociales': '✅',
-      'Soporte Técnico': '1 mes',
-      'Integración de APIs': '❌',
-      'Actualizaciones Incluidas': '❌',
-    },
-    deliveryTime: '2 - 3 Semanas',
-    price: 'AR$ 150.000 / $150 USD',
-  },
+interface PlanData {
+  id: string;
+  title: string;
+  description: string;
+  details: Record<string, string>;
+  features: Record<string, string>;
+}
+
+const planesData: PlanData[] = [
   {
     id: '1',
-    title: 'Aplicación Avanzada',
+    title: 'App Básica',
     description:
-      'Ideal para negocios que buscan funcionalidades avanzadas y mayor personalización.',
+      'Ideal para proyectos pequeños, startups o negocios que necesitan una app sencilla con funcionalidades esenciales.',
     details: {
       'Compatibilidad iOS y Android': '✅',
+      'Publicación en Stores': '❌',
+      'Integración con APIs': '❌',
+      'Notificaciones Push': '❌',
       'Diseño Personalizado': '✅',
-      'Integración con Redes Sociales': '✅',
-      'Soporte Técnico': '3 meses',
-      'Integración de APIs': '✅',
+      'Soporte Multilenguaje': '❌',
       'Actualizaciones Incluidas': '❌',
     },
-    deliveryTime: '4 - 6 Semanas',
-    price: 'AR$ 325.000 / $325 USD',
+    features: {
+      'Tiempo de Desarrollo': '15 - 30 Días',
+      Precio: 'AR$ 150.000 / $150 USD',
+      'Soporte Incluido': '1 mes',
+    },
   },
   {
     id: '2',
-    title: 'Aplicación Empresarial',
+    title: 'App Avanzada',
     description:
-      'Diseñada para empresas que requieren una app robusta con funcionalidades avanzadas.',
+      'Perfecta para negocios en crecimiento que necesitan una app con más funcionalidades y optimización.',
     details: {
       'Compatibilidad iOS y Android': '✅',
+      'Publicación en Stores': '✅',
+      'Integración con APIs': '✅',
+      'Notificaciones Push': '✅',
       'Diseño Personalizado': '✅',
-      'Integración con Redes Sociales': '✅',
-      'Soporte Técnico': '6 meses',
-      'Integración de APIs': '✅',
+      'Soporte Multilenguaje': '❌',
+      'Actualizaciones Incluidas': '❌',
+    },
+    features: {
+      'Tiempo de Desarrollo': '30 - 60 Días',
+      Precio: 'AR$ 350.000 / $350 USD',
+      'Soporte Incluido': '3 meses',
+    },
+  },
+  {
+    id: '3',
+    title: 'App Empresarial',
+    description:
+      'Para empresas consolidadas que requieren una app robusta, escalable y con alto rendimiento.',
+    details: {
+      'Compatibilidad iOS y Android': '✅',
+      'Publicación en Stores': '✅',
+      'Integración con APIs': '✅',
+      'Notificaciones Push': '✅',
+      'Diseño Personalizado': '✅',
+      'Soporte Multilenguaje': '✅',
       'Actualizaciones Incluidas': '✅',
     },
-    deliveryTime: '8 - 10 Semanas',
-    price: 'AR$ 550.000 / $550 USD',
+    features: {
+      'Tiempo de Desarrollo': '60 - 90 Días',
+      Precio: 'AR$ 750.000 / $750 USD',
+      'Soporte Incluido': '6 meses',
+    },
   },
 ];
 
 const PlanesMobile = () => {
   return (
-    <section className="w-full px-4 py-6 bg-gray-50 dark:bg-gray-900">
-      <h2 className="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-gray-100">
-        Nuestros Planes de Desarrollo Móvil
-      </h2>
-      <article className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {planesData.map((plan, index) => (
-          <div
-            key={index}
-            className="p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg bg-white dark:bg-gray-800"
+    <section className="relative min-h-screen py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden mt-10">
+      {/* Se agrega pointer-events-none para que este fondo no capture los clics */}
+      <div className="absolute inset-0 opacity-5 dark:opacity-[0.02] pointer-events-none bg-[url('/grid.svg')] bg-repeat" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-20"
+        >
+          <motion.h2
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-5xl font-bold text-gray-900 dark:text-white mb-6 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
           >
-            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-              {plan.title}
-            </h3>
-            <p className="text-gray-600 text-sm mt-2 dark:text-gray-400">
-              {plan.description}
-            </p>
-            <Separator className="my-4" />
-            <div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">
-                Características
-              </h3>
-              <ul className="space-y-2">
-                {Object.entries(plan.details).map(([key, value]) => (
-                  <li
-                    key={key}
-                    className="flex justify-between text-sm dark:text-gray-100"
-                  >
-                    <span>{key}:</span>{' '}
-                    <span className="text-gray-900 dark:text-gray-300">
-                      {value}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <Separator className="my-4" />
-            <div>
-              <h4 className="text-md font-semibold text-gray-900 dark:text-gray-100">
-                Plazo de Entrega
-              </h4>
-              <p className="text-sm text-gray-700 dark:text-gray-300">
-                {plan.deliveryTime}
-              </p>
-            </div>
-            <div>
-              <h4 className="text-md font-semibold text-green-600">Precio</h4>
-              <p className="text-lg font-bold text-green-600">{plan.price}</p>
-            </div>
-            <Separator className="my-4" />
-            <div className="grid grid-cols-2 gap-4">
-              <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
-                <MdOutlineMobileFriendly />
-                Comprar
-              </Button>
-              <Link href={'/contact'}>
-                <Button className="flex justify-center items-center gap-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white w-full">
-                  <MdOutlineMessage />
-                  Contactar
-                </Button>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </article>
+            Desarrollo Web Profesional
+          </motion.h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Transformamos tu visión digital en realidades interactivas con
+            tecnología de punta y diseño innovador
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
+          {planesData.map((plan, index) => (
+            <motion.div
+              key={plan.id}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <Plan
+                title={plan.title}
+                description={plan.description}
+                details={plan.details}
+                features={plan.features}
+                colorScheme={
+                  index === 0
+                    ? 'primary'
+                    : index === 1
+                    ? 'premium'
+                    : 'enterprise'
+                }
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          className="mt-20 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            ¿Buscas algo personalizado o tienes necesidades específicas?
+          </p>
+          <Link href="/contact" passHref legacyBehavior>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl"
+            >
+              Agenda una Consultoría Gratuita
+              <svg
+                className="ml-2 w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </motion.a>
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 };

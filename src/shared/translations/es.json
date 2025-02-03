@@ -1,7 +1,7 @@
 {
   "layout": {
     "title": "Backendito | Soluciones Profesionales de Desarrollo Web",
-    "description": "Descubre Backendito, tu aliado en el desarrollo web profesional. Creamos sitios web rápidos, optimizados para SEO, y con diseño atractivo para llevar tu negocio al siguiente nivel."
+    "description": "La mejor opción para tú emprendimiento, supera el 80% de empresas en el mercado con tú página web profesional hoy mismo."
   },
   "contactUs": {
     "header": "Contáctanos",
@@ -10,7 +10,6 @@
     "tagline": "Hacemos tu proyecto realidad",
     "sending": "Enviando...",
     "send": "Enviar",
-
     "placeholders": {
       "name": "Tu nombre",
       "email": "Tu correo electrónico",
@@ -80,28 +79,28 @@
     },
     "servicesRoutes": {
       "data": {
-        "title": "Data Analysis",
-        "description": "We offer advanced data analysis to convert large volumes of information into useful insights and informed decisions. Through specialized techniques like data mining, graphical visualization, and predictive modeling, we help companies optimize their strategies, improve operational efficiency, and maximize ROI."
+        "title": "Análisis de Datos",
+        "description": "Ofrecemos análisis de datos avanzado para convertir grandes volúmenes de información en conocimientos útiles y decisiones informadas. A través de técnicas especializadas como minería de datos, visualización gráfica y modelado predictivo, ayudamos a las empresas a optimizar sus estrategias, mejorar la eficiencia operativa y maximizar el ROI."
       },
       "web": {
-        "title": "Web Development",
-        "description": "We develop custom websites from scratch, tailored to the specific needs of your business."
+        "title": "Desarrollo Web",
+        "description": "Desarrollamos sitios web a medida desde cero, adaptados a las necesidades específicas de tu negocio."
       },
       "desktop": {
-        "title": "Desktop Development",
-        "description": "We create robust and highly functional desktop applications."
+        "title": "Desarrollo de Escritorio",
+        "description": "Creamos aplicaciones de escritorio robustas y altamente funcionales."
       },
       "mobile": {
-        "title": "Mobile Development",
-        "description": "We develop mobile applications tailored to your needs."
+        "title": "Desarrollo Móvil",
+        "description": "Desarrollamos aplicaciones móviles adaptadas a tus necesidades."
       },
       "script": {
-        "title": "Scripting Service",
-        "description": "We offer personalized scripting services."
+        "title": "Servicio de Scripting",
+        "description": "Ofrecemos servicios de scripting personalizados."
       },
       "seo": {
-        "title": "SEO Consultancy",
-        "description": "We help you increase your website's traffic through SEO."
+        "title": "Consultoría SEO",
+        "description": "Te ayudamos a aumentar el tráfico de tu sitio web a través de SEO."
       }
     },
     "head": {
@@ -109,7 +108,7 @@
       "cta": "Empezar ahora",
       "secondaryCta": "Contáctanos",
       "launch": "Nuevo lanzamiento",
-      "description": "Transformando ideas en experiencias digitales excepcionales para el mundo moderno",
+      "description": "Ayudamos a tú emprendimiento a superar el 80% de empresas en el mercado con tú página web profesional hoy mismo.",
       "keywords": {
         "code": "Desarrollo Web",
         "desing": "Diseño Web",
@@ -123,14 +122,14 @@
     },
     "contact": {
       "theSolutionToYourProject": "La solución a tu problema.",
-      "neverLeaveAProblemUnsolved": "Núnca dejamos un problema sin resolver.",
-      "ourTeamPlansTheSolution": "Todo nuestro equipo planifica la solución a cada problema posible que pudiera tener tu negocio, incluso si significa ir más allá de la programación, jamás va a haber un problema imposible.",
+      "neverLeaveAProblemUnsolved": "Tú emprendimiento es nuestra especialidad.",
+      "ourTeamPlansTheSolution": "Nuestra especialidad son las soluciones digitales para emprendimientos de cualquier rubro, restaurantes, consultoras, comercios digitaleso retails, todo lo automatizamos completamente, desde el contacto, la cotización, stock y envíos hasta el mantenimiento y atención al cliente, solo necesitas contratarnos y esperar a tus clientes.",
       "contactUs": "Contáctanos"
     },
     "info": {
-      "profile": "Perfiles sobresalientes.",
-      "hands": "Tú trabajo en las mejores manos.",
-      "ourProgrammers": "Nuestros programadores están altamente calificados para resolver cualquier tarea enfrente de ellos, contamos con departaments en cada especialidad, para asegurarnos que alguién experto totalmente en el area pueda resolver cualquier problema posible.",
+      "profile": "Supera a la competencia.",
+      "hands": "Tú negocio por arriba del 80%.",
+      "ourProgrammers": "En Argentina, el 80% de empresas aún no tienen una página web o tienen una obsoleta, por lo que pierden una gran cantidad de clientes mensualmente, con nuestros planes de páginas + automatización, podes estar por arriba del 80% en Argentina hoy mismo.",
       "ourTeam": "Nosostros"
     },
     "ourServices": {
@@ -139,33 +138,33 @@
       "services": {
         "web": {
           "title": "Desarrollo Web",
-          "description": "Creamos sitios web rápidos y modernos, adaptados a tu negocio."
+          "description": "Creamos sitios web especializados para emprendimientos, con automatización completa."
         },
         "data": {
           "title": "Análisis de Datos",
-          "description": "Análisis avanzado basado en dato para la toma de decisiones."
+          "description": "Desarrollamos métricas para tú emprendimiento, para que puedas ver a dónde tienden tus clientes y que te genera mayores ingresos."
         },
         "desktop": {
-          "title": "Diseño Aplicaciones de Escritorio",
-          "description": "Aplicaciones simples o complejas, para cualquier tarea."
+          "title": "Desarrollo Desktop",
+          "description": "Creamos aplicaciones de escritorio robustas y automatizadas para que gestiones tú negocio de manera eficiente y con el mayor rendimiento posible."
         },
         "mobile": {
           "title": "Desarrollo Mobile",
-          "description": "Implementamos sistemas escalables y eficientes para tu negocio."
+          "description": "Creamos aplicaciones para que gestiones eficientemente tú negocio y que tus clientes tengan un mayor acceso a tus servicios."
         },
         "script": {
           "title": "Servicio de Scripting",
-          "description": "Scripts para automatizar tareas."
+          "description": "Desarrollamos automatizaciones personalizadas, desde bots para atención al cliente hasta scripts integrados en webs para automatizar o gestionar tareas."
         },
         "seo": {
           "title": "Consultoría SEO",
-          "description": "Ten enseñamos cómo es que optimizamos nuestro SEO, para que tu sitio web sea más fácil de encontrar."
+          "description": "Te mostramos errores en tú página, generamos un reporte y te dejamos todo listo para que lo soluciones vos o otro programador."
         }
       },
       "servicesInfo": {
-        "join": "Únete a la innovación",
+        "join": "Tú idea a unos minutos.",
         "getStarted": "Empieza tu proyecto con nosotros en minutos",
-        "contactUs": "Contáctanos hoy y da el primer paso hacia soluciones tecnológicas innovadoras que transformarán tu negocio.",
+        "contactUs": "Envíanos un mail desde contacto con tus necesidades, y en breves te responderemos con un presupuesto y un plan de proyecto.",
         "startNow": "Empezar ahora"
       }
     },

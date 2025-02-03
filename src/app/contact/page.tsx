@@ -47,17 +47,6 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 py-16 px-4 relative overflow-hidden transition-colors duration-500">
-      {/* Theme toggle */}
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="fixed top-6 right-6 p-3 rounded-full z-50 bg-white dark:bg-slate-800 text-slate-700 dark:text-yellow-400 hover:bg-slate-100 dark:hover:bg-slate-700 shadow-lg transition-colors duration-300"
-        onClick={() => setIsDark(!isDark)}
-        aria-label="Cambiar tema"
-      >
-        {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-      </motion.button>
-
       {/* Success notification */}
       <AnimatePresence>
         {isSubmitted && (
@@ -85,7 +74,7 @@ export default function Contact() {
         onSubmit={handleSubmit}
       >
         {({ isSubmitting, errors, touched }) => (
-          <div className="relative flex flex-col lg:flex-row max-w-6xl mx-auto gap-12 items-center">
+          <div className=" flex flex-col lg:flex-row max-w-6xl mx-auto gap-12 items-center justify-center mt-10 h-full">
             {/* Form section */}
             <div className="w-full max-w-xl">
               <motion.div
@@ -205,14 +194,9 @@ export default function Contact() {
               transition={{ delay: 0.2 }}
               className="w-full max-w-md lg:w-1/2 space-y-6"
             >
-              <div className="space-y-4 text-slate-900 dark:text-white">
-                <h3 className="text-4xl font-bold">Backendito</h3>
-                <p className="text-xl opacity-80">{t('tagline')}</p>
-              </div>
-
               <div className="relative group">
                 <div className="absolute -inset-1 rounded-2xl opacity-50 blur-xl transition-all duration-500 group-hover:opacity-100 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 dark:from-indigo-500 dark:via-purple-500 dark:to-pink-500" />
-                <div className="relative">
+                <div className="flex flex-col items-center justify-center h-full">
                   <Image
                     src={backendito}
                     width={500}
