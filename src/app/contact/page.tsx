@@ -6,14 +6,13 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Moon, User, MessageSquare, Send, Sparkles } from 'lucide-react';
+import { User, MessageSquare, Send, Sparkles } from 'lucide-react';
 import backendito from '../../../public/backendito.png';
 import { useTranslations } from 'next-intl';
 
 export default function Contact() {
   const t = useTranslations('contactUs');
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isDark, setIsDark] = useState(false);
 
   const validationSchema = Yup.object({
     name: Yup.string()
