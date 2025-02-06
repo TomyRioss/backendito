@@ -170,6 +170,14 @@ const fullstackPersonnel = [
     CV: 'https://drive.google.com/file/d/1RwO6pZ1J09z-BXqr7eX2wV7VEZvaVJ2T/view?usp=drive_link',
     portfolio: 'https://yhonchis.dev',
   },
+  {
+    id: 4,
+    initials: 'PS',
+    name: 'Pablo S.',
+    role: 'Fullstack Developer',
+    CV: 'https://europa.eu/europass/eportfolio/screen/share/documents/87c2d8d0-3f2f-4c69-8036-baad15119933?lang=en',
+    portfolio: '',
+  },
 ];
 
 const mobilePersonnel = [
