@@ -43,7 +43,7 @@ const staffPersonnel = [
   {
     id: 1,
     initials: 'TR',
-    name: 'Tomas Rios',
+    name: 'Tomas R.',
     role: 'CEO',
   },
 ];
@@ -52,7 +52,7 @@ const frontendPersonnel = [
   {
     id: 1,
     initials: 'PM',
-    name: 'Pablo Maximiliano',
+    name: 'Pablo M.',
     role: 'Frontend Developer',
     CV: 'https://github.com/chunito23',
     portfolio: '',
@@ -60,7 +60,7 @@ const frontendPersonnel = [
   {
     id: 2,
     initials: 'FP',
-    name: 'Facundo Petterson',
+    name: 'Facundo P.',
     role: 'Frontend Developer',
     CV: 'https://drive.google.com/file/d/1nXRRJTfvAh78QXLCAvcy06q1BPA0WAzO/view?usp=drive_link.',
     portfolio: '',
@@ -68,7 +68,7 @@ const frontendPersonnel = [
   {
     id: 3,
     initials: 'SF',
-    name: 'Sebastian Fallas',
+    name: 'Sebastian F.',
     role: 'Frontend Developer',
     CV: 'https://drive.google.com/file/d/1zTD-BFjkVTWAsxO1RneQxRveD5hfvC_m/view?usp=drive_link.',
     portfolio: 'https://fallasdev.site/',
@@ -76,7 +76,7 @@ const frontendPersonnel = [
   {
     id: 4,
     initials: 'MA',
-    name: 'Miguel Angel',
+    name: 'Miguel A.',
     role: 'Frontend Developer',
     CV: ' https://www.linkedin.com/in/miguel-angel-fernandez-barco-7b802429b/.',
     portfolio: 'https://miguelangeldev.vercel.app',
@@ -84,7 +84,7 @@ const frontendPersonnel = [
   {
     id: 5,
     initials: 'A.',
-    name: 'Angel',
+    name: 'Angel ',
     role: 'Frontend Developer',
     CV: 'https://github.com/Fullangel.',
     portfolio: '',
@@ -93,7 +93,7 @@ const frontendPersonnel = [
   {
     id: 6,
     initials: 'JC',
-    name: 'Juan Camilo',
+    name: 'Juan C.',
     role: 'Frontend Developer',
     CV: 'https://drive.google.com/file/d/1BmYLt2WjuaKdkvNBGxSx--lTsOF2G-iL/view?usp=drive_link.',
     portfolio: 'https://milo.youworkers.com/',
@@ -101,7 +101,7 @@ const frontendPersonnel = [
   {
     id: 7,
     initials: 'AM',
-    name: 'Ayelen Montenegro',
+    name: 'Ayelen M.',
     role: 'Frontend Developer',
     CV: 'https://drive.google.com/file/d/13UCcLBO86rZ_PWICEmv_jvnNzwftgeji/view?usp=drive_link.',
     portfolio: '',
@@ -112,23 +112,16 @@ const backendPersonnel = [
   {
     id: 1,
     initials: 'JR',
-    name: 'Jere Rivelli',
+    name: 'Jere R.',
     role: 'Backend Developer',
     CV: 'https://drive.google.com/file/d/13v5xQ4jCtpqKcOnY47_m_059zXK1eqVz/view?usp=drive_link',
     portfolio: 'https://jereprograma.com.ar/',
   },
-  {
-    id: 2,
-    initials: 'IV',
-    name: 'Ingrid Vasconcelos',
-    role: 'Backend Developer',
-    CV: 'https://drive.google.com/file/d/1OGW0-YWaRotDlqO6CFWxDqqIVsr2UJOO/view?usp=drive_link',
-    portfolio: '',
-  },
+
   {
     id: 3,
     initials: 'KK',
-    name: 'Karenina Kauffman',
+    name: 'Karenina K.',
     role: 'Backend Developer',
     CV: 'https://drive.google.com/file/d/1OGW0-YWaRotDlqO6CFWxDqqIVsr2UJOO/view?usp=drive_link',
     portfolio: '',
@@ -136,53 +129,30 @@ const backendPersonnel = [
   {
     id: 4,
     initials: 'JF',
-    name: 'Juan Francitorra',
+    name: 'Juan F.',
     role: 'Backend Developer',
     CV: 'https://drive.google.com/file/d/1-KQvVaLDnXA5_Q4cQCrDtVteyMqf3Ii1/view?usp=drive_link',
     portfolio: 'https://jufadev.vercel.app/',
   },
-  {
-    id: 5,
-    initials: 'LA',
-    name: 'Ley Ayalo',
-    role: 'Backend Developer',
-    CV: 'https://drive.google.com/file/d/1YYiR5Q4446mxaizV3DaPZt3HnS-jT8nY/view?usp=drive_link',
-    portfolio: '',
-  },
+
   {
     id: 6,
     initials: 'AC',
-    name: 'Aldo de la Cruz',
+    name: 'Aldo C.',
     role: 'Backend Developer',
     CV: 'https://drive.google.com/file/d/1qe_KgbkKDghudonPKocoruqZe691n-DX/view?usp=drive_link',
     portfolio: 'https://kleytus-portfolio.vercel.app/',
-  },
-  {
-    id: 7,
-    initials: 'ML',
-    name: 'Michael Liendo',
-    role: 'Backend Developer',
-    CV: 'https://michaelliendo.com/',
-    portfolio: 'https://michaelliendo.com/',
-  },
-  {
-    id: 8,
-    initials: 'NA',
-    name: 'Nicolle Andujar',
-    role: 'Backend Developer',
-    CV: 'https://drive.google.com/file/d/1YkXtO9buvzWApoA6zHH2bCZY1XvzvqTf/view?usp=drive_link',
-    portfolio: '',
   },
 ];
 
 const fullstackPersonnel = [
   {
     id: 1,
-    initials: 'HC',
-    name: 'Harold Challco',
+    initials: 'RC.',
+    name: 'Riandry C.',
     role: 'Fullstack Developer',
-    CV: 'https://drive.google.com/file/d/15xbq0a7mZWQIZLefPGE7hqkiq9WIOV3i/view?usp=drive_link',
-    portfolio: '',
+    CV: 'https://drive.google.com/file/d/1WbqqbxfVVqgnCeekKFTme7B22RKV6OEi/view?usp=drive_link',
+    portfolio: 'https://porfolio-web-react.vercel.app/',
   },
   {
     id: 2,
@@ -190,7 +160,15 @@ const fullstackPersonnel = [
     name: 'Emanuel Funes',
     role: 'Fullstack Developer',
     CV: 'https://drive.google.com/file/d/1q-j_WlfB-Coqrs1wD7W5wY7WpW4KkWRe/view?usp=drive_link',
-    portfolio: 'portafolio: https://yhonchis.dev',
+    portfolio: '',
+  },
+  {
+    id: 3,
+    initials: 'MB',
+    name: 'Miguel B.',
+    role: 'Fullstack Developer',
+    CV: 'https://drive.google.com/file/d/1RwO6pZ1J09z-BXqr7eX2wV7VEZvaVJ2T/view?usp=drive_link',
+    portfolio: 'https://yhonchis.dev',
   },
 ];
 
