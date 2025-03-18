@@ -29,8 +29,8 @@ const planesData: PlanData[] = [
     },
     features: {
       'Cantidad de Páginas': '1',
-      'Plazo de Entrega': '3 - 5 Días',
-      Precio: 'AR $65.000 / $65 USD',
+      'Plazo de Entrega': '3 - 5 Semanas',
+      Precio: '$500 USD',
       'Soporte Incluido': '1 mes',
     },
   },
@@ -50,8 +50,8 @@ const planesData: PlanData[] = [
     },
     features: {
       'Cantidad de Páginas': '4',
-      'Plazo de Entrega': '7 - 14 Días',
-      Precio: 'AR$ 250.000 / $250 USD',
+      'Plazo de Entrega': '7 - 14 Semanas',
+      Precio: '$900 USD',
       'Soporte Incluido': '3 meses',
     },
   },
@@ -71,8 +71,8 @@ const planesData: PlanData[] = [
     },
     features: {
       'Cantidad de Páginas': '6+',
-      'Plazo de Entrega': '31 Días',
-      Precio: 'AR$ 550.000 / $550 USD',
+      'Plazo de Entrega': '8 - 21 Semanas',
+      Precio: '$1900 -  $2500 USD',
       'Soporte Incluido': '6 meses',
     },
   },

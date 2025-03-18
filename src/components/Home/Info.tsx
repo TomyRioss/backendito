@@ -93,9 +93,8 @@ const Info = () => {
             <div className="grid grid-cols-2 gap-6 mt-12 w-full max-w-xl mx-auto lg:mx-0">
               {[
                 { title: '24/7', desc: 'Soporte técnico' },
-                { title: '+1000', desc: 'Proyectos completados' },
                 { title: '99%', desc: 'Satisfacción del cliente' },
-                { title: '+50', desc: 'Desarrolladores expertos' },
+                { title: '+25', desc: 'Desarrolladores expertos' },
               ].map((item, index) => (
                 <div
                   key={index}

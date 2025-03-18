@@ -108,28 +108,28 @@
       "cta": "Empezar ahora",
       "secondaryCta": "Contáctanos",
       "launch": "Nuevo lanzamiento",
-      "description": "Ayudamos a tú emprendimiento a superar el 80% de empresas en el mercado con tú página web profesional hoy mismo.",
+      "description": "Desarrollamos soluciones digitales únicas para que tú negocio tenga las tecnologías más modernas del mercado.",
       "keywords": {
         "code": "Desarrollo Web",
-        "desing": "Diseño Web",
-        "seo": "SEO Optimizado"
+        "desing": "Inteligencia Artificial",
+        "seo": "Software a medida"
       },
       "stats": {
-        "projects": "Proyectos completados",
+        "projects": "Horas de trabajo",
         "clients": "Clientes satisfechos",
         "support": "Soporte Técnico"
       }
     },
     "contact": {
       "theSolutionToYourProject": "La solución a tu problema.",
-      "neverLeaveAProblemUnsolved": "Tú emprendimiento es nuestra especialidad.",
-      "ourTeamPlansTheSolution": "Nuestra especialidad son las soluciones digitales para emprendimientos de cualquier rubro, restaurantes, consultoras, comercios digitaleso retails, todo lo automatizamos completamente, desde el contacto, la cotización, stock y envíos hasta el mantenimiento y atención al cliente, solo necesitas contratarnos y esperar a tus clientes.",
+      "neverLeaveAProblemUnsolved": "La tecnología es nuestra especialidad.",
+      "ourTeamPlansTheSolution": "Ayudamos a que tú empresa este a punta con las tecnologías más modernas del mercado, permitiendo automatizar procesos complejos, mejorar la presentación de los productos, optimizar la conversión de clientes y sobre todo, dar una imagen absolutamente profesional a tú empresa.",
       "contactUs": "Contáctanos"
     },
     "info": {
       "profile": "Supera a la competencia.",
       "hands": "Tú negocio por arriba del 80%.",
-      "ourProgrammers": "En Argentina, el 80% de empresas aún no tienen una página web o tienen una obsoleta, por lo que pierden una gran cantidad de clientes mensualmente, con nuestros planes de páginas + automatización, podes estar por arriba del 80% en Argentina hoy mismo.",
+      "ourProgrammers": "El 80% de las empresas aún siguen con las viejas costumbres, con prácticas obsoletas y herramientas antiguas que consumen inmensas cantidades de tiempo. Nosotros nos encargamos de realizar las soluciones para estás tareas dejandote espacio para que solo te encargues de atraer a tus clientes.",
       "ourTeam": "Nosostros"
     },
     "ourServices": {
@@ -164,7 +164,7 @@
       "servicesInfo": {
         "join": "Tú idea a unos minutos.",
         "getStarted": "Empieza tu proyecto con nosotros en minutos",
-        "contactUs": "Envíanos un mail desde contacto con tus necesidades, y en breves te responderemos con un presupuesto y un plan de proyecto.",
+        "contactUs": "Envíanos un mail y en breves te hablaremos para obtener detalles.",
         "startNow": "Empezar ahora"
       }
     },

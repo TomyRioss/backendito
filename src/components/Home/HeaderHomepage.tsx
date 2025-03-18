@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Code, Rocket, Star, ArrowRight } from 'lucide-react';
+import { Code, Handshake, BrainCircuit, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslations } from 'next-intl';
@@ -75,13 +75,13 @@ const HeaderHomepage = () => {
 
   const features = [
     { icon: <Code className="w-5 h-5" />, text: t('keywords.code') },
-    { icon: <Star className="w-5 h-5" />, text: t('keywords.desing') },
-    { icon: <Rocket className="w-5 h-5" />, text: t('keywords.seo') },
+    { icon: <BrainCircuit className="w-5 h-5" />, text: t('keywords.desing') },
+    { icon: <Handshake className="w-5 h-5" />, text: t('keywords.seo') },
   ];
 
   const stats = [
-    { value: '100+', label: t('stats.projects') },
-    { value: '98%', label: t('stats.clients') },
+    { value: '4000+', label: t('stats.projects') },
+    { value: '99%', label: t('stats.clients') },
     { value: '24/7', label: t('stats.support') },
   ];
 
