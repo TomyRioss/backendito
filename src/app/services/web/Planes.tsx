@@ -51,7 +51,7 @@ const planesData: PlanData[] = [
     features: {
       'Cantidad de Páginas': '4',
       'Plazo de Entrega': '7 - 14 Semanas',
-      Precio: '$900 USD',
+      Precio: '$900 - $1.400 USD',
       'Soporte Incluido': '3 meses',
     },
   },
@@ -72,7 +72,7 @@ const planesData: PlanData[] = [
     features: {
       'Cantidad de Páginas': '6+',
       'Plazo de Entrega': '8 - 21 Semanas',
-      Precio: '$1900 -  $2500 USD',
+      Precio: '¡Contáctanos!',
       'Soporte Incluido': '6 meses',
     },
   },

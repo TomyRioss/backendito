@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useCallback } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Star, StarHalf } from 'lucide-react';
 import Image from 'next/image';
 
@@ -97,12 +96,9 @@ export function FeaturedProjects() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
-  const carouselRef = useRef(null);
-  const autoplayRef = useRef(null);
 
-  // Configuración para autoplay y gestos táctiles
+  // Configuración para gestos táctiles
   const minSwipeDistance = 50;
-  const autoplayDelay = 5000;
 
   // Agrupar proyectos en pares (2 proyectos por slide)
   const projectGroups = [
@@ -113,53 +109,30 @@ export function FeaturedProjects() {
   const totalGroups = projectGroups.length;
 
   // Navegación del carrusel
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex(prevIndex => (prevIndex + 1) % totalGroups);
-  };
+  }, [totalGroups]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex(prevIndex => (prevIndex - 1 + totalGroups) % totalGroups);
-  };
+  }, [totalGroups]);
 
   // Navegación a un índice específico
-  const goToSlide = index => {
+  const goToSlide = useCallback(index => {
     setCurrentIndex(index);
-  };
-
-  // Reinicia el temporizador de autoplay cuando cambia el índice
-  useEffect(() => {
-    resetAutoplay();
-  }, [currentIndex]);
-
-  // Configura el autoplay
-  const resetAutoplay = () => {
-    if (autoplayRef.current) {
-      clearTimeout(autoplayRef.current);
-    }
-    autoplayRef.current = setTimeout(nextSlide, autoplayDelay);
-  };
-
-  // Iniciar autoplay al montar el componente
-  useEffect(() => {
-    resetAutoplay();
-    return () => {
-      if (autoplayRef.current) {
-        clearTimeout(autoplayRef.current);
-      }
-    };
   }, []);
 
   // Gestión de eventos táctiles
-  const onTouchStart = e => {
+  const onTouchStart = useCallback(e => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
-  };
+  }, []);
 
-  const onTouchMove = e => {
+  const onTouchMove = useCallback(e => {
     setTouchEnd(e.targetTouches[0].clientX);
-  };
+  }, []);
 
-  const onTouchEnd = () => {
+  const onTouchEnd = useCallback(() => {
     if (!touchStart || !touchEnd) return;
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
@@ -171,7 +144,7 @@ export function FeaturedProjects() {
     if (isRightSwipe) {
       prevSlide();
     }
-  };
+  }, [touchStart, touchEnd, minSwipeDistance, nextSlide, prevSlide]);
 
   return (
     <div className="w-full py-12 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
@@ -185,7 +158,6 @@ export function FeaturedProjects() {
 
         <div
           className="relative overflow-hidden rounded-xl shadow-2xl"
-          ref={carouselRef}
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
@@ -265,9 +237,9 @@ export function FeaturedProjects() {
                         </div>
 
                         <blockquote className="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700 italic text-gray-700 dark:text-gray-300 text-sm">
-                          "{project.testimonial.quote}"
+                          &ldquo;{project.testimonial.quote}&rdquo;
                           <footer className="text-sm font-medium text-gray-600 dark:text-gray-400 mt-2">
-                            — {project.testimonial.author}
+                            &mdash; {project.testimonial.author}
                           </footer>
                         </blockquote>
                       </CardContent>

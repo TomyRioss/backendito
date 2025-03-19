@@ -17,7 +17,7 @@ const cardsLogic = (t: (key: string) => string): ServiceCardType[] => {
       description: t('servicesInfo.web.description'),
       icon: '/web.png',
       price: '500 ',
-      timeout: '2 ' + t('weeks'),
+      timeout: '3 ' + t('weeks'),
     },
   ];
 };

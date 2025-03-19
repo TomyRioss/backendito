@@ -71,7 +71,7 @@ export const Footer = () => {
                 href="mailto:backendito@gmail.com"
                 className="text-sm hover:text-blue-600 dark:hover:text-blue-400"
               >
-                backendito@gmail.com
+                contacto@backendito.com
               </a>
             </div>
 
